@@ -1,0 +1,6 @@
+{
+  "name": "Nutricionista Junior Coelho",
+  "description": "Acompanhamento nutricional com Junior Coelho para emagrecimento, reeducação alimentar, ganho de massa, performance e qualidade de vida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

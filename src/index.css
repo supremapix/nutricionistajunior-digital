@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --brand-green: #79B82A;
+  --brand-green-light: #A5D63F;
+  --brand-green-dark: #477A16;
+
+  --brand-orange: #F7941D;
+  --brand-orange-light: #FFB52B;
+
+  --brand-silver: #B7B7B7;
+  --brand-gray: #737373;
+
+  --background-dark: #050914;
+  --surface-dark: #0B1220;
+  --surface-dark-2: #111A29;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD2DC;
+}
+
+@theme {
+  --color-brand-green: #79B82A;
+  --color-brand-green-light: #A5D63F;
+  --color-brand-green-dark: #477A16;
+
+  --color-brand-orange: #F7941D;
+  --color-brand-orange-light: #FFB52B;
+
+  --color-brand-silver: #B7B7B7;
+  --color-brand-gray: #737373;
+
+  --color-brand-bg: #050914;
+  --color-brand-surface: #0B1220;
+  --color-brand-surface-2: #111A29;
+
+  /* Overriding Tailwind emerald/teal/cyan defaults to map to the JR.Coelho logo brand colors */
+  --color-emerald-300: #C2E875;
+  --color-emerald-400: #A5D63F;
+  --color-emerald-500: #79B82A;
+  --color-emerald-600: #477A16;
+  --color-emerald-700: #365E10;
+  --color-emerald-800: #26420B;
+  --color-emerald-900: #111A29;
+  --color-emerald-950: #050914;
+
+  --color-teal-300: #A5D63F;
+  --color-teal-400: #A5D63F;
+  --color-teal-500: #79B82A;
+  --color-teal-600: #477A16;
+  --color-teal-700: #365E10;
+
+  --color-cyan-300: #A5D63F;
+  --color-cyan-400: #A5D63F;
+  --color-cyan-500: #79B82A;
+  --color-cyan-600: #477A16;
+
+  --color-amber-400: #FFB52B;
+  --color-amber-500: #F7941D;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Custom Utilities for JR.Coelho Brand System */
+.bg-brand-bg {
+  background-color: var(--background-dark);
+}
+
+.bg-brand-surface {
+  background-color: var(--surface-dark);
+}
+
+.bg-brand-surface-2 {
+  background-color: var(--surface-dark-2);
+}
+
+.text-brand-green {
+  color: var(--brand-green);
+}
+
+.text-brand-green-light {
+  color: var(--brand-green-light);
+}
+
+.text-brand-orange {
+  color: var(--brand-orange);
+}
+
+.bg-brand-green {
+  background-color: var(--brand-green);
+}
+
+.bg-brand-green-light {
+  background-color: var(--brand-green-light);
+}
+
+.bg-brand-green-dark {
+  background-color: var(--brand-green-dark);
+}
+
+.border-brand-green {
+  border-color: var(--brand-green);
+}
+
+.border-brand-green-light {
+  border-color: var(--brand-green-light);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}

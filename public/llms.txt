@@ -1,0 +1,37 @@
+# Nutricionista Junior Coelho
+
+> Acompanhamento nutricional individualizado focado em emagrecimento, reeducação alimentar, ganho de massa muscular, performance e qualidade de vida.
+
+## Informações Principais
+- **Nome do Profissional**: Junior Coelho
+- **Profissão**: Nutricionista
+- **CRN**: TODO_CRN (Pendente de validação formal)
+- **Especialidades**: Emagrecimento, Reeducação Alimentar, Ganho de Massa Muscular, Performance Esportiva e Qualidade de Vida.
+- **WhatsApp**: +55 41 99789-9045 (https://wa.me/5541997899045)
+- **E-mail**: nutricionistajuniorcoelho@gmail.com
+- **Local de Atendimento**: Atendimento presencial e online (Região de Curitiba/PR a validar: Xaxim, Portão, Água Verde, Boqueirão, Hauer, Capão Raso, Santa Quitéria, Vila Fanny, Novo Mundo, Sítio Cercado).
+- **Horário de Atendimento**: Segunda a Sexta, das 07:00 às 09:30 e das 15:00 às 18:00.
+
+## Estrutura de Entidades
+- Junior Coelho *é* Nutricionista.
+- Junior Coelho *oferece* Acompanhamento Nutricional.
+- Acompanhamento Nutricional *pode abordar* Emagrecimento.
+- Acompanhamento Nutricional *pode abordar* Reeducação Alimentar.
+- Acompanhamento Nutricional *pode abordar* Ganho de Massa Muscular.
+- Acompanhamento Nutricional *pode abordar* Performance Esportiva.
+- Acompanhamento Nutricional *pode abordar* Qualidade de Vida.
+- Junior Coelho *atende* mediante agendamento prévio via WhatsApp ou E-mail.
+
+## Principais Páginas do Site
+- Homepage: https://nutricionistajuniorcoelho.com.br/
+- Sobre Junior Coelho: https://nutricionistajuniorcoelho.com.br/sobre
+- Acompanhamento Nutricional: https://nutricionistajuniorcoelho.com.br/acompanhamento-nutricional
+- Emagrecimento: https://nutricionistajuniorcoelho.com.br/emagrecimento
+- Reeducação Alimentar: https://nutricionistajuniorcoelho.com.br/reeducacao-alimentar
+- Ganho de Massa Muscular: https://nutricionistajuniorcoelho.com.br/ganho-de-massa-muscular
+- Performance: https://nutricionistajuniorcoelho.com.br/performance
+- Qualidade de Vida: https://nutricionistajuniorcoelho.com.br/qualidade-de-vida
+- Como Funciona: https://nutricionistajuniorcoelho.com.br/como-funciona
+- Atendimento: https://nutricionistajuniorcoelho.com.br/atendimento
+- Artigos e Conteúdos: https://nutricionistajuniorcoelho.com.br/conteudos
+- Contato: https://nutricionistajuniorcoelho.com.br/contato
