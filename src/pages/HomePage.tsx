@@ -482,6 +482,30 @@ export function HomePage({ onNavigate }: HomePageProps) {
             ))}
           </div>
 
+          {/* BANNER DE DESTAQUE DE E-BOOKS */}
+          <div className="mt-12 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-2 border-[var(--brand-green)]/40 p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div className="space-y-2 text-center md:text-left">
+              <span className="bg-[var(--brand-green)]/20 text-[var(--brand-green-light)] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-[var(--brand-green)]/30">
+                Lançamento • Materiais Digitais
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black text-white">
+                Conheça nossos E-books & Guias Nutricionais Práticos
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                Aprenda sobre Nutrição & Receitas Fitness, Dieta Inteligente e Cuidados com Tatuagem/Piercing com conteúdos exclusivos.
+              </p>
+            </div>
+
+            <button
+              onClick={() => handleNav('/ebooks')}
+              className="inline-flex items-center gap-2 bg-[var(--brand-green)] hover:bg-[var(--brand-green-light)] text-slate-950 font-black text-sm px-6 py-3.5 rounded-full shadow-lg transition hover:scale-105 cursor-pointer whitespace-nowrap shrink-0"
+            >
+              <BookOpen size={18} />
+              <span>Ver Todos os E-books</span>
+              <ArrowRight size={16} />
+            </button>
+          </div>
+
         </div>
       </section>
 

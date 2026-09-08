@@ -90,7 +90,8 @@ export type AnalyticsEventName =
   | 'service_view'
   | 'contact_form_submit'
   | 'share_copied'
-  | 'share_platform_click';
+  | 'share_platform_click'
+  | 'ebook_click';
 
 export function trackAnalyticsEvent(eventName: AnalyticsEventName, details?: Record<string, any>) {
   if (typeof window !== 'undefined') {

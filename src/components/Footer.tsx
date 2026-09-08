@@ -62,16 +62,16 @@ export function Footer({ onNavigate }: FooterProps) {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 font-black text-base px-6 py-4 rounded-full shadow-[0_8px_25px_rgba(121,184,42,0.4)] hover:scale-[1.02] active:scale-95 transition-all duration-300 min-h-[52px] cursor-pointer"
               >
                 <MessageCircle size={22} className="shrink-0" />
-                <span className="whitespace-nowrap">WhatsApp: (41) 99870-1361</span>
+                <span className="whitespace-nowrap">WhatsApp: {SITE_CONFIG.phone}</span>
               </a>
 
               <a
-                href={`tel:${SITE_CONFIG.phone.replace(/\D/g, '')}`}
+                href={`tel:${SITE_CONFIG.phoneRaw}`}
                 onClick={() => trackAnalyticsEvent('phone_click', { location: 'footer_quick_banner' })}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 py-4 rounded-full border border-slate-700 shadow-md transition duration-200 min-h-[52px] cursor-pointer"
               >
                 <Phone size={20} className="text-[var(--brand-green-light)] shrink-0" />
-                <span className="whitespace-nowrap">Ligar: (41) 99870-1361</span>
+                <span className="whitespace-nowrap">Ligar: {SITE_CONFIG.phone}</span>
               </a>
             </div>
           </div>
@@ -145,6 +145,7 @@ export function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-1.5 text-sm font-medium">
               {[
                 { name: "Início", path: "/" },
+                { name: "E-books & Guias Digitais", path: "/ebooks" },
                 { name: "Sobre o Nutricionista", path: "/sobre" },
                 { name: "Acompanhamento Nutricional", path: "/acompanhamento-nutricional" },
                 { name: "Como Funciona a Consulta", path: "/como-funciona" },

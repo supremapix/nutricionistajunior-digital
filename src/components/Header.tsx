@@ -37,6 +37,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
   const navLinks = [
     { name: "Início", path: "/" },
     { name: "Acompanhamento", path: "/acompanhamento-nutricional" },
+    { name: "E-books", path: "/ebooks" },
     { name: "Sobre", path: "/sobre" },
     { name: "Como Funciona", path: "/como-funciona" },
     { name: "Conteúdos", path: "/conteudos" },
@@ -60,6 +61,14 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
           <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs sm:text-sm font-medium">
             {[1, 2].map((loopIndex) => (
               <React.Fragment key={loopIndex}>
+                {/* CRN DESTACADO */}
+                <span className="inline-flex items-center gap-1.5 text-white font-black bg-[var(--brand-green)]/20 px-3 py-1 rounded-full border border-[var(--brand-green)]/40">
+                  <ShieldCheck size={14} className="text-[var(--brand-green-light)] shrink-0" />
+                  <span>CRN 8-13752</span>
+                </span>
+
+                <span className="text-slate-700 font-bold">•</span>
+
                 {/* TELEFONE CLICÁVEL */}
                 <a 
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
@@ -198,8 +207,12 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
           </div>
         </nav>
 
-        {/* CTA PRINCIPAL WHATSAPP */}
+        {/* CTA PRINCIPAL WHATSAPP & BADGE CRN */}
         <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-1.5 bg-slate-900 border border-slate-700/80 px-3.5 py-2 rounded-full text-xs font-bold text-slate-100 shadow-sm">
+            <ShieldCheck size={16} className="text-[var(--brand-green-light)] shrink-0" />
+            <span>CRN: <strong className="text-[var(--brand-green-light)]">8-13752</strong></span>
+          </div>
           <a
             href={SITE_CONFIG.whatsappUrl}
             target="_blank"

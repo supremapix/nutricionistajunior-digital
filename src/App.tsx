@@ -17,6 +17,7 @@ import { ArticlesPage } from './pages/ArticlesPage';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { ContactPage } from './pages/ContactPage';
 import { PrivacyPage } from './pages/PrivacyPage';
+import { EbooksPage } from './pages/EbooksPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
@@ -76,6 +77,9 @@ export default function App() {
     }
     if (path === '/conteudos' || path === '/artigos' || path === '/blog') {
       return <ArticlesPage onNavigate={handleNavigate} />;
+    }
+    if (path === '/ebooks' || path === '/e-book' || path === '/ebook') {
+      return <EbooksPage />;
     }
     if (path.startsWith('/conteudos/')) {
       const slug = path.replace('/conteudos/', '');

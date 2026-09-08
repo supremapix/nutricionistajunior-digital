@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { MessageCircle, Phone, Mail, MapPin, Clock, Send, ShieldCheck, Globe } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
@@ -43,6 +43,17 @@ export function ContactPage() {
               <h2 className="text-2xl font-bold text-white">Canais de Atendimento</h2>
 
               <div className="space-y-4 text-xs sm:text-sm">
+                {/* REGISTRO CRN DESTACADO */}
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-white">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold shrink-0">
+                    <ShieldCheck size={22} />
+                  </div>
+                  <div>
+                    <strong className="block font-bold text-emerald-400 uppercase text-xs tracking-wider">Nutricionista Inscrito</strong>
+                    <span className="text-base font-black text-white">CRN 8-13752</span>
+                  </div>
+                </div>
+
                 <a 
                   href={SITE_CONFIG.whatsappUrl}
                   target="_blank"
@@ -54,7 +65,7 @@ export function ContactPage() {
                     <MessageCircle size={20} />
                   </div>
                   <div>
-                    <strong className="block font-bold">WhatsApp Principal</strong>
+                    <strong className="block font-bold">WhatsApp / Telefone</strong>
                     <span className="text-slate-300">{SITE_CONFIG.phone}</span>
                   </div>
                 </a>
@@ -66,6 +77,16 @@ export function ContactPage() {
                   <div>
                     <strong className="block font-bold">E-mail Profissional</strong>
                     <span className="text-slate-300">{SITE_CONFIG.email}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-white">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold shrink-0">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <strong className="block font-bold">Endereço de Atendimento</strong>
+                    <span className="text-slate-300">{SITE_CONFIG.address.street} - {SITE_CONFIG.address.city} / {SITE_CONFIG.address.state}</span>
                   </div>
                 </div>
 
