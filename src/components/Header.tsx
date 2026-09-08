@@ -163,32 +163,32 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
         </button>
 
         {/* NAVEGAÇÃO DESKTOP */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+        <nav className="hidden xl:flex items-center gap-1 xl:gap-1.5">
           {navLinks.map((link) => {
             const isActive = currentPath === link.path;
             return (
               <button
                 key={link.path}
                 onClick={() => handleNavClick(link.path)}
-                className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer min-h-[44px] ${
+                className={`px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold transition-all duration-200 cursor-pointer min-h-[40px] whitespace-nowrap shrink-0 ${
                   isActive 
                     ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold' 
                     : 'text-slate-300 hover:text-white hover:bg-slate-900'
                 }`}
               >
-                {link.name}
+                <span className="whitespace-nowrap">{link.name}</span>
               </button>
             );
           })}
 
           {/* DROPDOWN DE OBJETIVOS E SERVIÇOS */}
-          <div className="relative">
+          <div className="relative shrink-0">
             <button
               onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              className="px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900 flex items-center gap-1.5 transition min-h-[44px] cursor-pointer"
+              className="px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900 flex items-center gap-1 transition min-h-[40px] cursor-pointer whitespace-nowrap"
             >
-              <span>Objetivos</span>
-              <ChevronDown size={16} className={`transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+              <span className="whitespace-nowrap">Objetivos</span>
+              <ChevronDown size={14} className={`transition-transform duration-200 shrink-0 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {servicesDropdownOpen && (
@@ -197,7 +197,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
                   <button
                     key={obj.path}
                     onClick={() => handleNavClick(obj.path)}
-                    className="w-full text-left px-3.5 py-2.5 rounded-xl text-xs sm:text-sm text-slate-200 hover:text-emerald-400 hover:bg-slate-800 transition font-medium cursor-pointer"
+                    className="w-full text-left px-3.5 py-2.5 rounded-xl text-xs sm:text-sm text-slate-200 hover:text-emerald-400 hover:bg-slate-800 transition font-medium cursor-pointer whitespace-nowrap"
                   >
                     {obj.name}
                   </button>
@@ -208,9 +208,9 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
         </nav>
 
         {/* CTA PRINCIPAL WHATSAPP & BADGE CRN */}
-        <div className="hidden sm:flex items-center gap-3">
-          <div className="hidden lg:flex items-center gap-1.5 bg-slate-900 border border-slate-700/80 px-3.5 py-2 rounded-full text-xs font-bold text-slate-100 shadow-sm">
-            <ShieldCheck size={16} className="text-[var(--brand-green-light)] shrink-0" />
+        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+          <div className="hidden 2xl:flex items-center gap-1.5 bg-slate-900 border border-slate-700/80 px-3 py-1.5 rounded-full text-xs font-bold text-slate-100 shadow-sm whitespace-nowrap shrink-0">
+            <ShieldCheck size={15} className="text-[var(--brand-green-light)] shrink-0" />
             <span>CRN: <strong className="text-[var(--brand-green-light)]">8-13752</strong></span>
           </div>
           <a
@@ -218,9 +218,9 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'header_cta' })}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-5 py-2.5 rounded-full font-black text-xs sm:text-sm whitespace-nowrap shadow-[0_6px_20px_rgba(121,184,42,0.35)] hover:shadow-[0_8px_25px_rgba(121,184,42,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-95 cursor-pointer min-h-[44px]"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-4 py-2.5 rounded-full font-black text-xs sm:text-sm whitespace-nowrap shadow-[0_6px_20px_rgba(121,184,42,0.35)] hover:shadow-[0_8px_25px_rgba(121,184,42,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-95 cursor-pointer min-h-[40px] shrink-0"
           >
-            <MessageCircle size={18} className="shrink-0" />
+            <MessageCircle size={17} className="shrink-0" />
             <span className="whitespace-nowrap">Agendar Consulta</span>
           </a>
         </div>
@@ -229,7 +229,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Abrir Menu"
-          className="md:hidden text-slate-200 hover:text-white p-2.5 rounded-xl bg-slate-900 border border-slate-800 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
+          className="xl:hidden text-slate-200 hover:text-white p-2.5 rounded-xl bg-slate-900 border border-slate-800 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer shrink-0"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
