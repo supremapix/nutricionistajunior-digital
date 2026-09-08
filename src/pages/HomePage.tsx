@@ -45,8 +45,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20 lg:py-28 bg-[#050914]">
         {/* VIDEO DE FUNDO HERO DE ALTA VISIBILIDADE */}
         <HeroVideoBg 
-          brightness="brightness-[0.75]" 
-          overlayGradient="from-[#050914] via-[#050914]/50 to-[#050914]/20" 
+          brightness="brightness-[0.95]" 
+          overlayGradient="from-[#050914] via-[#050914]/40 to-[#050914]/10" 
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">

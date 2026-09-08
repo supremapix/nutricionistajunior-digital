@@ -7,8 +7,8 @@ interface HeroVideoBgProps {
 }
 
 export function HeroVideoBg({ 
-  brightness = 'brightness-[0.65]',
-  overlayGradient = 'from-[#050914] via-[#050914]/55 to-[#050914]/25'
+  brightness = 'brightness-[0.92]',
+  overlayGradient = 'from-[#050914]/95 via-[#050914]/50 to-[#050914]/15'
 }: HeroVideoBgProps) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -17,7 +17,7 @@ export function HeroVideoBg({
         loop
         muted
         playsInline
-        className={`w-full h-full object-cover filter ${brightness} contrast-105 scale-105 transition-all duration-700`}
+        className={`w-full h-full object-cover filter ${brightness} contrast-110 scale-105 transition-all duration-700`}
       >
         <source src={SITE_CONFIG.images.heroVideo} type="video/mp4" />
       </video>

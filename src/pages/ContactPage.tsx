@@ -21,7 +21,7 @@ export function ContactPage() {
       />
 
       <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
-        <HeroVideoBg brightness="brightness-[0.28]" />
+        <HeroVideoBg brightness="brightness-[0.85]" overlayGradient="from-[#050914] via-[#050914]/60 to-[#050914]/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           
           <div className="max-w-3xl space-y-4">
