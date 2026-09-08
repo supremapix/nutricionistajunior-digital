@@ -18,6 +18,7 @@ import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { ContactPage } from './pages/ContactPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { EbooksPage } from './pages/EbooksPage';
+import { NeighborhoodPage } from './pages/NeighborhoodPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export default function App() {
@@ -90,6 +91,16 @@ export default function App() {
     }
     if (path === '/politica-de-privacidade') {
       return <PrivacyPage />;
+    }
+
+    // Neighborhood SEO pages (e.g. /nutricionista-em-xaxim-curitiba or /atendimento/xaxim)
+    if (path.startsWith('/nutricionista-em-')) {
+      const bairroSlug = path.replace('/nutricionista-em-', '').replace('-curitiba', '');
+      return <NeighborhoodPage slug={bairroSlug} />;
+    }
+    if (path.startsWith('/atendimento/')) {
+      const bairroSlug = path.replace('/atendimento/', '');
+      return <NeighborhoodPage slug={bairroSlug} />;
     }
 
     return <NotFoundPage onNavigate={handleNavigate} />;
