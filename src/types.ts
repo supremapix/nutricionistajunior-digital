@@ -76,6 +76,7 @@ export interface SiteConfig {
     heroBg: string;
     sectionsBg: string;
     consulting: string;
+    accompaniment?: string;
     about: string;
   };
 }

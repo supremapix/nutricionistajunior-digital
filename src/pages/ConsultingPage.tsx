@@ -87,7 +87,7 @@ export function ConsultingPage() {
           {/* BANNER COM IMAGEM 4 */}
           <div className="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl relative">
             <img 
-              src={SITE_CONFIG.images.consulting} 
+              src={SITE_CONFIG.images.accompaniment || SITE_CONFIG.images.consulting} 
               alt="Acompanhamento Nutricional com Junior Coelho"
               className="w-full h-[300px] sm:h-[400px] object-cover filter brightness-75"
               loading="lazy"

@@ -44,6 +44,7 @@ export const SITE_CONFIG: SiteConfig = {
     heroBg: "https://img.supremasite.com.br/nutri/fundo-banner-hero.jpg",
     sectionsBg: "https://img.supremasite.com.br/nutri/fundo-secoes.jpg",
     consulting: "https://img.supremasite.com.br/nutri/junior-coelho-nutricionista-xaxim-curitiba.webp",
+    accompaniment: "https://img.supremasite.com.br/nutri/junior-coelho-nutricionista-xaxim.webp",
     about: "https://img.supremasite.com.br/nutri/sobre-corpo-musculacao.jpg"
   }
 };
