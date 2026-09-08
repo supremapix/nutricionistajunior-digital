@@ -40,8 +40,9 @@ export const SITE_CONFIG: SiteConfig = {
   },
   images: {
     logo: "https://img.supremasite.com.br/nutri/logo-site.png",
-    og: "https://img.supremasite.com.br/nutri/consultoria_fitness_og.jpg",
+    og: "https://img.supremasite.com.br/nutri/og-card.webp",
     heroBg: "https://img.supremasite.com.br/nutri/fundo-banner-hero.jpg",
+    heroVideo: "https://img.supremasite.com.br/nutri/nutri-junior.mp4",
     sectionsBg: "https://img.supremasite.com.br/nutri/fundo-secoes.jpg",
     consulting: "https://img.supremasite.com.br/nutri/junior-coelho-nutricionista-xaxim-curitiba.webp",
     accompaniment: "https://img.supremasite.com.br/nutri/junior-coelho-nutricionista-xaxim.webp",

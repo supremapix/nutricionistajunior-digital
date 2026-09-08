@@ -2,6 +2,7 @@ import React from 'react';
 import { EthicalNoticeBanner } from '../components/EthicalNoticeBanner';
 import { HABIT_ACHIEVEMENTS, AUTHORIZED_TESTIMONIALS } from '../data/contentData';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { Users, HeartPulse, CheckCircle2, MessageCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { trackAnalyticsEvent } from '../types';
@@ -15,8 +16,9 @@ export function EvolutionsPage() {
         path="/evolucao"
       />
 
-      <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
+        <HeroVideoBg brightness="brightness-[0.28]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           
           <div className="max-w-3xl space-y-4">
             <span className="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-xs border border-emerald-500/30 uppercase tracking-wider">
@@ -87,17 +89,20 @@ export function EvolutionsPage() {
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
               Agende sua consulta e comece um acompanhamento nutricional feito sob medida para você.
             </p>
-            <div>
+            <div className="flex flex-col items-center pt-2">
               <a
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'evolutions_page' })}
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-8 py-4 rounded-full text-sm shadow-xl transition hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 font-black px-8 py-4 rounded-full text-sm whitespace-nowrap shadow-[0_8px_30px_rgba(121,184,42,0.35)] hover:shadow-[0_12px_40px_rgba(121,184,42,0.55)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
               >
-                <MessageCircle size={20} />
-                <span>Agendar Consulta no WhatsApp</span>
+                <MessageCircle size={20} className="shrink-0" />
+                <span className="whitespace-nowrap">Agendar Consulta no WhatsApp</span>
               </a>
+              <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 block opacity-85">
+                Inicie sua jornada com planejamento realista e sustentável
+              </span>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 export function PrivacyPage() {
@@ -12,8 +13,9 @@ export function PrivacyPage() {
         path="/politica-de-privacidade"
       />
 
-      <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-slate-300 text-xs sm:text-sm leading-relaxed">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
+        <HeroVideoBg brightness="brightness-[0.22]" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-slate-300 text-xs sm:text-sm leading-relaxed relative z-10">
           
           <div className="space-y-3">
             <span className="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-xs border border-emerald-500/30 uppercase tracking-wider">

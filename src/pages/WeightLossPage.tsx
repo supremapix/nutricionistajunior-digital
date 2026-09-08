@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
 
 export function WeightLossPage() {
@@ -22,8 +23,9 @@ export function WeightLossPage() {
         path="/emagrecimento"
       />
 
-      <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
+        <HeroVideoBg brightness="brightness-[0.28]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           
           {/* CABEÇALHO OBRIGATÓRIO */}
           <div className="max-w-3xl space-y-4">
@@ -121,17 +123,20 @@ export function WeightLossPage() {
               </div>
             </div>
 
-            <div className="pt-4 text-center">
+            <div className="pt-4 flex flex-col items-center">
               <a
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'weight_loss_page' })}
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-8 py-4 rounded-full text-sm shadow-xl transition hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 font-black px-8 py-4 rounded-full text-sm whitespace-nowrap shadow-[0_8px_30px_rgba(121,184,42,0.35)] hover:shadow-[0_12px_40px_rgba(121,184,42,0.55)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
               >
-                <MessageCircle size={20} />
-                <span>Agendar Consulta de Emagrecimento</span>
+                <MessageCircle size={20} className="shrink-0" />
+                <span className="whitespace-nowrap">Agendar Consulta de Emagrecimento</span>
               </a>
+              <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 block opacity-85">
+                Plano nutricional individualizado e suporte direto via WhatsApp
+              </span>
             </div>
           </div>
 

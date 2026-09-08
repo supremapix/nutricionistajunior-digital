@@ -74,6 +74,7 @@ export interface SiteConfig {
     logo?: string;
     og: string;
     heroBg: string;
+    heroVideo?: string;
     sectionsBg: string;
     consulting: string;
     accompaniment?: string;

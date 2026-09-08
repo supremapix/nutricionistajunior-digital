@@ -2,6 +2,7 @@ import React from 'react';
 import { Dumbbell, MessageCircle, CheckCircle2, ShieldAlert, Zap } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
 
 export function MuscleGainPage() {
@@ -13,8 +14,9 @@ export function MuscleGainPage() {
         path="/ganho-de-massa-muscular"
       />
 
-      <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
+        <HeroVideoBg brightness="brightness-[0.28]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
           
           <div className="max-w-3xl space-y-4">
             <span className="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-xs border border-emerald-500/30 uppercase tracking-wider">
@@ -66,17 +68,20 @@ export function MuscleGainPage() {
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
               Agende sua consulta individual e alinhe sua alimentação à sua rotina de treinos.
             </p>
-            <div>
+            <div className="flex flex-col items-center pt-2">
               <a
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'muscle_gain_page' })}
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-8 py-4 rounded-full text-sm shadow-xl transition hover:scale-105 active:scale-95 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 font-black px-8 py-4 rounded-full text-sm whitespace-nowrap shadow-[0_8px_30px_rgba(121,184,42,0.35)] hover:shadow-[0_12px_40px_rgba(121,184,42,0.55)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
               >
-                <MessageCircle size={20} />
-                <span>Agendar Consulta de Hipertrofia</span>
+                <MessageCircle size={20} className="shrink-0" />
+                <span className="whitespace-nowrap">Agendar Consulta de Hipertrofia</span>
               </a>
+              <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 block opacity-85">
+                Alinhamento nutricional preciso para sincronizar com seu treino
+              </span>
             </div>
           </div>
 

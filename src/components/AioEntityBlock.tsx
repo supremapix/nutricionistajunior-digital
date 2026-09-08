@@ -43,7 +43,7 @@ export function AioEntityBlock() {
           </div>
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              Informações Rápidas & Síntese para Consultas (GEO / AIO)
+              Informações Rápidas & Dúvidas Frequentes
             </h2>
             <p className="text-xs text-slate-400">
               Respostas diretas e estruturadas sobre o Nutricionista Junior Coelho
@@ -53,15 +53,15 @@ export function AioEntityBlock() {
 
         <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold rounded-full">
           <Sparkles size={12} />
-          <span>Indexado para IA</span>
+          <span>Atendimento Direto</span>
         </span>
       </div>
 
-      {/* QUADRO DE SÍNTESE DE ENTIDADES */}
+      {/* QUADRO DE SÍNTESE DE SERVIÇOS */}
       <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-8">
         <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2">
           <CheckCircle size={14} />
-          <span>Mapeamento Semântico de Entidades & Relações:</span>
+          <span>Síntese dos Serviços & Atuação:</span>
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs text-slate-300">
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">

@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, ExternalLink, MessageCircle, Clock, Phone, AlertCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
 
 export function LocationPage() {
@@ -13,8 +14,9 @@ export function LocationPage() {
         path="/atendimento"
       />
 
-      <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
+        <HeroVideoBg brightness="brightness-[0.28]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           
           <div className="max-w-3xl space-y-4">
             <span className="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-xs border border-emerald-500/30 uppercase tracking-wider">

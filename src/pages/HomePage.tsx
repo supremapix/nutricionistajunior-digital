@@ -21,6 +21,7 @@ import { AioEntityBlock } from '../components/AioEntityBlock';
 import { EthicalNoticeBanner } from '../components/EthicalNoticeBanner';
 import { SeoHead } from '../components/SeoHead';
 import { InstagramFeed } from '../components/InstagramFeed';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
 
 interface HomePageProps {
@@ -40,75 +41,95 @@ export function HomePage({ onNavigate }: HomePageProps) {
         path="/"
       />
 
-      {/* 1. HERO SECTION PREMIUM (COM IMAGEM 2: FUNDO BANNER HERO) */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
-        {/* IMAGEM 2 NO TOPO (HERO) COMO IMAGEM DE FUNDO COM OVERLAY ELEGANTE */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-referrer filter brightness-50 scale-105"
-          style={{ backgroundImage: `url(${SITE_CONFIG.images.heroBg})` }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+      {/* 1. HERO SECTION MINIMALISTA & ULTRA LIMPO */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20 lg:py-28 bg-[#050914]">
+        {/* VIDEO DE FUNDO HERO DE ALTA VISIBILIDADE */}
+        <HeroVideoBg 
+          brightness="brightness-[0.75]" 
+          overlayGradient="from-[#050914] via-[#050914]/50 to-[#050914]/20" 
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-3xl space-y-6">
-            
-            {/* BADGE DE CREDIBILIDADE */}
-            <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 px-4 py-2 rounded-full text-xs sm:text-sm font-bold backdrop-blur-md">
-              <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
-              <span>Acompanhamento Nutricional Ético & Individualizado</span>
-            </div>
+          <div className="max-w-3xl space-y-8">
 
-            {/* H1 OBRIGATÓRIO */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-              Nutricionista para <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A5D63F] to-[#79B82A]">Emagrecimento, Performance</span> e Qualidade de Vida
+            {/* H1 LIMPO E MAJESTOSO COM SOMBRA DE TEXTO PARA LEITURA PERFEITA */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+              Nutricionista para <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-green-light)] via-[var(--brand-green)] to-[var(--brand-orange-light)]">Emagrecimento, Performance</span> e Qualidade de Vida
             </h1>
 
-            {/* SUBHEADLINE OBRIGATÓRIA */}
-            <p className="text-base sm:text-xl text-slate-200 leading-relaxed font-normal">
-              Acompanhamento nutricional individualizado para quem deseja melhorar a alimentação, composição corporal, desempenho e qualidade de vida com orientação profissional.
+            {/* SUBHEADLINE ELEGANTE E LIMPA */}
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+              Acompanhamento nutricional individualizado desenhado para transformar sua saúde, composição corporal e rendimento sem abrir mão da sua rotina.
             </p>
 
-            {/* BOTÕES DE AÇÃO HERO */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-              <a
-                href={SITE_CONFIG.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'hero_primary_cta' })}
-                className="flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-8 py-4 rounded-full font-black text-base shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer min-h-[52px]"
-              >
-                <MessageCircle size={22} />
-                <span>Agendar pelo WhatsApp</span>
-              </a>
+            {/* BOTÕES DE AÇÃO REFINADOS EM LINHA ÚNICA COM SUBTEXTO DISCRETO E ELEGANTE */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-5 pt-2">
+              
+              <div className="flex flex-col items-center sm:items-start">
+                <a
+                  href={SITE_CONFIG.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'hero_primary_cta' })}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-8 py-4 rounded-full font-black text-base whitespace-nowrap shadow-[0_10px_35px_rgba(121,184,42,0.4)] hover:shadow-[0_15px_45px_rgba(121,184,42,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer min-h-[54px]"
+                >
+                  <MessageCircle size={20} className="shrink-0" />
+                  <span className="whitespace-nowrap">Agendar pelo WhatsApp</span>
+                </a>
+                <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 px-1 flex items-center gap-1.5 opacity-90 drop-shadow">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Resposta rápida em horário comercial
+                </span>
+              </div>
 
-              <button
-                onClick={() => handleNav('/acompanhamento-nutricional')}
-                className="flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700/80 px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 cursor-pointer min-h-[52px] backdrop-blur-md"
-              >
-                <span>Conhecer o acompanhamento</span>
-                <ArrowRight size={18} />
-              </button>
-            </div>
+              <div className="flex flex-col items-center sm:items-start">
+                <button
+                  onClick={() => handleNav('/acompanhamento-nutricional')}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-slate-950/80 hover:bg-slate-900/90 text-white border border-slate-600/80 hover:border-[var(--brand-green)]/60 px-7 py-4 rounded-full font-bold text-base whitespace-nowrap transition-all duration-300 hover:scale-[1.02] cursor-pointer min-h-[54px] backdrop-blur-md shadow-lg"
+                >
+                  <span className="whitespace-nowrap">Conhecer o Acompanhamento</span>
+                  <ArrowRight size={18} className="text-[var(--brand-green-light)] shrink-0" />
+                </button>
+                <span className="text-[11px] text-slate-300/80 font-medium tracking-wide mt-2 px-1 opacity-85 drop-shadow">
+                  Entenda nossa metodologia completa
+                </span>
+              </div>
 
-            {/* DESTAQUES RÁPIDOS SEM PROMESSAS FALSAS */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-8 border-t border-slate-800/80 text-xs font-semibold text-slate-300">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                <span>Sem Dietas Restritivas</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                <span>Plano Adaptado à Rotina</span>
-              </div>
-              <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                <span>Suporte via WhatsApp</span>
-              </div>
             </div>
 
           </div>
         </div>
       </section>
+
+      {/* FAIXA MARQUEE EM CONTINUO APÓS O HERO (LADO INVERSO) */}
+      <div className="bg-[#080d1a] border-y border-slate-800/90 py-3.5 overflow-hidden relative z-10 shadow-xl">
+        <div className="animate-marquee-reverse flex items-center whitespace-nowrap gap-8 text-xs sm:text-sm font-mono uppercase tracking-widest text-slate-200 font-bold">
+          {[...Array(6)].map((_, i) => (
+            <React.Fragment key={i}>
+              <span className="flex items-center gap-2 text-emerald-400">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Nutrição de Alto Padrão
+              </span>
+              <span className="text-slate-600">•</span>
+              <span className="flex items-center gap-2 text-slate-100">
+                <span className="w-2 h-2 rounded-full bg-orange-400"></span>
+                Atendimento Curitiba/PR & Online
+              </span>
+              <span className="text-slate-600">•</span>
+              <span className="flex items-center gap-2 text-emerald-300">
+                <span className="w-2 h-2 rounded-full bg-emerald-300"></span>
+                Estratégias Sob Medida
+              </span>
+              <span className="text-slate-600">•</span>
+              <span className="flex items-center gap-2 text-amber-300">
+                <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+                Evolução Sustentável
+              </span>
+              <span className="text-slate-600">•</span>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
 
       {/* 2. RESPOSTA DIRETA ÀS INTENÇÕES DE BUSCA (SEO + LLM CITÁVEL) */}
       <section className="py-16 bg-slate-950 border-y border-slate-800/80">
@@ -320,11 +341,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
             {/* IMAGEM 4 NA SEÇÃO COMO FUNCIONA */}
             <div className="order-1 lg:order-2">
-              <div className="rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl">
+              <div className="rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900/50">
                 <img 
                   src={SITE_CONFIG.images.consulting} 
                   alt="Como funciona a consultoria nutricional com Junior Coelho"
-                  className="w-full h-[350px] sm:h-[450px] object-cover"
+                  className="w-full max-w-full h-auto block object-contain object-center"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
@@ -478,17 +499,20 @@ export function HomePage({ onNavigate }: HomePageProps) {
             Tire suas dúvidas, conheça a metodologia e agende sua consulta diretamente pelo WhatsApp de forma rápida e prática.
           </p>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col items-center">
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'home_bottom_cta' })}
-              className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-8 py-4 rounded-full font-black text-base shadow-2xl transition duration-300 hover:scale-105 active:scale-95 cursor-pointer min-h-[52px]"
+              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-8 py-4 rounded-full font-black text-base whitespace-nowrap shadow-[0_10px_35px_rgba(121,184,42,0.4)] hover:shadow-[0_15px_45px_rgba(121,184,42,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer min-h-[52px]"
             >
-              <MessageCircle size={22} />
-              <span>Quero iniciar meu acompanhamento</span>
+              <MessageCircle size={20} className="shrink-0" />
+              <span className="whitespace-nowrap">Quero iniciar meu acompanhamento</span>
             </a>
+            <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 opacity-85">
+              Atendimento direto pelo WhatsApp • Vagas limitadas para este mês
+            </span>
           </div>
         </div>
       </section>

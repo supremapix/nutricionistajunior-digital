@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Menu, 
   X, 
@@ -9,6 +10,7 @@ import {
   ChevronDown, 
   Eye, 
   Sparkles,
+  ShieldCheck,
   ExternalLink
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
@@ -52,52 +54,86 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
 
   return (
     <header className="sticky top-0 z-40 w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
-      {/* BARRA SUPERIOR DE ACESSIBILIDADE E CONTATO RÁPIDO PARA IDOSOS */}
-      <div className="bg-slate-900 border-b border-slate-800 text-slate-300 py-2 px-4 sm:px-6 text-xs sm:text-sm">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          
-          <div className="flex items-center gap-4 flex-wrap">
-            {/* TELEFONE RÁPIDO */}
-            <a 
-              href={`tel:${SITE_CONFIG.phoneRaw}`}
-              onClick={() => trackAnalyticsEvent('phone_click', { location: 'header_top_bar' })}
-              className="flex items-center gap-1.5 hover:text-emerald-400 transition font-medium min-h-[36px] px-1"
-            >
-              <Phone size={15} className="text-emerald-400 shrink-0" />
-              <span>{SITE_CONFIG.phone}</span>
-            </a>
+      {/* BARRA SUPERIOR EM FORMATO LETREIRO PASSANTE CONTINUO (TICKER MARQUEE CLICÁVEL) */}
+      <div className="bg-[#050914] border-b border-slate-800/80 text-slate-300 py-2 overflow-hidden relative z-50 select-none">
+        <div className="w-full flex overflow-hidden">
+          <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs sm:text-sm font-medium">
+            {[1, 2].map((loopIndex) => (
+              <React.Fragment key={loopIndex}>
+                {/* TELEFONE CLICÁVEL */}
+                <a 
+                  href={`tel:${SITE_CONFIG.phoneRaw}`}
+                  onClick={() => trackAnalyticsEvent('phone_click', { location: 'ticker' })}
+                  className="inline-flex items-center gap-2 hover:text-[var(--brand-green-light)] transition cursor-pointer text-slate-200"
+                >
+                  <Phone size={14} className="text-[var(--brand-green)] shrink-0" />
+                  <span><strong>Telefone:</strong> {SITE_CONFIG.phone}</span>
+                </a>
 
-            {/* ENDEREÇO & GPS LINK */}
-            <button
-              onClick={() => setShowAddressModal(true)}
-              className="flex items-center gap-1.5 hover:text-emerald-400 transition text-slate-300 min-h-[36px] px-1 cursor-pointer"
-            >
-              <MapPin size={15} className="text-emerald-400 shrink-0" />
-              <span>Atendimento em Curitiba/PR (Ver Bairros/GPS)</span>
-            </button>
+                <span className="text-slate-700 font-bold">•</span>
 
-            {/* HORÁRIOS */}
-            <div className="hidden lg:flex items-center gap-1.5 text-slate-400">
-              <Clock size={15} className="text-emerald-400 shrink-0" />
-              <span>{SITE_CONFIG.hours.days}: {SITE_CONFIG.hours.period1} | {SITE_CONFIG.hours.period2}</span>
-            </div>
+                {/* ENDEREÇO & GPS CLICÁVEL */}
+                <button
+                  onClick={() => setShowAddressModal(true)}
+                  className="inline-flex items-center gap-2 hover:text-[var(--brand-green-light)] transition text-slate-200 cursor-pointer"
+                >
+                  <MapPin size={14} className="text-[var(--brand-green)] shrink-0" />
+                  <span><strong>Local:</strong> Atendimento Presencial em Curitiba/PR (GPS/Bairros)</span>
+                </button>
+
+                <span className="text-slate-700 font-bold">•</span>
+
+                {/* ITEM DE HERO RECENTEMENTE MOVIDO */}
+                <span className="inline-flex items-center gap-2 text-slate-300">
+                  <ShieldCheck size={14} className="text-[var(--brand-green)] shrink-0" />
+                  <span>Acompanhamento Nutricional Ético & Individualizado</span>
+                </span>
+
+                <span className="text-slate-700 font-bold">•</span>
+
+                {/* DESTAQUE DE DIETAS RESTRITIVAS (REMOVIDO DA HERO) */}
+                <span className="inline-flex items-center gap-2 text-slate-300">
+                  <Sparkles size={14} className="text-[var(--brand-orange)] shrink-0" />
+                  <span>Sem Dietas Restritivas • Plano Adaptado à sua Rotina</span>
+                </span>
+
+                <span className="text-slate-700 font-bold">•</span>
+
+                {/* WHATSAPP SUPORTE CLICÁVEL (REMOVIDO DA HERO) */}
+                <a
+                  href={SITE_CONFIG.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'ticker' })}
+                  className="inline-flex items-center gap-2 text-[var(--brand-green-light)] hover:text-white transition font-bold cursor-pointer"
+                >
+                  <MessageCircle size={14} className="shrink-0" />
+                  <span>Suporte Direto via WhatsApp com Junior Coelho</span>
+                </a>
+
+                <span className="text-slate-700 font-bold">•</span>
+
+                {/* HORÁRIOS */}
+                <span className="inline-flex items-center gap-2 text-slate-400">
+                  <Clock size={14} className="text-[var(--brand-green)] shrink-0" />
+                  <span>{SITE_CONFIG.hours.days}: {SITE_CONFIG.hours.period1} | {SITE_CONFIG.hours.period2}</span>
+                </span>
+
+                <span className="text-slate-700 font-bold">•</span>
+
+                {/* BOTAO ALTO CONTRASTE */}
+                <button
+                  onClick={() => setHighContrast && setHighContrast(!highContrast)}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition cursor-pointer"
+                >
+                  <Eye size={13} />
+                  <span>{highContrast ? "Modo Padrão" : "Alto Contraste"}</span>
+                </button>
+
+                <span className="text-slate-700 font-bold me-4">•</span>
+              </React.Fragment>
+            ))}
           </div>
-
-          {/* ACESSIBILIDADE - MODO FACILITADO PARA IDOSOS */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setHighContrast && setHighContrast(!highContrast)}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border transition min-h-[36px] cursor-pointer ${
-                highContrast 
-                  ? 'bg-yellow-400 text-slate-950 border-yellow-300' 
-                  : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'
-              }`}
-            >
-              <Eye size={14} />
-              <span>{highContrast ? "Modo Padrão" : "Acessibilidade / Alto Contraste"}</span>
-            </button>
-          </div>
-
         </div>
       </div>
 
@@ -113,7 +149,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
             src={SITE_CONFIG.images.logo} 
             alt="Logo Nutricionista Junior Coelho" 
             onError={(e) => { e.currentTarget.src = "/logo-site.png"; }}
-            className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-14 sm:h-18 md:h-20 lg:h-24 max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </button>
 
@@ -169,10 +205,10 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'header_cta' })}
-            className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-2.5 rounded-full font-bold text-sm shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer min-h-[44px]"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-5 py-2.5 rounded-full font-black text-xs sm:text-sm whitespace-nowrap shadow-[0_6px_20px_rgba(121,184,42,0.35)] hover:shadow-[0_8px_25px_rgba(121,184,42,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-95 cursor-pointer min-h-[44px]"
           >
-            <MessageCircle size={18} />
-            <span>Agendar Consulta</span>
+            <MessageCircle size={18} className="shrink-0" />
+            <span className="whitespace-nowrap">Agendar Consulta</span>
           </a>
         </div>
 
@@ -186,63 +222,121 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
         </button>
       </div>
 
-      {/* MENU MOBILE SIMPLIFICADO E ACESSÍVEL */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-slate-950 border-b border-slate-800 px-4 py-5 animate-in fade-in duration-200">
-          <div className="flex flex-col gap-2">
-            {navLinks.map((link) => {
-              const isActive = currentPath === link.path;
-              return (
-                <button
-                  key={link.path}
-                  onClick={() => handleNavClick(link.path)}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold min-h-[48px] flex items-center justify-between transition ${
-                    isActive 
-                      ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' 
-                      : 'text-slate-200 hover:bg-slate-900'
-                  }`}
-                >
-                  <span>{link.name}</span>
-                </button>
-              );
-            })}
+      {/* MENU MOBILE LUXO FULL-SCREEN VIA PORTAL */}
+      {mobileMenuOpen && createPortal(
+        <div className="fixed inset-0 z-[9999] bg-[#050914] overflow-y-auto flex flex-col justify-between p-6 animate-in fade-in duration-200">
+          
+          {/* TOPO DO MENU MOBILE */}
+          <div className="flex items-center justify-between pb-6 border-b border-slate-800/80">
+            <button 
+              onClick={() => handleNavClick('/')}
+              className="flex items-center focus:outline-none"
+            >
+              <img 
+                src={SITE_CONFIG.images.logo} 
+                alt="Logo Junior Coelho" 
+                className="h-12 sm:h-16 w-auto object-contain"
+              />
+            </button>
 
-            {/* SEÇÃO OBJETIVOS MOBILE */}
-            <div className="pt-3 border-t border-slate-800 mt-2">
-              <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider px-2 mb-2">
-                Objetivos & Especialidades
-              </p>
-              <div className="grid grid-cols-1 gap-1">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setHighContrast && setHighContrast(!highContrast)}
+                className="p-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-bold transition flex items-center gap-1.5"
+              >
+                <Eye size={16} />
+                <span className="hidden sm:inline">Alto Contraste</span>
+              </button>
+
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Fechar Menu"
+                className="w-11 h-11 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition cursor-pointer shadow-lg"
+              >
+                <X size={22} />
+              </button>
+            </div>
+          </div>
+
+          {/* LISTA PRINCIPAL DE NAVEGAÇÃO DE ALTO PADRÃO */}
+          <div className="py-8 space-y-6">
+            <div className="space-y-2">
+              <span className="text-[10px] font-mono tracking-widest text-[var(--brand-green-light)] uppercase font-bold">
+                Navegação Principal
+              </span>
+
+              <nav className="grid grid-cols-1 gap-2">
+                {navLinks.map((link, idx) => {
+                  const isActive = currentPath === link.path;
+                  return (
+                    <button
+                      key={link.path}
+                      onClick={() => handleNavClick(link.path)}
+                      className={`w-full text-left py-3.5 px-4 rounded-2xl text-lg font-black transition-all duration-200 flex items-center justify-between cursor-pointer ${
+                        isActive 
+                          ? 'bg-[var(--brand-green)]/15 text-[var(--brand-green-light)] border border-[var(--brand-green)]/30' 
+                          : 'text-slate-100 hover:bg-slate-900/80 hover:text-white'
+                      }`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className="text-xs font-mono text-slate-500 font-bold">0{idx + 1}</span>
+                        <span>{link.name}</span>
+                      </span>
+                      <ChevronDown size={18} className="-rotate-90 text-slate-600" />
+                    </button>
+                  );
+                })}
+              </nav>
+            </div>
+
+            {/* ESPECIALIDADES E OBJETIVOS */}
+            <div className="space-y-3 pt-4 border-t border-slate-800/60">
+              <span className="text-[10px] font-mono tracking-widest text-[var(--brand-orange-light)] uppercase font-bold">
+                Especialidades & Objetivos
+              </span>
+
+              <div className="grid grid-cols-2 gap-2">
                 {objectiveLinks.map((obj) => (
                   <button
                     key={obj.path}
                     onClick={() => handleNavClick(obj.path)}
-                    className="w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900 transition min-h-[44px]"
+                    className="text-left px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 bg-slate-900/60 border border-slate-800 hover:border-[var(--brand-green)]/40 hover:text-white transition cursor-pointer truncate"
                   >
-                    • {obj.name}
+                    {obj.name}
                   </button>
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* CTA WHATSAPP MOBILE */}
+          {/* RODAPÉ DO MENU MOBILE COM BOTAO WHATSAPP LUXO */}
+          <div className="pt-4 border-t border-slate-800/80 space-y-3">
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'mobile_menu_cta' })}
-              className="mt-4 w-full flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-3.5 px-4 rounded-xl text-base shadow-xl min-h-[48px]"
+              className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green-light)] text-slate-950 font-black py-4 px-6 rounded-2xl text-base shadow-2xl transition active:scale-98 cursor-pointer"
             >
-              <MessageCircle size={20} />
-              <span>Falar no WhatsApp com Junior</span>
+              <MessageCircle size={22} />
+              <span>Agendar pelo WhatsApp</span>
             </a>
+
+            <div className="flex items-center justify-between text-xs text-slate-400 px-2 pt-1 font-medium">
+              <span>{SITE_CONFIG.hours.days}</span>
+              <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-[var(--brand-green-light)] font-bold">
+                {SITE_CONFIG.phone}
+              </a>
+            </div>
           </div>
-        </div>
+
+        </div>,
+        document.body
       )}
 
-      {/* MODAL DE ENDEREÇO E BAIRROS COM LINK GPS */}
-      {showAddressModal && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+      {/* MODAL DE ENDEREÇO E BAIRROS COM LINK GPS VIA PORTAL */}
+      {showAddressModal && createPortal(
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
           <div className="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
             <button
               onClick={() => setShowAddressModal(false)}
@@ -300,7 +394,8 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );

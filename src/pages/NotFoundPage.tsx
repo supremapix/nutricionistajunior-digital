@@ -2,6 +2,7 @@ import React from 'react';
 import { Home, ArrowLeft, MessageCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
+import { HeroVideoBg } from '../components/HeroVideoBg';
 
 interface NotFoundPageProps {
   onNavigate: (path: string) => void;
@@ -16,8 +17,9 @@ export function NotFoundPage({ onNavigate }: NotFoundPageProps) {
         path="/404"
       />
 
-      <section className="min-h-[70vh] flex items-center justify-center py-20 bg-slate-950 text-center px-4">
-        <div className="max-w-md space-y-6">
+      <section className="relative overflow-hidden min-h-[70vh] flex items-center justify-center py-20 bg-[#050914] text-center px-4">
+        <HeroVideoBg brightness="brightness-[0.22]" />
+        <div className="max-w-md space-y-6 relative z-10">
           <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 font-black text-2xl flex items-center justify-center mx-auto border border-emerald-500/30">
             404
           </div>

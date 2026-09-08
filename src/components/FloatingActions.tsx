@@ -84,7 +84,7 @@ export function FloatingActions() {
 
   const pageUrl = getCurrentPageUrl();
   const pageTitle = typeof document !== 'undefined' ? document.title : SITE_CONFIG.name;
-  const ogImage = "https://img.supremasite.com.br/nutri/consultoria_fitness_og.jpg";
+  const ogImage = SITE_CONFIG.images.og;
 
   const currentMessageText = SHARE_TEXT_VARIATIONS[activeTextIndex];
   const fullShareText = `${currentMessageText} ${pageUrl}`;
@@ -163,20 +163,19 @@ export function FloatingActions() {
 
   return (
     <>
-      {/* CANTO INFERIOR ESQUERDO: BOTÃO DE COMPARTILHAMENTO FLUTUANTE */}
-      <div className="fixed bottom-5 left-4 sm:left-6 z-50">
+      {/* CANTO INFERIOR ESQUERDO: BOTÃO DE COMPARTILHAMENTO FLUTUANTE COMPACTO */}
+      <div className="fixed bottom-4 left-3 sm:left-4 z-40">
         <div className="relative group">
-          {/* Pulso e Brilho de Fundo */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green-light)] rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+          {/* Pulso de Fundo */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green-light)] rounded-full blur opacity-60 group-hover:opacity-100 transition duration-300"></div>
           
           <button
             id="floating-share-button"
             onClick={() => setShowShareModal(!showShareModal)}
             aria-label="Compartilhar página"
-            className="relative flex items-center gap-2 bg-slate-900 border border-emerald-500/40 text-emerald-400 hover:text-white px-4 py-3 rounded-full shadow-2xl font-semibold text-sm transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+            className="relative w-10 h-10 flex items-center justify-center bg-slate-900 border border-emerald-500/40 text-emerald-400 hover:text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           >
-            <Share2 size={20} className="animate-bounce" />
-            <span className="hidden sm:inline font-bold">Compartilhar</span>
+            <Share2 size={17} />
           </button>
         </div>
 
@@ -282,51 +281,50 @@ export function FloatingActions() {
         )}
       </div>
 
-      {/* CANTO INFERIOR DIREITO: BOTÕES DE CONTATO RÁPIDO E VOLTAR AO TOPO */}
-      <div className="fixed bottom-5 right-4 sm:right-6 z-50 flex flex-col gap-3 items-end">
+      {/* CANTO INFERIOR DIREITO: BOTÕES FLUTUANTES COMPACTOS E DISCRETOS */}
+      <div className="fixed bottom-4 right-3 sm:right-4 z-40 flex flex-col gap-2 items-end">
         {/* BOTÃO VOLTAR AO TOPO */}
         {showBackToTop && (
           <button
             id="back-to-top-button"
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
-            className="bg-slate-800/90 hover:bg-slate-700 backdrop-blur-md border border-slate-600 text-slate-200 hover:text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 active:scale-90 flex items-center justify-center cursor-pointer"
+            className="w-8 h-8 bg-slate-800/90 hover:bg-slate-700 backdrop-blur-md border border-slate-600 text-slate-200 hover:text-white rounded-full shadow-md transition-all duration-300 hover:scale-110 active:scale-90 flex items-center justify-center cursor-pointer"
           >
-            <ArrowUp size={20} />
+            <ArrowUp size={16} />
           </button>
         )}
 
-        {/* BOTÃO LIGAR AGORA */}
+        {/* BOTÃO LIGAR AGORA COMPACTO */}
         <a
           id="floating-phone-button"
           href={`tel:${SITE_CONFIG.phoneRaw}`}
+          aria-label="Ligar por Telefone"
           onClick={() => trackAnalyticsEvent('phone_click', { location: 'floating_action' })}
-          className="group relative flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-3 rounded-full shadow-xl font-bold text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 border border-blue-400/30"
+          className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 border border-blue-400/30"
+          title="Ligar Agora"
         >
-          <PhoneCall size={18} className="animate-pulse shrink-0" />
-          <span className="hidden md:inline">Ligar Agora</span>
+          <PhoneCall size={17} />
         </a>
 
-        {/* BOTÃO WHATSAPP 24H COM LUZ INDICADORA ONLINE */}
+        {/* BOTÃO WHATSAPP COMPACTO COM BOLINHA ONLINE */}
         <a
           id="floating-whatsapp-button"
           href={SITE_CONFIG.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Conversar no WhatsApp"
           onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'floating_action' })}
-          className="group relative flex items-center gap-2.5 bg-gradient-to-r from-[var(--brand-green-dark)] to-[var(--brand-green)] hover:from-[var(--brand-green)] hover:to-[var(--brand-green-light)] text-slate-950 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full shadow-2xl font-black text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 border border-[var(--brand-green-light)]/40"
+          className="relative w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-r from-[var(--brand-green-dark)] to-[var(--brand-green)] text-slate-950 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 border border-[var(--brand-green-light)]/50"
+          title="Falar no WhatsApp"
         >
-          {/* LUZ INDICADORA ONLINE PISCANDO */}
-          <span className="relative flex h-3 w-3">
+          {/* LUZ INDICADORA ONLINE */}
+          <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400 border border-white"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400 border-2 border-slate-950"></span>
           </span>
 
-          <MessageCircle size={20} className="shrink-0 animate-bounce" />
-          <div className="flex flex-col text-left">
-            <span className="font-extrabold text-xs sm:text-sm leading-tight">WhatsApp</span>
-            <span className="text-[10px] text-emerald-100 opacity-90 hidden sm:inline">Online Agora</span>
-          </div>
+          <MessageCircle size={22} className="text-slate-950" />
         </a>
       </div>
     </>
