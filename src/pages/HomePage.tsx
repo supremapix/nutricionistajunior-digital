@@ -492,7 +492,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 Conheça nossos E-books & Guias Nutricionais Práticos
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
-                Aprenda sobre Nutrição & Receitas Fitness, Dieta Inteligente e Cuidados com Tatuagem/Piercing com conteúdos exclusivos.
+                Aprenda sobre Nutrição & Performance, Receitas Fitness, Dieta Inteligente e Cuidados com Tatuagem/Piercing com conteúdos exclusivos.
               </p>
             </div>
 

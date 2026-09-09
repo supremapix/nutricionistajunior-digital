@@ -151,7 +151,7 @@ export function EnhancedSEO({
 
       {/* Resource Hints & Font Optimization */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://img.supremasite.com.br" />
 
       {/* Local SEO Geo Tags */}

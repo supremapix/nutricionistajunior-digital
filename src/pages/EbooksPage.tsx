@@ -54,6 +54,22 @@ export function EbooksPage() {
         'Aprenda a fazer compras eficientes no supermercado'
       ],
       tag: 'Recomendado'
+    },
+    {
+      id: 'nutricao-e-performance',
+      title: 'Nutrição e Performance',
+      subtitle: 'Estratégias Nutricionais para Treinos de Alta Intensidade & Recuperação',
+      price: 'Hotmart Marketplace',
+      image: 'https://img.supremasite.com.br/nutri/nutri-performance-junior-coelho-nutricionista.webp',
+      link: 'https://hotmart.com/pt-br/marketplace/produtos/nutricao-e-performance/M107532418F',
+      description: 'Guia completo desenvolvido pelo Nutricionista Junior Coelho focado na otimização da performance esportiva, recuperação muscular acelerada, hidratação estratégica e uso eficiente de suplementação para atletas e praticantes de atividade física.',
+      highlights: [
+        'Nutrição pré, intra e pós-treino para energia e rendimento máximo',
+        'Estratégias de hidratação e reposição de eletrólitos',
+        'Guia prático sobre suplementação alimentar e ergogênicos',
+        'Aceleração da recuperação muscular e prevenção de lesões'
+      ],
+      tag: 'Alta Performance'
     }
   ];
 
