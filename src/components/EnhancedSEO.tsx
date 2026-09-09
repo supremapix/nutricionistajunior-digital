@@ -27,18 +27,18 @@ export function EnhancedSEO({
   articleData
 }: EnhancedSEOProps) {
   const pageTitle = title.includes('Junior Coelho') ? title : `${title} | Nutricionista Junior Coelho (CRN 8-13752)`;
-  const currentCanonical = canonicalUrl || `https://nutricionistajuniorcoelho.com.br${path || ''}`;
+  const currentCanonical = canonicalUrl || `https://www.nutricionistajunior.digital${path || ''}`;
 
   // Structured Data Schema: Physician / MedicalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "@id": "https://nutricionistajuniorcoelho.com.br/#physician",
+    "@id": "https://www.nutricionistajunior.digital/#physician",
     "name": "Nutricionista Junior Coelho",
     "image": SITE_CONFIG.images.og,
     "telephone": SITE_CONFIG.phone,
     "email": SITE_CONFIG.email,
-    "url": "https://nutricionistajuniorcoelho.com.br",
+    "url": "https://www.nutricionistajunior.digital",
     "priceRange": "$$",
     "medicalSpecialty": [
       "Dietetics",
@@ -88,7 +88,7 @@ export function EnhancedSEO({
         "@type": "ListItem",
         "position": 1,
         "name": "Início",
-        "item": "https://nutricionistajuniorcoelho.com.br"
+        "item": "https://www.nutricionistajunior.digital"
       },
       ...(path && path !== '/' ? [
         {

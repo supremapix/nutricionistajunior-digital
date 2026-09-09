@@ -91,7 +91,16 @@ export type AnalyticsEventName =
   | 'contact_form_submit'
   | 'share_copied'
   | 'share_platform_click'
-  | 'ebook_click';
+  | 'ebook_click'
+  | 'click_whatsapp'
+  | 'click_agendamento'
+  | 'click_site'
+  | 'click_ebooks'
+  | 'click_google_review'
+  | 'click_instagram'
+  | 'click_phone'
+  | 'click_location'
+  | 'click_qrcode';
 
 export function trackAnalyticsEvent(eventName: AnalyticsEventName, details?: Record<string, any>) {
   if (typeof window !== 'undefined') {

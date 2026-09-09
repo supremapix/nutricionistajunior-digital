@@ -4,45 +4,53 @@
   
   <!-- Página Inicial -->
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/</loc>
+    <loc>https://www.nutricionistajunior.digital/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Página de Links Oficiais / Linktree -->
+  <url>
+    <loc>https://www.nutricionistajunior.digital/links</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- Páginas Institucionais & Atendimento -->
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/sobre</loc>
+    <loc>https://www.nutricionistajunior.digital/sobre</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/acompanhamento-nutricional</loc>
+    <loc>https://www.nutricionistajunior.digital/acompanhamento-nutricional</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/como-funciona</loc>
+    <loc>https://www.nutricionistajunior.digital/como-funciona</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/atendimento</loc>
+    <loc>https://www.nutricionistajunior.digital/atendimento</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/contato</loc>
+    <loc>https://www.nutricionistajunior.digital/contato</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/politica-de-privacidade</loc>
+    <loc>https://www.nutricionistajunior.digital/politica-de-privacidade</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -50,31 +58,31 @@
 
   <!-- Páginas por Objetivo Nutricional -->
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/emagrecimento</loc>
+    <loc>https://www.nutricionistajunior.digital/emagrecimento</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/reeducacao-alimentar</loc>
+    <loc>https://www.nutricionistajunior.digital/reeducacao-alimentar</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/ganho-de-massa-muscular</loc>
+    <loc>https://www.nutricionistajunior.digital/ganho-de-massa-muscular</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/performance</loc>
+    <loc>https://www.nutricionistajunior.digital/performance</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/qualidade-de-vida</loc>
+    <loc>https://www.nutricionistajunior.digital/qualidade-de-vida</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -82,13 +90,13 @@
 
   <!-- E-books & Conteúdos -->
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/ebooks</loc>
+    <loc>https://www.nutricionistajunior.digital/ebooks</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/conteudos</loc>
+    <loc>https://www.nutricionistajunior.digital/conteudos</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -96,61 +104,61 @@
 
   <!-- Páginas SEO de Bairros em Curitiba -->
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-xaxim-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-xaxim-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-portao-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-portao-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-agua-verde-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-agua-verde-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-boqueirao-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-boqueirao-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-hauer-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-hauer-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-capao-raso-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-capao-raso-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-santa-quiteria-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-santa-quiteria-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-fanny-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-fanny-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-novo-mundo-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-novo-mundo-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nutricionistajuniorcoelho.com.br/nutricionista-em-sitio-cercado-curitiba</loc>
+    <loc>https://www.nutricionistajunior.digital/nutricionista-em-sitio-cercado-curitiba</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

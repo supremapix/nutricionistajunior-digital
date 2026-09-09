@@ -17,7 +17,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
     slug: normalizedSlug,
     name: normalizedSlug.charAt(0).toUpperCase() + normalizedSlug.slice(1).replace(/-/g, ' '),
     fullName: `Nutricionista em ${normalizedSlug.charAt(0).toUpperCase() + normalizedSlug.slice(1).replace(/-/g, ' ')} - Curitiba/PR`,
-    canonicalUrl: `https://nutricionistajuniorcoelho.com.br/nutricionista-em-${normalizedSlug}-curitiba`,
+    canonicalUrl: `https://www.nutricionistajunior.digital/nutricionista-em-${normalizedSlug}-curitiba`,
     altUrl: `/atendimento/${normalizedSlug}`,
     description: `Acompanhamento nutricional focado em emagrecimento, reeducação alimentar e ganho de massa muscular no bairro ${normalizedSlug} em Curitiba. Agende com o Nutricionista Junior Coelho (CRN 8-13752).`,
     heroHeadline: `Nutricionista no Bairro ${normalizedSlug.charAt(0).toUpperCase() + normalizedSlug.slice(1).replace(/-/g, ' ')} – Curitiba`,

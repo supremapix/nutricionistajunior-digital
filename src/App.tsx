@@ -18,6 +18,7 @@ import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { ContactPage } from './pages/ContactPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { EbooksPage } from './pages/EbooksPage';
+import { LinksPage } from './pages/LinksPage';
 import { NeighborhoodPage } from './pages/NeighborhoodPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -39,10 +40,15 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const isLinksPage = currentPath.toLowerCase() === '/links' || currentPath.toLowerCase() === '/links/';
+
   // Render correct page view based on path
   const renderCurrentView = () => {
     const path = currentPath.toLowerCase();
 
+    if (path === '/links' || path === '/links/') {
+      return <LinksPage onNavigate={handleNavigate} />;
+    }
     if (path === '/' || path === '') {
       return <HomePage onNavigate={handleNavigate} />;
     }
@@ -105,6 +111,16 @@ export default function App() {
 
     return <NotFoundPage onNavigate={handleNavigate} />;
   };
+
+  if (isLinksPage) {
+    return (
+      <div className="min-h-screen bg-[#050914] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+        <main className="flex-1">
+          <LinksPage onNavigate={handleNavigate} />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">

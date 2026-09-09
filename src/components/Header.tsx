@@ -41,7 +41,8 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
     { name: "Sobre", path: "/sobre" },
     { name: "Como Funciona", path: "/como-funciona" },
     { name: "Conteúdos", path: "/conteudos" },
-    { name: "Contato", path: "/contato" }
+    { name: "Contato", path: "/contato" },
+    { name: "Links", path: "/links" }
   ];
 
   const objectiveLinks = [

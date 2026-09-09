@@ -79,7 +79,7 @@ export function FloatingActions() {
     if (typeof window !== 'undefined') {
       return window.location.href;
     }
-    return "https://nutricionistajuniorcoelho.com.br";
+    return "https://www.nutricionistajunior.digital";
   };
 
   const pageUrl = getCurrentPageUrl();
@@ -206,7 +206,7 @@ export function FloatingActions() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
               <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] text-slate-200">
-                <span className="font-bold text-emerald-400 truncate">nutricionistajuniorcoelho.com.br</span>
+                <span className="font-bold text-emerald-400 truncate">www.nutricionistajunior.digital</span>
                 <span className="bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 px-1.5 py-0.5 rounded">OG Card</span>
               </div>
             </div>

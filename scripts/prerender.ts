@@ -81,12 +81,12 @@ async function runPrerender() {
     const localBusinessSchema = {
       "@context": "https://schema.org",
       "@type": "Physician",
-      "@id": "https://nutricionistajuniorcoelho.com.br/#physician",
+      "@id": "https://www.nutricionistajunior.digital/#physician",
       "name": "Nutricionista Junior Coelho",
       "image": "https://img.supremasite.com.br/nutri/og-card.webp",
       "telephone": "(41) 99789-9045",
       "email": "nutricionistajuniorcoelho@gmail.com",
-      "url": "https://nutricionistajuniorcoelho.com.br",
+      "url": "https://www.nutricionistajunior.digital",
       "priceRange": "$$",
       "medicalSpecialty": ["Dietetics", "SportsNutrition", "WeightManagement"],
       "address": {
@@ -124,7 +124,7 @@ async function runPrerender() {
           "@type": "ListItem",
           "position": 1,
           "name": "Início",
-          "item": "https://nutricionistajuniorcoelho.com.br"
+          "item": "https://www.nutricionistajunior.digital"
         },
         ...(route.path !== '/' ? [
           {

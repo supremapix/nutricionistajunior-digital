@@ -152,6 +152,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 { name: "Evolução & Metas Éticas", path: "/evolucao" },
                 { name: "Conteúdos & Artigos", path: "/conteudos" },
                 { name: "Locais de Atendimento", path: "/atendimento" },
+                { name: "Links Oficiais", path: "/links" },
                 { name: "Contato Direto", path: "/contato" }
               ].map((link) => (
                 <li key={link.path}>

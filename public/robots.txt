@@ -20,4 +20,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://nutricionistajuniorcoelho.com.br/sitemap.xml
+Sitemap: https://www.nutricionistajunior.digital/sitemap.xml

@@ -2,7 +2,7 @@ export interface NeighborhoodInfo {
   slug: string; // e.g. "xaxim"
   name: string; // e.g. "Xaxim"
   fullName: string; // e.g. "Nutricionista em Xaxim - Curitiba/PR"
-  canonicalUrl: string; // e.g. "https://nutricionistajuniorcoelho.com.br/nutricionista-em-xaxim-curitiba"
+  canonicalUrl: string; // e.g. "https://www.nutricionistajunior.digital/nutricionista-em-xaxim-curitiba"
   altUrl: string; // e.g. "/atendimento/xaxim"
   description: string;
   heroHeadline: string;
@@ -18,7 +18,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'xaxim',
     name: 'Xaxim',
     fullName: 'Nutricionista no Bairro Xaxim em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-xaxim-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-xaxim-curitiba',
     altUrl: '/atendimento/xaxim',
     description: 'Acompanhamento nutricional focado em emagrecimento, reeducação alimentar e ganho de massa no bairro Xaxim e região em Curitiba/PR. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Xaxim – Curitiba',
@@ -41,7 +41,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'portao',
     name: 'Portão',
     fullName: 'Nutricionista no Bairro Portão em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-portao-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-portao-curitiba',
     altUrl: '/atendimento/portao',
     description: 'Atendimento nutricional presencial e online no bairro Portão em Curitiba. Emagrecimento, reeducação alimentar e hipertrofia com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Portão – Curitiba',
@@ -60,7 +60,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'agua-verde',
     name: 'Água Verde',
     fullName: 'Nutricionista no Bairro Água Verde em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-agua-verde-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-agua-verde-curitiba',
     altUrl: '/atendimento/agua-verde',
     description: 'Nutricionista no Água Verde em Curitiba. Planos alimentares personalizados para emagrecimento, ganho de massa e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Água Verde – Curitiba',
@@ -79,7 +79,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'boqueirao',
     name: 'Boqueirão',
     fullName: 'Nutricionista no Bairro Boqueirão em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-boqueirao-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-boqueirao-curitiba',
     altUrl: '/atendimento/boqueirao',
     description: 'Atendimento com nutricionista no Boqueirão em Curitiba. Consultas para emagrecimento, hipertrofia e reeducação alimentar com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Boqueirão – Curitiba',
@@ -98,7 +98,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'hauer',
     name: 'Hauer',
     fullName: 'Nutricionista no Bairro Hauer em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-hauer-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-hauer-curitiba',
     altUrl: '/atendimento/hauer',
     description: 'Nutricionista no Hauer, Curitiba. Emagrecimento, reeducação e plano alimentar sob medida com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Hauer – Curitiba',
@@ -117,7 +117,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'capao-raso',
     name: 'Capão Raso',
     fullName: 'Nutricionista no Bairro Capão Raso em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-capao-raso-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-capao-raso-curitiba',
     altUrl: '/atendimento/capao-raso',
     description: 'Atendimento nutricional especializado no Capão Raso em Curitiba. Consultas para emagrecer com saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Capão Raso – Curitiba',
@@ -136,7 +136,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'santa-quiteria',
     name: 'Santa Quitéria',
     fullName: 'Nutricionista no Bairro Santa Quitéria em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-santa-quiteria-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-santa-quiteria-curitiba',
     altUrl: '/atendimento/santa-quiteria',
     description: 'Acompanhamento nutricional no bairro Santa Quitéria em Curitiba. Reeducação alimentar e alta performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Santa Quitéria – Curitiba',
@@ -155,7 +155,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'fanny',
     name: 'Vila Fanny',
     fullName: 'Nutricionista na Vila Fanny em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-fanny-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-fanny-curitiba',
     altUrl: '/atendimento/fanny',
     description: 'Nutricionista na Vila Fanny em Curitiba. Emagrecimento, reeducação e nutrição esportiva com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista na Vila Fanny – Curitiba',
@@ -174,7 +174,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'novo-mundo',
     name: 'Novo Mundo',
     fullName: 'Nutricionista no Bairro Novo Mundo em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-novo-mundo-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-novo-mundo-curitiba',
     altUrl: '/atendimento/novo-mundo',
     description: 'Consulta com nutricionista no Novo Mundo em Curitiba. Foco em emagrecimento, massa muscular e hábitos saudáveis com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Novo Mundo – Curitiba',
@@ -193,7 +193,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     slug: 'sitio-cercado',
     name: 'Sítio Cercado',
     fullName: 'Nutricionista no Bairro Sítio Cercado em Curitiba',
-    canonicalUrl: 'https://nutricionistajuniorcoelho.com.br/nutricionista-em-sitio-cercado-curitiba',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-sitio-cercado-curitiba',
     altUrl: '/atendimento/sitio-cercado',
     description: 'Atendimento nutricional acessível e prático no Sítio Cercado em Curitiba. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista no Bairro Sítio Cercado – Curitiba',
