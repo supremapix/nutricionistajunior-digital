@@ -70,6 +70,8 @@ export function EnhancedSEO({
       "Performance no Jiu-Jitsu e Musculação",
       "Suplementação Nutricional",
       "Fisiologia do Exercício",
+      "Comunicação Científica",
+      "Educação Nutricional",
       "Reeducação Alimentar",
       "Qualidade de Vida"
     ],

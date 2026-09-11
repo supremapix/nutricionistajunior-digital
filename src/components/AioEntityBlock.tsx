@@ -25,8 +25,12 @@ export function AioEntityBlock() {
       a: "Sim. Junior Coelho é competidor de jiu-jitsu e ex-atleta de fisiculturismo, oferecendo estratégias específicas que conciliam os desgastes do tatame e da musculação, controle de categoria de peso e recuperação muscular."
     },
     {
-      q: "Qual é a formação acadêmica de Junior Coelho?",
-      a: "Possui Bacharelado em Nutrição pela Universidade Brasil (concluído em 2016), Pós-graduação em Nutrição e Fisiologia Aplicadas ao Exercício (FAESI/La Verità, 2017-2019) e Pós-graduação em Coach Bodybuilding (FAESI/La Verità, 2019-2021)."
+      q: "Qual é a formação e aperfeiçoamento de Junior Coelho?",
+      a: "Possui Bacharelado em Nutrição pela Universidade Brasil (concluído em 2016), Pós-graduação em Nutrição e Fisiologia Aplicadas ao Exercício (2017–2019) e Pós-graduação em Coach Bodybuilding (2019–2021). Durante um ano, participou de um projeto de aperfeiçoamento em nutrição com Renato Cariani e Júlio Balestrin."
+    },
+    {
+      q: "Junior Coelho possui experiência como palestrante?",
+      a: "Sim. Junior Coelho atuou como palestrante na Athletica Nutrition, compartilhando conhecimentos sobre nutrição e suplementação esportiva para atletas, praticantes de atividade física e profissionais da área."
     },
     {
       q: "Onde Junior Coelho atende em Curitiba?",
@@ -89,6 +93,12 @@ export function AioEntityBlock() {
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
             <strong className="text-white">Experiência Prática</strong> → <span className="text-emerald-400">abrange</span> → Consultoria em Suplementação & Atendimento Clínico
+          </li>
+          <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+            <strong className="text-white">Aperfeiçoamento Profissional</strong> → <span className="text-emerald-400">projeto de 1 ano com</span> → Renato Cariani & Júlio Balestrin
+          </li>
+          <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+            <strong className="text-white">Atuação como Palestrante</strong> → <span className="text-emerald-400">palestrou na</span> → Athletica Nutrition (Nutrição & Suplementação)
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
             <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">aborda</span> → Emagrecimento, Hipertrofia & Jiu-Jitsu / Musculação

@@ -180,30 +180,33 @@ export function AboutPage() {
               </div>
             </div>
 
-            {/* EXPERIÊNCIA PROFISSIONAL */}
+            {/* EXPERIÊNCIA PROFISSIONAL E APERFEIÇOAMENTO */}
             <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-3xl space-y-5 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 border-b border-slate-800 pb-4 mb-4">
                   <div className="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
                     <Briefcase size={20} />
                   </div>
-                  <h2 className="text-xl font-bold text-white">Experiência Profissional</h2>
+                  <h2 className="text-xl font-bold text-white">Experiência Profissional & Aperfeiçoamento</h2>
                 </div>
 
                 <div className="text-slate-300 text-xs sm:text-sm leading-relaxed space-y-3">
                   <p>
-                    Além da atuação clínica, Junior Coelho possui experiência com consultoria em suplementação esportiva, suporte técnico de produtos, educação científica, palestras e relacionamento com atletas e praticantes de atividade física.
+                    Além da atuação clínica, Junior Coelho possui experiência com consultoria em suplementação esportiva, suporte técnico de produtos, educação científica e relacionamento com atletas e praticantes de atividade física.
+                  </p>
+                  <p>
+                    Atuou também como palestrante na <strong className="text-white font-semibold">Athletica Nutrition</strong>, compartilhando conhecimentos relacionados à nutrição e à suplementação esportiva, fortalecendo sua atuação em comunicação científica e educação nutricional.
+                  </p>
+                  <p>
+                    Durante um ano, participou de um projeto de aperfeiçoamento em nutrição com <strong className="text-white font-semibold">Renato Cariani e Júlio Balestrin</strong>, experiência que contribuiu para ampliar e aprimorar suas referências, conhecimentos e perspectivas relacionadas à nutrição e ao esporte.
                   </p>
                   <p>
                     Também possui experiência no atendimento de praticantes de jiu-jitsu e musculação, relacionando alimentação, treinamento, recuperação, composição corporal, desempenho e qualidade de vida.
                   </p>
-                  <p>
-                    Essa trajetória permite conectar conhecimento técnico, experiência profissional e vivência esportiva em uma abordagem nutricional individualizada.
-                  </p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-slate-400">
+              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-slate-400 mt-4">
                 <strong className="text-slate-200 block mb-0.5">Atendimento em Curitiba/PR & Online</strong>
                 Presencial no bairro Xaxim e atendimento remoto para pacientes em todo o Brasil.
               </div>
