@@ -77,6 +77,7 @@ export interface SiteConfig {
     heroVideo?: string;
     sectionsBg: string;
     consulting: string;
+    profile?: string;
     accompaniment?: string;
     about: string;
   };

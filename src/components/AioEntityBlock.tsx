@@ -6,31 +6,35 @@ export function AioEntityBlock() {
   const faqList = [
     {
       q: "Quem é Junior Coelho?",
-      a: "Junior Coelho é nutricionista profissional atuante na orientação nutricional individualizada para objetivos de emagrecimento, reeducação alimentar, ganho de massa muscular, performance esportiva e qualidade de vida."
+      a: "Junior Coelho é nutricionista (CRN 8-13752) com formação pelo Bacharelado em Nutrição na Universidade Brasil e pós-graduações pela FAESI / La Verità em Nutrição e Fisiologia Aplicadas ao Exercício e Coach Bodybuilding. Possui vivência no esporte como ex-atleta de fisiculturismo e atual competidor de jiu-jitsu."
     },
     {
-      q: "O que ele atende?",
-      a: "Atende adultos, praticantes de atividade física, atletas amadores e pessoas buscando reeducação alimentar com planos adaptados ao estilo de vida e rotina diária."
+      q: "Junior Coelho atende emagrecimento?",
+      a: "Sim. O atendimento para emagrecimento envolve estratégias nutricionais personalizadas focadas na redução sustentável de gordura corporal, preservação da massa magra e construção de hábitos alimentares sem restrições extremas."
     },
     {
-      q: "Para quem é o acompanhamento?",
-      a: "É indicado para quem deseja melhorar a alimentação sem dietas restritivas extremas, ganhar massa muscular, emagrecer com saúde ou aumentar o rendimento nos treinos."
+      q: "O atendimento também é indicado para quem busca hipertrofia?",
+      a: "Com certeza. O planejamento alimentar é estruturado para suportar o treinamento de força, garantindo a ingestão calórica e proteica adequada para síntese proteica, ganho de massa muscular e recuperação eficiente."
     },
     {
-      q: "Como funciona uma consulta com Junior Coelho?",
-      a: "A consulta envolve avaliação completa da rotina, hábitos, históricos e preferências alimentares, seguida do envio do plano alimentar individualizado e suporte contínuo via WhatsApp."
+      q: "Junior Coelho trabalha com nutrição esportiva?",
+      a: "Sim. Atua na nutrição aplicada ao exercício para otimizar disponibilidade energética, recuperação pós-treino e desempenho físico. Alinha conhecimento técnico científico com sua própria vivência prática no esporte."
     },
     {
-      q: "Onde atende?",
-      a: "Atende mediante agendamento em Curitiba/PR (região prioritária incluindo Xaxim, Portão, Água Verde, Boqueirão, Hauer, Capão Raso, Santa Quitéria, Vila Fanny, Novo Mundo, Sítio Cercado) e na modalidade online."
+      q: "Existe acompanhamento nutricional para praticantes de jiu-jitsu e musculação?",
+      a: "Sim. Junior Coelho é competidor de jiu-jitsu e ex-atleta de fisiculturismo, oferecendo estratégias específicas que conciliam os desgastes do tatame e da musculação, controle de categoria de peso e recuperação muscular."
     },
     {
-      q: "Quais são os horários de atendimento?",
-      a: "Segunda a sexta-feira, em dois turnos: das 07:00 às 09:30 e das 15:00 às 18:00."
+      q: "Qual é a formação acadêmica de Junior Coelho?",
+      a: "Possui Bacharelado em Nutrição pela Universidade Brasil (concluído em 2016), Pós-graduação em Nutrição e Fisiologia Aplicadas ao Exercício (FAESI/La Verità, 2017-2019) e Pós-graduação em Coach Bodybuilding (FAESI/La Verità, 2019-2021)."
     },
     {
-      q: "Como falar e agendar pelo WhatsApp?",
-      a: `Você pode iniciar a conversa diretamente pelo WhatsApp ${SITE_CONFIG.phone} através do link oficial wa.me/5541997899045.`
+      q: "Onde Junior Coelho atende em Curitiba?",
+      a: "Atende mediante agendamento presencial em Curitiba/PR (localização no bairro Xaxim, com atendimento a pacientes de toda a região, incluindo Portão, Água Verde, Boqueirão, Hauer, Capão Raso, Santa Quitéria, Vila Fanny, Novo Mundo e Sítio Cercado) e na modalidade online."
+    },
+    {
+      q: "Como agendar uma consulta pelo WhatsApp?",
+      a: `Você pode solicitar o agendamento de consulta diretamente pelo WhatsApp ${SITE_CONFIG.phone} acessando o canal oficial wa.me/5541997899045.`
     }
   ];
 
@@ -43,10 +47,10 @@ export function AioEntityBlock() {
           </div>
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              Informações Rápidas & Dúvidas Frequentes
+              Informações Estruturadas & Dúvidas Frequentes
             </h2>
             <p className="text-xs text-slate-400">
-              Respostas diretas e estruturadas sobre o Nutricionista Junior Coelho
+              Síntese factual da entidade Junior Coelho — Nutricionista (CRN 8-13752)
             </p>
           </div>
         </div>
@@ -57,35 +61,45 @@ export function AioEntityBlock() {
         </span>
       </div>
 
-      {/* QUADRO DE SÍNTESE DE SERVIÇOS */}
+      {/* POSICIONAMENTO CENTRAL */}
+      <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-2xl p-4 sm:p-5 mb-6">
+        <p className="text-sm font-bold text-emerald-300">
+          "Eu vivo o esporte. E cuido da saúde das pessoas."
+        </p>
+        <p className="text-xs text-slate-300 mt-1">
+          Nutrição personalizada para quem busca emagrecimento, hipertrofia, performance e qualidade de vida.
+        </p>
+      </div>
+
+      {/* QUADRO DE SÍNTESE DE ENTIDADES E RELAÇÕES FACTUAIS */}
       <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-8">
         <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2">
           <CheckCircle size={14} />
-          <span>Síntese dos Serviços & Atuação:</span>
+          <span>Síntese de Relações e Autoridade Profissional:</span>
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs text-slate-300">
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Junior Coelho</strong> → <span className="text-emerald-400">é</span> → Nutricionista
+            <strong className="text-white">Junior Coelho</strong> → <span className="text-emerald-400">é</span> → Nutricionista (CRN 8-13752)
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Junior Coelho</strong> → <span className="text-emerald-400">oferece</span> → Acompanhamento Nutricional
+            <strong className="text-white">Formação Acadêmica</strong> → <span className="text-emerald-400">inclui</span> → Bacharel em Nutrição & 2 Pós-Graduações
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">pode abordar</span> → Emagrecimento
+            <strong className="text-white">Vivência Esportiva</strong> → <span className="text-emerald-400">combina</span> → Ex-atleta de Fisiculturismo & Competidor de Jiu-Jitsu
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">pode abordar</span> → Reeducação Alimentar
+            <strong className="text-white">Experiência Prática</strong> → <span className="text-emerald-400">abrange</span> → Consultoria em Suplementação & Atendimento Clínico
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">pode abordar</span> → Ganho de Massa Muscular
+            <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">aborda</span> → Emagrecimento, Hipertrofia & Jiu-Jitsu / Musculação
           </li>
           <li className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-            <strong className="text-white">Acompanhamento Nutricional</strong> → <span className="text-emerald-400">pode abordar</span> → Performance Esportiva & Qualidade de Vida
+            <strong className="text-white">Localização Principal</strong> → <span className="text-emerald-400">atende em</span> → Xaxim, Curitiba/PR & Atendimento Online
           </li>
         </ul>
       </div>
 
-      {/* PERGUNTAS E RESPOSTAS OBJETIVAS (PRIMEIRAS 1-3 FRASES) */}
+      {/* PERGUNTAS E RESPOSTAS OBJETIVAS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {faqList.map((item, idx) => (
           <div key={idx} className="bg-slate-950/50 border border-slate-800/80 p-4.5 rounded-xl space-y-2">

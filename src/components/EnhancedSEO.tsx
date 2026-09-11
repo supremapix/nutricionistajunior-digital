@@ -29,6 +29,59 @@ export function EnhancedSEO({
   const pageTitle = title.includes('Junior Coelho') ? title : `${title} | Nutricionista Junior Coelho (CRN 8-13752)`;
   const currentCanonical = canonicalUrl || `https://www.nutricionistajunior.digital${path || ''}`;
 
+  // Structured Data Schema: Person (Entity Junior Coelho)
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.nutricionistajunior.digital/#person",
+    "name": "Junior Coelho",
+    "jobTitle": "Nutricionista CRN 8-13752",
+    "description": "Nutricionista especialista em Nutrição Esportiva, Emagrecimento, Hipertrofia e Performance. Ex-atleta de fisiculturismo e atual competidor de jiu-jitsu.",
+    "url": "https://www.nutricionistajunior.digital",
+    "image": SITE_CONFIG.images.og,
+    "telephone": SITE_CONFIG.phone,
+    "email": SITE_CONFIG.email,
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "CRN",
+      "value": SITE_CONFIG.crn
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Universidade Brasil",
+        "description": "Bacharelado em Nutrição (Conclusão: 21 de dezembro de 2016)"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "FAESI / Instituto de Pós-Graduação La Verità Ltda.",
+        "description": "Pós-graduação em Nutrição e Fisiologia Aplicadas ao Exercício (2017–2019)"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "FAESI / Instituto de Pós-Graduação La Verità Ltda.",
+        "description": "Pós-graduação em Coach Bodybuilding (2019–2021)"
+      }
+    ],
+    "knowsAbout": [
+      "Nutrição Esportiva",
+      "Emagrecimento Sustentável",
+      "Hipertrofia Muscular",
+      "Performance no Jiu-Jitsu e Musculação",
+      "Suplementação Nutricional",
+      "Fisiologia do Exercício",
+      "Reeducação Alimentar",
+      "Qualidade de Vida"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": SITE_CONFIG.address.street,
+      "addressLocality": SITE_CONFIG.address.city,
+      "addressRegion": SITE_CONFIG.address.state,
+      "addressCountry": "BR"
+    }
+  };
+
   // Structured Data Schema: Physician / MedicalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -45,6 +98,16 @@ export function EnhancedSEO({
       "SportsNutrition",
       "WeightManagement"
     ],
+    "physicianSpecialty": [
+      "Nutrição Esportiva",
+      "Emagrecimento e Reeducação Alimentar",
+      "Hipertrofia Muscular",
+      "Nutrição para Artes Marciais e Musculação"
+    ],
+    "founder": {
+      "@type": "Person",
+      "@id": "https://www.nutricionistajunior.digital/#person"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": SITE_CONFIG.address.street,
@@ -178,6 +241,7 @@ export function EnhancedSEO({
       <meta name="twitter:image" content={image} />
 
       {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}

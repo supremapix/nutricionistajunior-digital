@@ -5,8 +5,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: "emagrecimento",
     slug: "emagrecimento",
     title: "Emagrecimento com Reeducação e Respeito à sua Rotina",
-    shortDesc: "Acompanhamento individualizado focado na redução sustentável de gordura corporal, sem dietas extremamente restritivas.",
-    fullDesc: "O acompanhamento para emagrecimento do Nutricionista Junior Coelho é construído a partir de uma análise minuciosa dos seus hábitos atuais, histórico de saúde, nível de atividade física e preferências alimentares. O objetivo é promover o déficit calórico adequado sem comprometer sua energia, massa magra ou bem-estar.",
+    shortDesc: "Estratégias nutricionais personalizadas para redução de gordura corporal, melhora da composição corporal e construção de hábitos alimentares sustentáveis.",
+    fullDesc: "O acompanhamento para emagrecimento do Nutricionista Junior Coelho é construído a partir de uma análise minuciosa dos seus hábitos atuais, histórico de saúde, nível de atividade física e preferências alimentares. O objetivo é promover a redução de gordura corporal de forma sustentável, preservando a massa magra e o bem-estar.",
     iconName: "Flame",
     targetAudience: [
       "Pessoas que tentaram dietas restritivas e sofreram com efeito sanfona.",
@@ -50,19 +50,19 @@ export const SERVICES_DATA: ServiceItem[] = [
   {
     id: "ganho-de-massa-muscular",
     slug: "ganho-de-massa-muscular",
-    title: "Ganho de Massa Muscular e Hipertrofia",
-    shortDesc: "Estratégia nutricional focada na síntese proteica, superávit calórico controlado e recuperação muscular eficiente.",
-    fullDesc: "O ganho de massa muscular exige precisão. Não basta comer mais; é fundamental alinhar a ingestão de proteínas, carboidratos e micronutrientes com a intensidade e o volume do seu treinamento físico.",
+    title: "Hipertrofia e Ganho de Massa Muscular",
+    shortDesc: "Planejamento alimentar voltado ao suporte do treinamento de força, síntese proteica, recuperação e desenvolvimento da massa muscular.",
+    fullDesc: "O ganho de massa muscular exige precisão. Não basta comer mais; é fundamental alinhar a ingestão de proteínas, carboidratos e micronutrientes com a intensidade, o volume do seu treinamento físico e seu descanso.",
     iconName: "Dumbbell",
     targetAudience: [
-      "Praticantes de musculação que buscam ganho de volume limpo.",
+      "Praticantes de musculação que buscam ganho de volume magro.",
       "Pessoas com dificuldade de ganho de peso e hipertrofia.",
-      "Atletas amadores que precisam otimizar a recuperação pós-treino."
+      "Atletas e praticantes que precisam otimizar a recuperação pós-treino."
     ],
     howItWorks: [
       "Ajuste fino de carboidratos e proteínas em horários estratégicos.",
       "Cálculo exato da ingestão energética diária conforme gasto no treino.",
-      "Análise de biomarcadores e sinergia entre alimentação e treino."
+      "Sinergia entre alimentação, periodização de treino e recuperação."
     ],
     benefits: [
       "Maximização dos ganhos do treino de força.",
@@ -73,37 +73,83 @@ export const SERVICES_DATA: ServiceItem[] = [
   {
     id: "performance",
     slug: "performance",
-    title: "Nutrição e Performance Esportiva",
-    shortDesc: "Potencialize seus treinos, resistência e rendimento através da nutrição focada em energia e eficiência fisiológica.",
-    fullDesc: "Para quem treina com metas de desempenho — corrida, ciclismo, CrossFit, lutas ou treinos de alta intensidade — a nutrição é o combustível decisivo. Junior Coelho desenvolve protocolos nutricionais alinhados aos ciclos de treino e competição.",
+    title: "Performance Esportiva",
+    shortDesc: "Nutrição aplicada ao exercício com estratégias relacionadas à disponibilidade energética, recuperação rápida e desempenho sob estresse físico.",
+    fullDesc: "Para quem treina com metas de desempenho — corridas, modalidades de alta intensidade, lutas ou treinos exigentes — a nutrição é o combustível decisivo. Junior Coelho desenvolve protocolos nutricionais alinhados aos ciclos de treino e competição.",
     iconName: "Zap",
     targetAudience: [
-      "Corredores, ciclistas, praticantes de CrossFit e esportistas.",
-      "Quem busca superar marcas pessoais e evitar queda de rendimento.",
-      "Atletas que precisam de estratégias de hidratação e reposição energética."
+      "Praticantes de atividade física que buscam evolução constante.",
+      "Atletas amadores de corrida, ciclismo, CrossFit, artes marciais e esportes de rendimento.",
+      "Quem precisa de estratégias eficientes de hidratação e reposição de energia."
     ],
     howItWorks: [
-      "Planejamento pré, intra e pós-treino conforme o tipo de exercício.",
+      "Planejamento pré, intra e pós-treino conforme o tipo e a duração do exercício.",
       "Estratégias de periodização nutricional sincronizadas ao calendário esportivo.",
-      "Avaliação de necessidades específicas de eletrólitos e micronutrientes."
+      "Avaliação de necessidades específicas de eletrólitos e suplementos."
     ],
     benefits: [
-      "Menos câimbras, fadiga precoce e episódios de queda de rendimento.",
+      "Menos fadiga precoce e episódios de queda de rendimento.",
       "Recuperação muscular acelerada entre sessões de treino.",
       "Alta energia mantida do início ao fim dos exercícios."
     ]
   },
   {
+    id: "nutricao-jiujitsu-musculacao",
+    slug: "performance",
+    title: "Nutrição para Jiu-Jitsu e Musculação",
+    shortDesc: "Estratégias alimentares alinhadas às demandas energéticas, recuperação e composição corporal de praticantes de jiu-jitsu e musculação.",
+    fullDesc: "Combinar o desgaste físico do jiu-jitsu com a musculação exige uma estratégia nutricional muito bem calculada. Como ex-atleta de fisiculturismo e atual competidor de jiu-jitsu, Junior Coelho entende na pele as necessidades de bater peso, recuperar o corpo entre treinos duros e manter a força física.",
+    iconName: "Zap",
+    targetAudience: [
+      "Praticantes e competidores de Jiu-Jitsu que precisam otimizar energia e recuperação.",
+      "Atletas de musculação e fisiculturismo focados em composição corporal precisa.",
+      "Quem concilia treinos de força e artes marciais na mesma semana."
+    ],
+    howItWorks: [
+      "Ajuste da ingestão de carboidratos pré e pós-treino de tatame e musculação.",
+      "Estratégias para manutenção ou adequação de categoria de peso com saúde.",
+      "Aporte proteico e hídrico para acelerar a regeneração tecidual."
+    ],
+    benefits: [
+      "Maior resistência muscular nos treinos intensos e combates.",
+      "Prevenção de sobrecarga e fadiga crônica entre as sessões.",
+      "Evolução na composição corporal sem perda de rendimento."
+    ]
+  },
+  {
+    id: "suplementacao-nutricional",
+    slug: "como-funciona",
+    title: "Suplementação Nutricional Individualizada",
+    shortDesc: "Orientação individualizada sobre suplementação considerando alimentação, exames, rotina, objetivos e necessidades específicas.",
+    fullDesc: "A suplementação não substitui a refeição, mas atua como uma ferramenta estratégica quando bem prescrita. Com vasta experiência em consultoria técnica de suplementação esportiva, Junior Coelho orienta sobre o uso consciente, seguro e comprovado cientificamente de suplementos.",
+    iconName: "Target",
+    targetAudience: [
+      "Pessoas que têm dúvidas sobre quais suplementos realmente funcionam.",
+      "Quem tem dificuldade de atingir metas de proteínas e micronutrientes na dieta.",
+      "Praticantes de atividades intensas que necessitam de suporte ergogênico seguro."
+    ],
+    howItWorks: [
+      "Avaliação da alimentação diária para identificar reais lacunas nutricionais.",
+      "Prescrição individualizada de dosagens, horários e formas de apresentação.",
+      "Orientação sobre custo-benefício e evidência científica de cada composto."
+    ],
+    benefits: [
+      "Economia e segurança evitando produtos desnecessários.",
+      "Otimização prática do aporte nutricional e da recuperação.",
+      "Complementação sob medida para os objetivos do paciente."
+    ]
+  },
+  {
     id: "qualidade-de-vida",
     slug: "qualidade-de-vida",
-    title: "Qualidade de Vida, Disposição e Saúde",
-    shortDesc: "Alimentação para otimizar o sono, a digestão, o foco mental, o sistema imunológico e a vitalidade diária.",
-    fullDesc: "Nutrição vai muito além do espelho. Alimentar-se bem reflete na saúde do intestino, na clareza mental, na qualidade do sono e na prevenção de doenças crônicas. O foco é proporcionar bem-estar contínuo.",
+    title: "Qualidade de Vida e Saúde",
+    shortDesc: "Estratégias alimentares voltadas à saúde, disposição, qualidade do sono, digestão, bem-estar e consistência no dia a dia.",
+    fullDesc: "Nutrição vai muito além da estética. Alimentar-se bem reflete na saúde do intestino, na clareza mental, na qualidade do sono e na prevenção de indisposição crônica. O foco é proporcionar vitalidade e equilíbrio sustentável.",
     iconName: "HeartPulse",
     targetAudience: [
-      "Quem sente cansaço constante, indisposição ou oscilações de humor.",
+      "Quem sente cansaço constante, indisposição ou oscilações de energia.",
       "Pessoas com desconfortos digestivos ou sono não reparador.",
-      "Qualquer pessoa que queira envelhecer com saúde e vitalidade."
+      "Qualquer pessoa que queira viver com mais saúde e vitalidade."
     ],
     howItWorks: [
       "Adequação de ingestão de fibras, micronutrientes e água.",

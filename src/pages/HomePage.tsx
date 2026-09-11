@@ -232,11 +232,23 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 Orientação Nutricional Científica, Prática e Sem Radicalismos
               </h2>
 
+              <div className="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-bold text-sm">
+                "Eu vivo o esporte. E cuido da saúde das pessoas."
+              </div>
+
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Junior Coelho atua no acompanhamento nutricional individualizado com o propósito de transformar a relação das pessoas com a alimentação. O trabalho não se baseia em restrições extremas nem em modelos de dieta genéricos, mas sim em adequar a nutrição à realidade e aos objetivos específicos de cada indivíduo.
+                Junior Coelho (CRN 8-13752) é nutricionista com Bacharelado em Nutrição pela Universidade Brasil e duas pós-graduações pela FAESI/La Verità em Fisiologia do Exercício e Coach Bodybuilding. Ex-atleta de fisiculturismo e atual competidor de jiu-jitsu, une ciência, vivência prática e experiência profissional para transformar a saúde, o físico e a performance de seus pacientes.
               </p>
 
               <div className="space-y-3 pt-2 text-xs sm:text-sm text-slate-200">
+                <div className="flex items-start gap-3 bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                  <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white block font-bold">Vivência Prática no Esporte:</strong>
+                    <span>Ex-atleta de fisiculturismo e competidor ativo de jiu-jitsu, entendendo as demandas reais do treino.</span>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3 bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
                   <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
                   <div>
