@@ -21,6 +21,7 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
         description={article.description}
         path={`/conteudos/${article.slug}`}
         type="article"
+        image={article.imageUrl}
         articleData={{
           publishedAt: article.publishedAt,
           author: article.author
@@ -61,6 +62,24 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
               {article.description}
             </p>
           </div>
+
+          {/* CAPA DO ARTIGO (IMAGEM 16:9) */}
+          {article.imageUrl && (
+            <div className="space-y-2">
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
+                <img 
+                  src={article.imageUrl} 
+                  alt={article.imageAlt || article.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex items-center justify-between text-[11px] text-slate-400 px-1">
+                <span>Imagem ilustrativa gerada por inteligência artificial</span>
+                <span>CRN 8-13752</span>
+              </div>
+            </div>
+          )}
 
           {/* CORPO DO ARTIGO COM RESPOSTAS RÁPIDAS CITÁVEIS */}
           <div className="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">

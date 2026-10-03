@@ -7,6 +7,7 @@ interface SeoHeadProps {
   path: string;
   canonicalUrl?: string;
   type?: 'website' | 'article' | 'profile' | 'product';
+  image?: string;
   articleData?: {
     publishedAt: string;
     author: string;
@@ -14,7 +15,7 @@ interface SeoHeadProps {
   faqItems?: { question: string; answer: string }[];
 }
 
-export function SeoHead({ title, description, path, canonicalUrl, type = 'website', articleData, faqItems }: SeoHeadProps) {
+export function SeoHead({ title, description, path, canonicalUrl, type = 'website', image, articleData, faqItems }: SeoHeadProps) {
   return (
     <EnhancedSEO
       title={title}
@@ -22,6 +23,7 @@ export function SeoHead({ title, description, path, canonicalUrl, type = 'websit
       path={path}
       canonicalUrl={canonicalUrl}
       type={type}
+      image={image}
       articleData={articleData}
       faqItems={faqItems}
     />

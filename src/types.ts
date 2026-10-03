@@ -19,6 +19,8 @@ export interface ArticleItem {
   readTime: string;
   publishedAt: string;
   author?: string;
+  imageUrl?: string;
+  imageAlt?: string;
   summaryBlock: {
     question: string;
     directAnswer: string;

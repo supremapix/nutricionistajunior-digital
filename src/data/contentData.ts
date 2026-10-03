@@ -322,6 +322,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     category: "Performance",
     readTime: "5 min de leitura",
     publishedAt: "2026-02-27",
+    author: "Junior Coelho (CRN 8-13752)",
     summaryBlock: {
       question: "O que muda na dieta focada em performance esportiva?",
       directAnswer: "Na nutrição voltada para performance, a atenção se volta para a crononutrição (timing de carboidratos pré, intra e pós-treino), hidratação adequada e manutenção do rendimento sob estresse físico elevado."
@@ -337,8 +338,118 @@ export const ARTICLES_DATA: ArticleItem[] = [
         answer: "Sim! Qualquer praticante regular de exercícios beneficia-se imensamente de ter mais energia, menos fadiga e melhor recuperação entre os treinos."
       }
     ]
+  },
+  // --- BLOG LOTE 1 (4 ARTIGOS NOVOS) ---
+  {
+    id: "art-8",
+    slug: "nutricionista-online-como-ajuda-na-rotina",
+    title: "Nutricionista online: como o acompanhamento pode ajudar na rotina?",
+    description: "Entenda como o planejamento alimentar adaptado, o ajuste de preferências e a autonomia ajudam a manter a consistência no dia a dia.",
+    category: "Acompanhamento Online",
+    readTime: "5 min de leitura",
+    publishedAt: "2026-03-01",
+    author: "Junior Coelho (CRN 8-13752)",
+    imageUrl: "https://img.supremasite.com.br/nutri/image_20261003_193238.jpg",
+    imageAlt: "Pessoa em casa diante de um notebook, com caderno e refeição sobre a mesa.",
+    summaryBlock: {
+      question: "Como o acompanhamento nutricional online ajuda na rotina?",
+      directAnswer: "O acompanhamento online oferece praticidade, planejamento adaptado às suas preferências e autonomia para fazer escolhas saudáveis em qualquer lugar, contando com suporte periódico e orientação profissional estruturada."
+    },
+    content: [
+      "A rotina moderna exige flexibilidade. Conciliar trabalho, família, compromissos e alimentação saudável pode parecer um desafio complexo sem um método claro.",
+      "O acompanhamento nutricional online com o Nutricionista Junior Coelho (CRN 8-13752) é desenhado para se integrar à sua vida real. Em vez de impor regras rígidas, o processo analisa suas preferências alimentares, horários de trabalho e dificuldades cotidianas para construir um planejamento sustentável.",
+      "Diferente de promessas de suporte contínuo ininterrupto, o acompanhamento periódico estabelece metas claras, revisões estratégicas e diretrizes objetivas que fomentam a autonomia do paciente em suas escolhas diárias."
+    ],
+    faq: [
+      {
+        question: "O atendimento online tem a mesma eficácia do presencial?",
+        answer: "Sim, para grande parte dos objetivos como emagrecimento, reeducação alimentar e performance, a consulta online oferece o mesmo rigor técnico na avaliação e na elaboração do plano."
+      }
+    ]
+  },
+  {
+    id: "art-9",
+    slug: "como-funciona-primeira-consulta-online",
+    title: "Como funciona a primeira consulta nutricional online?",
+    description: "Saiba como se preparar para o primeiro atendimento, a importância da anamnese e o processo real de avaliação.",
+    category: "Primeira Consulta",
+    readTime: "4 min de leitura",
+    publishedAt: "2026-03-03",
+    author: "Junior Coelho (CRN 8-13752)",
+    imageUrl: "https://img.supremasite.com.br/nutri/image_20261003_193244.jpg",
+    imageAlt: "Pessoa diante de um notebook, com caderno, caneta e copo de água para uma consulta online.",
+    summaryBlock: {
+      question: "O que acontece na primeira consulta nutricional online?",
+      directAnswer: "A primeira consulta consiste em uma anamnese detalhada sobre sua rotina, histórico de saúde, hábitos alimentares e objetivos, permitindo que o nutricionista elabore um plano alimentar inicial totalmente personalizado."
+    },
+    content: [
+      "Preparar-se para a primeira consulta online é simples e garante que o aproveitamento do tempo seja máximo.",
+      "Recomenda-se escolher um ambiente tranquilo e reservado para a videochamada, ter em mãos anotações sobre sua rotina alimentar habitual e, caso possua exames de sangue recentes (realizados nos últimos 6 meses), separá-los para discussão conjunta.",
+      "Vale destacar que exames laboratoriais não são obrigatórios para todos os pacientes no primeiro momento, mas ajudam a refinar a estratégia nutricional quando disponíveis."
+    ],
+    faq: [
+      {
+        question: "Quais aplicativos são usados para a videochamada?",
+        answer: "As consultas são realizadas por plataformas de vídeo acessíveis via computador ou celular, com link enviado previamente no agendamento."
+      }
+    ]
+  },
+  {
+    id: "art-10",
+    slug: "alimentacao-rotina-corrida-sem-dieta-perfeita",
+    title: "Alimentação na rotina corrida: como se organizar sem buscar uma dieta perfeita?",
+    description: "Dicas práticas de organização de compras, planejamento de refeições e escolhas flexíveis sem rigores exagerados.",
+    category: "Rotina & Hábitos",
+    readTime: "5 min de leitura",
+    publishedAt: "2026-03-05",
+    author: "Junior Coelho (CRN 8-13752)",
+    imageUrl: "https://img.supremasite.com.br/nutri/image_20261003_193243.jpg",
+    imageAlt: "Mãos organizando arroz, feijão e legumes em recipientes reutilizáveis.",
+    summaryBlock: {
+      question: "Como se alimentar bem na rotina corrida sem buscar a perfeição?",
+      directAnswer: "A chave está na organização prévia de compras e refeições básicas, priorizando a constância sobre a perfeição e aceitando que pequenos ajustes diários superam dietas restritivas."
+    },
+    content: [
+      "A busca pela 'dieta perfeita' costuma ser a principal causa de abandono de hábitos saudáveis. Quando se acredita que um único deslize estraga todo o progresso, a tendência é desistir.",
+      "Na perspectiva educativa da nutrição, orienta-se que o planejamento de compras e o pré-preparo simples de alimentos básicos (como proteínas magras e vegetais) poupam tempo precioso durante a semana.",
+      "O foco é sempre a constância a longo prazo, respeitando imprevistos e mantendo uma relação saudável com a comida."
+    ],
+    faq: [
+      {
+        question: "Preciso cozinhar todas as refeições do zero?",
+        answer: "Não necessariamente. O uso de vegetais congelados, alimentos práticos de boa qualidade e opções inteligentes em restaurantes ajuda quem tem pouco tempo."
+      }
+    ]
+  },
+  {
+    id: "art-11",
+    slug: "consulta-online-ou-presencial-como-escolher",
+    title: "Consulta online ou presencial: como escolher a modalidade?",
+    description: "Análise das possibilidades e limitações de cada formato para ajudar você a decidir qual atende melhor às suas necessidades.",
+    category: "Modalidades",
+    readTime: "4 min de leitura",
+    publishedAt: "2026-03-07",
+    author: "Junior Coelho (CRN 8-13752)",
+    imageUrl: "https://img.supremasite.com.br/nutri/image_20261003_193227.jpg",
+    imageAlt: "Duas cenas ilustrativas de consulta: por notebook em casa e presencial em consultório.",
+    summaryBlock: {
+      question: "Como escolher entre consulta nutricional online ou presencial?",
+      directAnswer: "A escolha depende da sua preferência pessoal, localização, necessidade de avaliação física presencial e conveniência de horários. As modalidades não são idênticas em todos os aspectos, mas ambas entregam alto rigor técnico."
+    },
+    content: [
+      "Tanto o atendimento presencial quanto o online possuem características próprias que devem ser consideradas pelo paciente.",
+      "O atendimento presencial em Curitiba facilita avaliações antropométricas detalhadas no consultório. Já a modalidade online elimina tempo de deslocamento, sendo ideal para quem tem agenda apertada ou reside em outros municípios da Região Metropolitana.",
+      "A avaliação profissional ajudará a indicar o formato mais adequado ao seu momento e objetivo."
+    ],
+    faq: [
+      {
+        question: "Posso alternar entre consulta online e presencial?",
+        answer: "Sim, conforme a disponibilidade e a necessidade de acompanhamento físico, os formatos podem ser conversados com o nutricionista."
+      }
+    ]
   }
 ];
+
 
 export const HABIT_ACHIEVEMENTS: HabitAchievement[] = [
   {

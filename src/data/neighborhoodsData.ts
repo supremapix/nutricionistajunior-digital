@@ -207,5 +207,355 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
         answer: 'Não. A prioridade é sempre a comida de verdade. Suplementos só são indicados quando estritamente necessários.'
       }
     ]
+  },
+  // --- PRIMEIRO LOTE SOLICITADO: ARAUCÁRIA (2), SÃO JOSÉ DOS PINHAIS (2), PINHAIS (2) ---
+  'araucaria-centro': {
+    slug: 'araucaria-centro',
+    name: 'Centro (Araucária)',
+    fullName: 'Nutricionista Online para o Centro de Araucária/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-araucaria-centro',
+    altUrl: '/atendimento/araucaria-centro',
+    description: 'Atendimento nutricional online para moradores do Centro de Araucária/PR. Emagrecimento, reeducação alimentar e hipertrofia com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Araucária',
+    heroSubheadline: 'Consultoria nutricional online especializada com suporte diário via WhatsApp para moradores e trabalhadores do Centro de Araucária.',
+    locationDetails: 'Atendimento online estruturado para residentes do Centro de Araucária, com plano alimentar adaptado à rotina local e comércios da região.',
+    nearbyLandmarks: ['Prefeitura Municipal de Araucária', 'Praça Dr. Vicente Machado', 'Rodovia do Xisto'],
+    popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia e Performance', 'Reeducação Alimentar', 'Avaliação de Exames'],
+    faq: [
+      {
+        question: 'Como funciona o atendimento online para o Centro de Araucária?',
+        answer: 'A consulta é realizada via vídeo chamada com anamnese completa, cálculo de necessidades e entrega de plano alimentar e suporte via WhatsApp.'
+      },
+      {
+        question: 'Exige deslocamento até Curitiba?',
+        answer: 'Não. O atendimento para Araucária é 100% online, com toda a segurança e acompanhamento direto.'
+      }
+    ]
+  },
+  'costeira-araucaria': {
+    slug: 'costeira-araucaria',
+    name: 'Costeira (Araucária)',
+    fullName: 'Nutricionista Online para o Bairro Costeira em Araucária/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-costeira-araucaria',
+    altUrl: '/atendimento/costeira-araucaria',
+    description: 'Atendimento nutricional online para o bairro Costeira em Araucária/PR. Emagrecimento e ganho de massa com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Costeira – Araucária',
+    heroSubheadline: 'Planos alimentares personalizados para objetivos de emagrecimento e saúde no bairro Costeira em Araucária.',
+    locationDetails: 'Atendimento online dedicado aos moradores do bairro Costeira em Araucária, com diretrizes práticas e acessíveis.',
+    nearbyLandmarks: ['Parque Cachoeira', 'Rodovia do Xisto', 'UPA Araucária'],
+    popularObjectives: ['Perda de Gordura', 'Ganho de Massa Muscular', 'Saúde Digestiva', 'Alimentação Saudável'],
+    faq: [
+      {
+        question: 'Como agendar consulta online para o bairro Costeira?',
+        answer: 'Você pode agendar pelo WhatsApp (41) 99789-9045 com atendimento rápido e prático.'
+      }
+    ]
+  },
+  'sjp-centro': {
+    slug: 'sjp-centro',
+    name: 'Centro (São José dos Pinhais)',
+    fullName: 'Nutricionista Online para o Centro de São José dos Pinhais/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-sao-jose-dos-pinhais-centro',
+    altUrl: '/atendimento/sjp-centro',
+    description: 'Nutricionista online para o Centro de São José dos Pinhais/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de São José dos Pinhais',
+    heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de São José dos Pinhais.',
+    locationDetails: 'Atendimento online com suporte contínuo para o Centro de São José dos Pinhais, facilitando a rotina de quem busca resultados sólidos.',
+    nearbyLandmarks: ['Catedral São José', 'Rua XV de Novembro', 'Shopping São José'],
+    popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'O atendimento para São José dos Pinhais é presencial ou online?',
+        answer: 'O atendimento para São José dos Pinhais é realizado na modalidade online, com alto padrão técnico e acompanhamento diário via WhatsApp.'
+      }
+    ]
+  },
+  'afonso-pena': {
+    slug: 'afonso-pena',
+    name: 'Afonso Pena (São José dos Pinhais)',
+    fullName: 'Nutricionista Online para o Bairro Afonso Pena em São José dos Pinhais/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-afonso-pena',
+    altUrl: '/atendimento/afonso-pena',
+    description: 'Nutricionista online para o bairro Afonso Pena em São José dos Pinhais/PR. Planos de emagrecimento e ganho de massa com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Afonso Pena – São José dos Pinhais',
+    heroSubheadline: 'Consultoria nutricional focada em praticidade, saúde e performance para moradores do Afonso Pena.',
+    locationDetails: 'Atendimento online estruturado para a região do Afonso Pena, polo comercial e residencial de São José dos Pinhais.',
+    nearbyLandmarks: ['Rua Almirante Alexandrino', 'Terminal Afonso Pena', 'Av. das Torres'],
+    popularObjectives: ['Perda de Peso', 'Ganho de Massa', 'Energia para o Dia a Dia', 'Controle Nutricional'],
+    faq: [
+      {
+        question: 'Como faço para iniciar o acompanhamento no Afonso Pena?',
+        answer: 'Basta entrar em contato pelo WhatsApp (41) 99789-9045 para agendar sua consulta online.'
+      }
+    ]
+  },
+  'pinhais-centro': {
+    slug: 'pinhais-centro',
+    name: 'Centro (Pinhais)',
+    fullName: 'Nutricionista Online para o Centro de Pinhais/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-pinhais-centro',
+    altUrl: '/atendimento/pinhais-centro',
+    description: 'Nutricionista online para o Centro de Pinhais/PR. Emagrecimento, reeducação alimentar e nutrição esportiva com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Pinhais',
+    heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Pinhais.',
+    locationDetails: 'Atendimento online dedicado aos residentes do Centro de Pinhais, com foco em metas reais e sustentáveis.',
+    nearbyLandmarks: ['Avenida Camilo di Lellis', 'Prefeitura de Pinhais', 'Bosque Municipal'],
+    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'As consultas de Pinhais ocorrem online?',
+        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+      }
+    ]
+  },
+  pineville: {
+    slug: 'pineville',
+    name: 'Pineville (Pinhais)',
+    fullName: 'Nutricionista Online para o Bairro Pineville em Pinhais/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-pineville',
+    altUrl: '/atendimento/pineville',
+    description: 'Nutricionista online para o bairro Pineville em Pinhais/PR. Planos alimentares para saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Pineville – Pinhais',
+    heroSubheadline: 'Consultoria nutricional de alta performance e emagrecimento para o bairro Pineville em Pinhais.',
+    locationDetails: 'Atendimento online adaptado à rotina dos moradores do bairro Pineville em Pinhais.',
+    nearbyLandmarks: ['Autódromo Internacional de Curitiba (região)', 'Rodovia João Leopoldo Jacomel'],
+    popularObjectives: ['Performance Esportiva', 'Emagrecimento', 'Ganho de Massa', 'Saúde Geral'],
+    faq: [
+      {
+        question: 'Como agendar consulta para o Pineville?',
+        answer: 'Agende de forma simples pelo WhatsApp oficial (41) 99789-9045.'
+      }
+    ]
+  },
+  // --- SEGUNDO LOTE SOLICITADO: COLOMBO (2), FAZENDA RIO GRANDE (2), CAMPO LARGO (2) ---
+  'colombo-centro': {
+    slug: 'colombo-centro',
+    name: 'Centro (Colombo)',
+    fullName: 'Nutricionista Online para o Centro de Colombo/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-colombo-centro',
+    altUrl: '/atendimento/colombo-centro',
+    description: 'Atendimento nutricional online para moradores do Centro de Colombo/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Colombo',
+    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento contínuo via WhatsApp para moradores e trabalhadores do Centro de Colombo.',
+    locationDetails: 'Atendimento online estruturado para residentes do Centro de Colombo, com plano alimentar adaptado à rotina local.',
+    nearbyLandmarks: ['Prefeitura Municipal de Colombo', 'Parque Municipal da Uva', 'Rua XV de Novembro'],
+    popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia', 'Reeducação Alimentar', 'Qualidade de Vida'],
+    faq: [
+      {
+        question: 'Como funciona a consulta online para o Centro de Colombo?',
+        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e suporte diário via WhatsApp.'
+      }
+    ]
+  },
+  'maracana-colombo': {
+    slug: 'maracana-colombo',
+    name: 'Maracanã (Colombo)',
+    fullName: 'Nutricionista Online para o Bairro Maracanã em Colombo/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-maracana-colombo',
+    altUrl: '/atendimento/maracana-colombo',
+    description: 'Atendimento nutricional online para o bairro Maracanã em Colombo/PR. Emagrecimento e ganho de massa com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Maracanã – Colombo',
+    heroSubheadline: 'Planos alimentares personalizados para objetivos de emagrecimento e saúde no bairro Maracanã em Colombo.',
+    locationDetails: 'Atendimento online dedicado aos moradores do bairro Maracanã em Colombo, com diretrizes práticas e acessíveis.',
+    nearbyLandmarks: ['Terminal do Maracanã', 'Rodovia do Uva', 'Av. Abel Scuissiato'],
+    popularObjectives: ['Perda de Gordura', 'Ganho de Massa Muscular', 'Saúde Digestiva', 'Alimentação Saudável'],
+    faq: [
+      {
+        question: 'Como agendar consulta online para o Maracanã?',
+        answer: 'Você pode agendar pelo WhatsApp (41) 99789-9045 com atendimento rápido e prático.'
+      }
+    ]
+  },
+  'fazenda-rio-grande-centro': {
+    slug: 'fazenda-rio-grande-centro',
+    name: 'Centro (Fazenda Rio Grande)',
+    fullName: 'Nutricionista Online para o Centro de Fazenda Rio Grande/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-fazenda-rio-grande-centro',
+    altUrl: '/atendimento/fazenda-rio-grande-centro',
+    description: 'Nutricionista online para o Centro de Fazenda Rio Grande/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Fazenda Rio Grande',
+    heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de Fazenda Rio Grande.',
+    locationDetails: 'Atendimento online com suporte contínuo para o Centro de Fazenda Rio Grande.',
+    nearbyLandmarks: ['Prefeitura de Fazenda Rio Grande', 'Av. Brasil', 'Terminal Eucaliptos'],
+    popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'O atendimento para Fazenda Rio Grande é online?',
+        answer: 'Sim, modalidade online com alto padrão técnico e acompanhamento diário via WhatsApp.'
+      }
+    ]
+  },
+  'eucaliptos-fazenda': {
+    slug: 'eucaliptos-fazenda',
+    name: 'Eucaliptos (Fazenda Rio Grande)',
+    fullName: 'Nutricionista Online para o Bairro Eucaliptos em Fazenda Rio Grande/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-eucaliptos',
+    altUrl: '/atendimento/eucaliptos-fazenda',
+    description: 'Nutricionista online para o bairro Eucaliptos em Fazenda Rio Grande/PR. Planos de emagrecimento e ganho de massa com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Eucaliptos – Fazenda Rio Grande',
+    heroSubheadline: 'Consultoria nutricional focada em praticidade, saúde e performance para moradores do bairro Eucaliptos.',
+    locationDetails: 'Atendimento online estruturado para a região do Eucaliptos em Fazenda Rio Grande.',
+    nearbyLandmarks: ['Terminal Eucaliptos', 'Rodovia BR-116', 'Parque Verde'],
+    popularObjectives: ['Perda de Peso', 'Ganho de Massa', 'Energia para o Dia a Dia', 'Controle Nutricional'],
+    faq: [
+      {
+        question: 'Como faço para iniciar o acompanhamento no Eucaliptos?',
+        answer: 'Basta entrar em contato pelo WhatsApp (41) 99789-9045 para agendar sua consulta online.'
+      }
+    ]
+  },
+  'campo-largo-centro': {
+    slug: 'campo-largo-centro',
+    name: 'Centro (Campo Largo)',
+    fullName: 'Nutricionista Online para o Centro de Campo Largo/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-campo-largo-centro',
+    altUrl: '/atendimento/campo-largo-centro',
+    description: 'Nutricionista online para o Centro de Campo Largo/PR. Emagrecimento, reeducação alimentar e nutrição esportiva com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Campo Largo',
+    heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Campo Largo.',
+    locationDetails: 'Atendimento online dedicado aos residentes do Centro de Campo Largo, com foco em metas reais e sustentáveis.',
+    nearbyLandmarks: ['Praça Getúlio Vargas', 'Igreja Matriz Nossa Senhora da Piedade', 'Rua XV de Novembro'],
+    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'As consultas para Campo Largo ocorrem online?',
+        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+      }
+    ]
+  },
+  'bancaria-campo-largo': {
+    slug: 'bancaria-campo-largo',
+    name: 'Vila Bancária (Campo Largo)',
+    fullName: 'Nutricionista Online para a Vila Bancária em Campo Largo/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-bancaria-campo-largo',
+    altUrl: '/atendimento/bancaria-campo-largo',
+    description: 'Nutricionista online para o bairro Vila Bancária em Campo Largo/PR. Planos alimentares para saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Vila Bancária – Campo Largo',
+    heroSubheadline: 'Consultoria nutricional de alta performance e emagrecimento para a Vila Bancária em Campo Largo.',
+    locationDetails: 'Atendimento online adaptado à rotina dos moradores da Vila Bancária em Campo Largo.',
+    nearbyLandmarks: ['Rodovia BR-277', 'Estádio Municipal', 'Centro de Campo Largo'],
+    popularObjectives: ['Performance Esportiva', 'Emagrecimento', 'Ganho de Massa', 'Saúde Geral'],
+    faq: [
+      {
+        question: 'Como agendar consulta para a Vila Bancária?',
+        answer: 'Agende de forma simples pelo WhatsApp oficial (41) 99789-9045.'
+      }
+    ]
+  },
+  // --- TERCEIRO LOTE SOLICITADO: ALMIRANTE TAMANDARÉ (2), CAMPO MAGRO (2), QUATRO BARRAS (2) ---
+  'tamandare-centro': {
+    slug: 'tamandare-centro',
+    name: 'Centro (Almirante Tamandaré)',
+    fullName: 'Nutricionista Online para o Centro de Almirante Tamandaré/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-tamandare-centro',
+    altUrl: '/atendimento/tamandare-centro',
+    description: 'Atendimento nutricional online para moradores do Centro de Almirante Tamandaré/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Almirante Tamandaré',
+    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento contínuo via WhatsApp para moradores e trabalhadores do Centro de Almirante Tamandaré.',
+    locationDetails: 'Atendimento online estruturado para residentes do Centro de Almirante Tamandaré, com plano alimentar adaptado à rotina local.',
+    nearbyLandmarks: ['Prefeitura Municipal de Almirante Tamandaré', 'Parque Municipal Anibal Khury', 'Rodovia dos Minérios'],
+    popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia', 'Reeducação Alimentar', 'Qualidade de Vida'],
+    faq: [
+      {
+        question: 'Como funciona a consulta online para Almirante Tamandaré?',
+        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e suporte diário via WhatsApp.'
+      }
+    ]
+  },
+  'tamboado-tamandare': {
+    slug: 'tamboado-tamandare',
+    name: 'Tamboado (Almirante Tamandaré)',
+    fullName: 'Nutricionista Online para o Bairro Tamboado em Almirante Tamandaré/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-tamboado',
+    altUrl: '/atendimento/tamboado-tamandare',
+    description: 'Atendimento nutricional online para o bairro Tamboado em Almirante Tamandaré/PR. Emagrecimento e ganho de massa com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Tamboado – Almirante Tamandaré',
+    heroSubheadline: 'Planos alimentares personalizados para objetivos de emagrecimento e saúde no bairro Tamboado em Almirante Tamandaré.',
+    locationDetails: 'Atendimento online dedicado aos moradores do bairro Tamboado em Almirante Tamandaré, com diretrizes práticas e acessíveis.',
+    nearbyLandmarks: ['Rodovia dos Minérios', 'Comércio Local', 'Área Residencial de Tamandaré'],
+    popularObjectives: ['Perda de Gordura', 'Ganho de Massa Muscular', 'Saúde Digestiva', 'Alimentação Saudável'],
+    faq: [
+      {
+        question: 'Como agendar consulta online para o Tamboado?',
+        answer: 'Você pode agendar pelo WhatsApp (41) 99789-9045 com atendimento rápido e prático.'
+      }
+    ]
+  },
+  'campo-magro-centro': {
+    slug: 'campo-magro-centro',
+    name: 'Centro (Campo Magro)',
+    fullName: 'Nutricionista Online para o Centro de Campo Magro/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-campo-magro-centro',
+    altUrl: '/atendimento/campo-magro-centro',
+    description: 'Nutricionista online para o Centro de Campo Magro/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Campo Magro',
+    heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de Campo Magro.',
+    locationDetails: 'Atendimento online com suporte contínuo para o Centro de Campo Magro.',
+    nearbyLandmarks: ['Prefeitura de Campo Magro', 'Rodovia PR-090', 'Igreja Matriz'],
+    popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'O atendimento para Campo Magro é online?',
+        answer: 'Sim, modalidade online com alto padrão técnico e acompanhamento diário via WhatsApp.'
+      }
+    ]
+  },
+  'laranjeiras-campo-magro': {
+    slug: 'laranjeiras-campo-magro',
+    name: 'Laranjeiras (Campo Magro)',
+    fullName: 'Nutricionista Online para o Bairro Laranjeiras em Campo Magro/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-laranjeiras',
+    altUrl: '/atendimento/laranjeiras-campo-magro',
+    description: 'Nutricionista online para o bairro Laranjeiras em Campo Magro/PR. Planos de emagrecimento e ganho de massa com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Bairro Laranjeiras – Campo Magro',
+    heroSubheadline: 'Consultoria nutricional focada em praticidade, saúde e performance para moradores do bairro Laranjeiras.',
+    locationDetails: 'Atendimento online estruturado para a região de Laranjeiras em Campo Magro.',
+    nearbyLandmarks: ['PR-090', 'Região Residencial Laranjeiras', 'Comércio Local'],
+    popularObjectives: ['Perda de Peso', 'Ganho de Massa', 'Energia para o Dia a Dia', 'Controle Nutricional'],
+    faq: [
+      {
+        question: 'Como faço para iniciar o acompanhamento em Laranjeiras?',
+        answer: 'Basta entrar em contato pelo WhatsApp (41) 99789-9045 para agendar sua consulta online.'
+      }
+    ]
+  },
+  'quatro-barras-centro': {
+    slug: 'quatro-barras-centro',
+    name: 'Centro (Quatro Barras)',
+    fullName: 'Nutricionista Online para o Centro de Quatro Barras/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-quatro-barras-centro',
+    altUrl: '/atendimento/quatro-barras-centro',
+    description: 'Nutricionista online para o Centro de Quatro Barras/PR. Emagrecimento, reeducação alimentar e nutrição esportiva com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para o Centro de Quatro Barras',
+    heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Quatro Barras.',
+    locationDetails: 'Atendimento online dedicado aos residentes do Centro de Quatro Barras, com foco em metas reais e sustentáveis.',
+    nearbyLandmarks: ['Prefeitura de Quatro Barras', 'Igreja Matriz São Sebastião', 'Av. Dom Pedro II'],
+    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    faq: [
+      {
+        question: 'As consultas para Quatro Barras ocorrem online?',
+        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+      }
+    ]
+  },
+  'borda-do-campo-quatro-barras': {
+    slug: 'borda-do-campo-quatro-barras',
+    name: 'Borda do Campo (Quatro Barras)',
+    fullName: 'Nutricionista Online para a Localidade de Borda do Campo em Quatro Barras/PR',
+    canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-borda-do-campo',
+    altUrl: '/atendimento/borda-do-campo-quatro-barras',
+    description: 'Nutricionista online para a localidade e região de Borda do Campo em Quatro Barras/PR. Planos alimentares para saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para a Região de Borda do Campo – Quatro Barras',
+    heroSubheadline: 'Consultoria nutricional de alta performance e emagrecimento para moradores da localidade de Borda do Campo em Quatro Barras.',
+    locationDetails: 'Atendimento online adaptado à rotina dos moradores da região de Borda do Campo em Quatro Barras.',
+    nearbyLandmarks: ['Rodovia BR-116', 'Represa do Iraí (região)', 'Área Industrial e Residencial'],
+    popularObjectives: ['Performance Esportiva', 'Emagrecimento', 'Ganho de Massa', 'Saúde Geral'],
+    faq: [
+      {
+        question: 'Como agendar consulta para Borda do Campo?',
+        answer: 'Agende de forma simples pelo WhatsApp oficial (41) 99789-9045.'
+      }
+    ]
   }
 };
+

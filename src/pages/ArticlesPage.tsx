@@ -40,6 +40,17 @@ export function ArticlesPage({ onNavigate }: ArticlesPageProps) {
                 className="bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl space-y-4 transition duration-300 flex flex-col justify-between"
               >
                 <div className="space-y-3">
+                  {art.imageUrl && (
+                    <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950 mb-3">
+                      <img 
+                        src={art.imageUrl} 
+                        alt={art.imageAlt || art.title} 
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="bg-emerald-500/10 text-emerald-400 font-bold px-2.5 py-1 rounded-md border border-emerald-500/20">
                       {art.category}
