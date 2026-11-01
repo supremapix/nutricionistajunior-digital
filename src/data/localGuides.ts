@@ -1,3 +1,7 @@
+import { RMC_GUIDE_CONTENT_D } from './rmcGuideContentD';
+import { RMC_GUIDE_CONTENT_E } from './rmcGuideContentE';
+import { RMC_GUIDE_CONTENT_F } from './rmcGuideContentF';
+import { RMC_CITY_CONTENT } from './rmcCityContent';
 import { RMC_GUIDE_META } from './rmcGuideMeta';
 import { RMC_GUIDE_CONTENT_A } from './rmcGuideContentA';
 import { RMC_GUIDE_CONTENT_B } from './rmcGuideContentB';
@@ -27,7 +31,7 @@ export interface LocalGuide extends LocalGuideContent {
   parentOfficialName?: string;
   parentRoute?: string;
 }
-const articles: Record<string, LocalGuideContent> = {...LOCAL_GUIDE_CONTENT_A, ...LOCAL_GUIDE_CONTENT_B, ...RMC_GUIDE_CONTENT_A, ...RMC_GUIDE_CONTENT_B, ...RMC_GUIDE_CONTENT_C};
+const articles: Record<string, LocalGuideContent> = {...LOCAL_GUIDE_CONTENT_A, ...LOCAL_GUIDE_CONTENT_B, ...RMC_GUIDE_CONTENT_A, ...RMC_GUIDE_CONTENT_B, ...RMC_GUIDE_CONTENT_C, ...RMC_GUIDE_CONTENT_D, ...RMC_GUIDE_CONTENT_E, ...RMC_GUIDE_CONTENT_F, ...RMC_CITY_CONTENT};
 export const LOCAL_GUIDES: LocalGuide[] = [...LOCAL_GUIDE_META, ...RMC_GUIDE_META].map(meta => {
   const content = articles[meta.route];
   if (!content) throw new Error(`Conteúdo local ausente: ${meta.route}`);

@@ -67,6 +67,7 @@ for (const url of urls) {
     assert(fs.existsSync(path.join('dist', href, 'index.html')) || fs.existsSync(path.join('dist', href)), `${url}: internal href ${href} exists`);
   }
   dom.window.close();
+  await new Promise<void>(resolve => setImmediate(resolve));
 }
 const hubDom = new JSDOM(fs.readFileSync('dist/atendimento/index.html', 'utf8'));
 const hub = hubDom.window.document;
@@ -77,7 +78,7 @@ for (const [selector, count] of [['[data-coverage-official]', LOCAL_COVERAGE.off
 }
 hubDom.window.close();
 // RMC pages preserve the previously published URL set and link both ways to a city.
-const oldSitemap = JSON.parse(fs.readFileSync('scripts/fixtures/published-routes-136.json', 'utf8')) as string[];
+const oldSitemap = JSON.parse(fs.readFileSync('scripts/fixtures/published-routes-231.json', 'utf8')) as string[];
 for (const old of oldSitemap) assert(urls.includes(old), `Preserved published route ${old}`);
 for (const guide of LOCAL_GUIDES.filter(item => item.kind === 'urban_locality')) {
   assert(guide.source?.startsWith('https://'), `${guide.route}: primary geography source`);
@@ -94,6 +95,7 @@ for (const guide of LOCAL_GUIDES.filter(item => item.kind === 'urban_locality'))
   assert.equal(crumb.itemListElement.length, 4);
   assert.equal(crumb.itemListElement[2].item, `${origin}${parent.route}`);
   childDom.window.close(); parentDom.window.close();
+  await new Promise<void>(resolve => setImmediate(resolve));
 }
 const missing = new JSDOM(fs.readFileSync('dist/404.html', 'utf8')).window.document;
 assert(missing.querySelector('meta[name="robots"]')?.getAttribute('content')?.includes('noindex'));
