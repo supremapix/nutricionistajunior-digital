@@ -1,3 +1,4 @@
+import { RMC_POPULAR_ALIASES } from '../data/rmcGuideMeta';
 import React from 'react';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
@@ -15,26 +16,32 @@ export function LocalGuidePage({ guide }: { guide: LocalGuide }) {
   const parentPath = parentGuide?.route || (parentExisting ? new URL(parentExisting.canonicalUrl).pathname : undefined);
   const cityGuide = LOCAL_GUIDES.find(item => item.kind === 'municipality' && item.name === guide.municipality);
   const cityLocalities = guide.kind === 'municipality' ? Object.values(NEIGHBORHOODS_DATA).filter(item => item.name.includes(guide.municipality)) : [];
-  const kindLabel = guide.kind === 'municipality' ? 'Município' : guide.kind === 'official_neighborhood' ? 'Bairro oficial de Curitiba' : 'Vila ou nome popular documentado';
+  const newCityLocalities = guide.kind === 'municipality' ? LOCAL_GUIDES.filter(item => item.parentRoute === guide.route && item.kind === 'urban_locality') : [];
+  const breadcrumbs = guide.kind === 'urban_locality' && cityGuide ? [{name:'Início',path:'/'},{name:'Atendimento',path:'/atendimento'},{name:guide.municipality,path:cityGuide.route},{name:guide.name,path:guide.route}] : undefined;
+  const kindLabel = guide.kind === 'municipality' ? 'Município' : guide.kind === 'official_neighborhood' ? 'Bairro oficial de Curitiba' : guide.kind === 'urban_locality' ? 'Bairro ou localidade urbana documentada' : 'Vila ou nome popular documentado';
+  const placeTitle = guide.kind === 'urban_locality' ? `${guide.name}, ${guide.municipality}` : guide.name;
   return <>
-    <SeoHead title={`Nutricionista online para ${guide.name} | Junior Coelho`} description={`${guide.heading} Orientações educativas para organizar a consulta online com Junior Coelho, para quem está em ${guide.name}.`} path={guide.route} faqItems={guide.faq} />
+    <SeoHead title={`Nutricionista online para ${placeTitle} | Junior Coelho`} description={`${guide.heading} Orientações educativas para organizar a consulta online com Junior Coelho, para quem está em ${placeTitle}.`} path={guide.route} breadcrumbs={breadcrumbs} faqItems={guide.faq} />
     <section className="relative overflow-hidden py-16 sm:py-24 bg-[#050914]">
       <HeroVideoBg brightness="brightness-[0.85]" overlayGradient="from-[#050914] via-[#050914]/60 to-[#050914]/20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+        {breadcrumbs && <nav aria-label="Trilha de navegação"><ol className="flex flex-wrap gap-2 text-sm text-emerald-300">{breadcrumbs.map((item,index) => <li key={item.path}>{index > 0 && <span aria-hidden="true"> / </span>}{index === breadcrumbs.length - 1 ? <span aria-current="page">{item.name}</span> : <a className="underline" href={item.path}>{item.name}</a>}</li>)}</ol></nav>}
         <a href="/atendimento" className="text-sm text-emerald-300 underline">Ver todas as regiões e modalidades</a>
         <p className="text-xs uppercase tracking-wider font-bold text-emerald-400">{kindLabel} · {guide.municipality}/PR</p>
-        <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">Nutricionista online para quem está em {guide.name}</h1>
+        <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">Nutricionista online para quem está em {placeTitle}</h1>
         <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">Conheça possibilidades de apoio nutricional à distância e prepare uma conversa que faça sentido para sua rotina. A adequação da consulta online e a disponibilidade devem ser confirmadas com Junior.</p>
       </div>
     </section>
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
       <section className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4">
         <h2 className="text-xl sm:text-2xl font-bold text-white">Entenda a referência de localização</h2>
-        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">{guide.kind === 'municipality' ? `${guide.name} é um município distinto de Curitiba. Esta página trata da possibilidade de consulta online, não de uma unidade física local.` : guide.kind === 'official_neighborhood' ? `${guide.name} consta na relação de bairros oficiais de Curitiba. O nome ajuda a identificar sua região; não significa que exista consultório de Junior neste bairro.` : `${guide.name} é uma referência popular documentada${parentName ? ` relacionada a ${parentName}` : ''}. Não é apresentada como um bairro oficial adicional ou uma unidade física.`}</p>
+        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">{guide.kind === 'municipality' ? `${guide.name} é um município distinto de Curitiba. Esta página trata da possibilidade de consulta online, não de uma unidade física local.` : guide.kind === 'official_neighborhood' ? `${guide.name} consta na relação de bairros oficiais de Curitiba. O nome ajuda a identificar sua região; não significa que exista consultório de Junior neste bairro.` : guide.kind === 'urban_locality' ? `${guide.name} está documentado como referência urbana de ${guide.municipality} na fonte municipal indicada. Esta identificação não estabelece limites legais atualizados nem significa que Junior tenha consultório na localidade.` : `${guide.name} é uma referência popular documentada${parentName ? ` relacionada a ${parentName}` : ''}. Não é apresentada como um bairro oficial adicional ou uma unidade física.`}</p>
         {guide.name === 'Bairro Novo' && <p className="text-sm text-slate-300">Aqui, Bairro Novo se refere ao conjunto habitacional no Sítio Cercado. A Regional Bairro Novo é uma divisão administrativa diferente.</p>}
         <p className="text-sm text-slate-400">Para atendimento presencial, confirme o endereço atual antes de se deslocar. Não há promessa de atendimento domiciliar, consultório nesta região ou resultado garantido.</p>
         {guide.source && <a href={guide.source} target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-300 underline">Conferir referência geográfica na fonte municipal</a>}
         {cityLocalities.length > 0 && <div className="space-y-2"><h3 className="font-bold text-slate-200">Outras referências desta cidade no site</h3><ul className="space-y-2 text-sm">{cityLocalities.map(item => <li key={item.slug}><a className="text-emerald-300 underline" href={new URL(item.canonicalUrl).pathname}>{item.name}</a></li>)}</ul></div>}
+        {newCityLocalities.length > 0 && <div data-rmc-city-links className="space-y-3"><h3 className="font-bold text-slate-200">Bairros e localidades urbanas com guia próprio</h3><ul className="grid sm:grid-cols-2 gap-2 text-sm">{newCityLocalities.map(item => <li key={item.route}><a className="text-emerald-300 underline" href={item.route}>{item.name}</a></li>)}</ul><p className="text-xs text-slate-400">Seleção documentada em fontes municipais, não uma relação exaustiva de bairros nem de consultórios.</p></div>}
+        {RMC_POPULAR_ALIASES.filter(item => item.route === guide.route).map(item => <section id={item.anchor} key={item.anchor} className="space-y-2"><h3 className="font-bold text-slate-200">{item.name}: nome popular relacionado a {item.parent}</h3><p className="text-sm text-slate-300">A documentação municipal registra este nome associado a {item.parent}, em {item.municipality}. É uma referência de localização, não um bairro oficial adicional, delimitação territorial ou unidade de atendimento. As informações sobre consulta online desta página também ajudam quem usa esse nome para se localizar.</p><a className="text-xs text-emerald-300 underline" href={item.source} target="_blank" rel="noopener noreferrer">Consultar documento municipal</a></section>)}
         {parentPath && <p><a href={parentPath} className="text-sm text-emerald-300 underline">Conhecer a página de {parentName}</a></p>}
         {cityGuide && cityGuide.route !== guide.route && <p><a href={cityGuide.route} className="text-sm text-emerald-300 underline">Guia de consulta online para {guide.municipality}</a></p>}
       </section>

@@ -46,6 +46,7 @@ for (const route of [...routes, '/404']) {
 // Keep sitemap synchronized with actual canonical pages, without invented update dates.
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(route => `  <url><loc>${origin}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
+fs.writeFileSync('public/sitemap.xml', sitemap);
 console.log(`${routes.length} indexable routes and one noindex 404 rendered with full body content.`);
 
 // Compatibility URLs redirect to one canonical page instead of becoming duplicate content.

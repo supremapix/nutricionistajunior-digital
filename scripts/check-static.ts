@@ -76,6 +76,25 @@ for (const [selector, count] of [['[data-coverage-official]', LOCAL_COVERAGE.off
   for (const link of links) assert(urls.includes(`${origin}${link.getAttribute('href')}`), `Hub target ${link.getAttribute('href')} has complete canonical page`);
 }
 hubDom.window.close();
+// RMC pages preserve the previously published URL set and link both ways to a city.
+const oldSitemap = JSON.parse(fs.readFileSync('scripts/fixtures/published-routes-136.json', 'utf8')) as string[];
+for (const old of oldSitemap) assert(urls.includes(old), `Preserved published route ${old}`);
+for (const guide of LOCAL_GUIDES.filter(item => item.kind === 'urban_locality')) {
+  assert(guide.source?.startsWith('https://'), `${guide.route}: primary geography source`);
+  const parent = LOCAL_GUIDES.find(item => item.route === guide.parentRoute && item.kind === 'municipality');
+  assert(parent, `${guide.route}: explicit municipal parent`);
+  const childDom = new JSDOM(fs.readFileSync(path.join('dist', guide.route, 'index.html'), 'utf8'));
+  const parentDom = new JSDOM(fs.readFileSync(path.join('dist', parent.route, 'index.html'), 'utf8'));
+  assert(parentDom.window.document.querySelector(`a[href="${guide.route}"]`), `${guide.route}: city-to-neighborhood link`);
+  assert(childDom.window.document.querySelector(`a[href="${parent.route}"]`), `${guide.route}: return-to-city link`);
+  const trail = childDom.window.document.querySelector('nav[aria-label="Trilha de navegação"]');
+  assert(trail?.textContent?.includes(parent.name), `${guide.route}: visible parent breadcrumb`);
+  const schemas = [...childDom.window.document.querySelectorAll('script[type="application/ld+json"]')].map(el => JSON.parse(el.textContent!));
+  const crumb = schemas.find(item => item['@type'] === 'BreadcrumbList');
+  assert.equal(crumb.itemListElement.length, 4);
+  assert.equal(crumb.itemListElement[2].item, `${origin}${parent.route}`);
+  childDom.window.close(); parentDom.window.close();
+}
 const missing = new JSDOM(fs.readFileSync('dist/404.html', 'utf8')).window.document;
 assert(missing.querySelector('meta[name="robots"]')?.getAttribute('content')?.includes('noindex'));
 for (const route of ['/conteudos/nao-existe', '/nutricionista-em-inventado-curitiba', '/atendimento/inventado', '/nutricionista-online-em-inventado']) {

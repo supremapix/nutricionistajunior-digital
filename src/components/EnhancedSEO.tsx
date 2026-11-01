@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 export interface EnhancedSEOProps {
+  breadcrumbs?: { name: string; path: string }[];
   noindex?: boolean;
   title: string;
   description: string;
@@ -19,6 +20,7 @@ export interface EnhancedSEOProps {
 }
 
 export function EnhancedSEO({
+  breadcrumbs,
   title,
   noindex = false,
   description,
@@ -138,7 +140,7 @@ export function EnhancedSEO({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    "itemListElement": breadcrumbs ? breadcrumbs.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, item: `https://www.nutricionistajunior.digital${item.path}` })) : [
       {
         "@type": "ListItem",
         "position": 1,
