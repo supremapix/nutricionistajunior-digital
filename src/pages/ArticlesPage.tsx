@@ -70,13 +70,13 @@ export function ArticlesPage({ onNavigate }: ArticlesPageProps) {
                   </p>
                 </div>
 
-                <button
-                  onClick={() => onNavigate(`/conteudos/${art.slug}`)}
+                <a
+                  href={`/conteudos/${art.slug}`} onClick={event => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); onNavigate(`/conteudos/${art.slug}`); } }}
                   className="pt-4 text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 cursor-pointer border-t border-slate-800"
                 >
                   <span>Ler artigo completo</span>
                   <ChevronRight size={14} />
-                </button>
+                </a>
               </div>
             ))}
           </div>

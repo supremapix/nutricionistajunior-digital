@@ -7,6 +7,7 @@ import { JSDOM } from 'jsdom';
 import App from '../src/App';
 import { ARTICLES_DATA } from '../src/data/contentData';
 import { NEIGHBORHOODS_DATA } from '../src/data/neighborhoodsData';
+import { LOCAL_GUIDES } from '../src/data/localGuides';
 import { PRERENDER_ROUTES } from '../prerender.config.js';
 
 const dist = path.resolve('dist');
@@ -17,6 +18,7 @@ const routes = [...new Set([
   ...ARTICLES_DATA.map(article => `/conteudos/${article.slug}`),
   ...Object.values(NEIGHBORHOODS_DATA).map(info => new URL(info.canonicalUrl).pathname),
   '/evolucao',
+  ...LOCAL_GUIDES.map(guide => guide.route),
 ])];
 
 // The exact React pages are rendered, not a separate crawler-only text version.
@@ -24,7 +26,8 @@ HelmetProvider.canUseDOM = false;
 for (const route of [...routes, '/404']) {
   const context: any = {};
   const body = renderToString(React.createElement(HelmetProvider, { context }, React.createElement(App, { initialPath: route })));
-  const doc = new JSDOM(template).window.document;
+  const dom = new JSDOM(template);
+  const doc = dom.window.document;
   // Remove template metadata owned by Helmet so every URL has one authoritative set.
   doc.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[name="author"], meta[name="theme-color"], meta[name="viewport"], meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"], script[type="application/ld+json"]').forEach(node => node.remove());
   doc.getElementById('root')!.innerHTML = body;
@@ -37,6 +40,7 @@ for (const route of [...routes, '/404']) {
   const target = route === '/' ? path.join(dist, 'index.html') : route === '/404' ? path.join(dist, '404.html') : path.join(dist, route.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, '<!DOCTYPE html>' + doc.documentElement.outerHTML);
+  dom.window.close();
   console.log(`Rendered ${route}`);
 }
 // Keep sitemap synchronized with actual canonical pages, without invented update dates.

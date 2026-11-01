@@ -20,6 +20,8 @@ import { ContactPage } from './pages/ContactPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { EbooksPage } from './pages/EbooksPage';
 import { LinksPage } from './pages/LinksPage';
+import { getLocalGuide } from './data/localGuides';
+import { LocalGuidePage } from './pages/LocalGuidePage';
 import { NeighborhoodPage } from './pages/NeighborhoodPage';
 import { ARTICLES_DATA } from './data/contentData';
 import { NEIGHBORHOODS_DATA } from './data/neighborhoodsData';
@@ -114,6 +116,9 @@ export default function App({ initialPath = '/' }: { initialPath?: string }) {
     if (path === '/politica-de-privacidade') {
       return <PrivacyPage />;
     }
+
+    const localGuide = getLocalGuide(path);
+    if (localGuide) return <LocalGuidePage guide={localGuide} />;
 
     // Match verified canonical URLs; some municipality URLs differ from their data keys.
     const neighborhood = Object.values(NEIGHBORHOODS_DATA).find(info => new URL(info.canonicalUrl).pathname === path);

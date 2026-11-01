@@ -1,12 +1,14 @@
+import { getLocalGuide } from './localGuides';
 import { NEIGHBORHOODS_DATA } from './neighborhoodsData';
 /** Textos educativos originais: não representam prescrição, volume de buscas ou revisão clínica assinada. */
 export interface PageInsightContent {
   question: string;
   answer: string;
   nextStep: string;
-  source?: 'guia' | 'oms' | 'anvisa';
+  source?: 'guia' | 'oms' | 'anvisa' | 'digestao';
 }
 export const INSIGHT_SOURCES = {
+  digestao: { label: 'NIDDK — Sintomas e causas de gases', url: 'https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/symptoms-causes' },
   guia: { label: 'Ministério da Saúde — Guias Alimentares', url: 'https://www.gov.br/saude/pt-br/composicao/saps/promocao-da-saude/guias-alimentares/guias-alimentares' },
   oms: { label: 'OMS — Alimentação saudável', url: 'https://www.who.int/news-room/fact-sheets/detail/healthy-diet' },
   anvisa: { label: 'Anvisa — Suplementos alimentares', url: 'https://www.gov.br/anvisa/pt-br/assuntos/alimentos/suplementos-alimentares' },
@@ -64,6 +66,7 @@ export const LOCAL_INSIGHTS: Record<string, PageInsightContent> = {
 };
 
 export const ARTICLE_INSIGHTS: Record<string, PageInsightContent & { summary: string[] }> = {
+  'inchaco-abdominal-gastrite-refluxo-nutricionista-online': { ...insight('Como conversar sobre desconforto sem culpar toda a alimentação?', 'Um sintoma não define uma doença e a proximidade com uma refeição não prova intolerância. Observar padrões pode ajudar a conversa com a equipe de saúde, sem cortar vários alimentos ou buscar uma promessa de cura.', 'Anote sua principal dúvida e confirme a modalidade de atendimento adequada. Sinais de urgência descritos no artigo exigem serviço de saúde, não espera por WhatsApp.', 'digestao'), summary: ['Inchaço abdominal, gastrite e refluxo não são sinônimos.', 'Apoio nutricional é individualizado e complementa a investigação médica.', 'Sintomas persistentes e sinais de urgência precisam do cuidado apropriado.'] },
   'como-funciona-acompanhamento-nutricional': { ...insight('O que muda quando explico minha rotina com exemplos?', 'Dizer onde, com quem e em que horários você costuma comer ajuda a discutir alternativas concretas. Uma descrição honesta é mais útil do que apresentar o que você acha que deveria comer.', 'Anote um dia habitual e um dia em que tudo muda para conversar na consulta.'), summary: ['A consulta parte de informações sobre hábitos, saúde e objetivos.', 'Preferências, horários e acesso aos alimentos ajudam a orientar o plano.', 'Retornos e canais de contato devem ser combinados com o profissional.'] },
   'nutricionista-para-emagrecimento-quando-procurar': { ...insight('Posso buscar orientação mesmo sem uma meta de peso?', 'Sim: compreender hábitos e necessidades de saúde também é um motivo para conversar. O peso é uma informação entre outras e não precisa ser o único foco do acompanhamento.', 'Descreva o que deseja melhorar no cotidiano além de qualquer mudança na balança.', 'oms'), summary: ['A necessidade de redução de peso deve ser avaliada individualmente.', 'Restrições encontradas na internet não substituem avaliação.', 'Objetivos incluem saúde, rotina e relação com a alimentação.'] },
   'reeducacao-alimentar-por-onde-comecar': { ...insight('Qual pequena habilidade pode facilitar minha semana?', 'Aprender a comprar, armazenar ou preparar um alimento habitual pode tornar o cuidado mais concreto. O passo inicial deve caber na realidade, não depender de uma transformação completa.', 'Escolha uma habilidade e observe qual apoio ou recurso falta para praticá-la.'), summary: ['Comece observando o que já existe na sua rotina.', 'Escolha mudanças graduais que respeitem preferências e recursos.', 'O ritmo de mudança varia; sintomas persistentes merecem avaliação.'] },
@@ -84,5 +87,7 @@ export function getPageInsight(path: string): PageInsightContent | undefined {
   if (route.startsWith('/conteudos/')) return ARTICLE_INSIGHTS[route.slice('/conteudos/'.length)];
   const locality = Object.values(NEIGHBORHOODS_DATA).find((item) => new URL(item.canonicalUrl).pathname === route || item.altUrl === route);
   if (locality) return LOCAL_INSIGHTS[locality.slug];
+  const guide = getLocalGuide(route);
+  if (guide) return {question: guide.insightQuestion, answer: guide.insightAnswer, nextStep: guide.insightStep, source: 'guia'};
   return PAGE_INSIGHTS[route];
 }

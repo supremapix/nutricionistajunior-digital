@@ -23,9 +23,11 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
         path={`/conteudos/${article.slug}`}
         type="article"
         image={article.imageUrl}
+        faqItems={article.sections ? article.faq : undefined}
         articleData={{
           publishedAt: article.publishedAt,
-          author: article.author
+          author: article.author,
+          authorType: article.authorType
         }}
       />
 
@@ -64,6 +66,8 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
             </p>
           </div>
 
+          {article.editorialNote && <p className="text-xs text-slate-400">{article.editorialNote}</p>}
+
           {/* CAPA DO ARTIGO (IMAGEM 16:9) */}
           {article.imageUrl && (
             <div className="space-y-2">
@@ -82,6 +86,8 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
             </div>
           )}
 
+          {article.sections && <section className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3"><h2 className="text-xl font-bold text-white">{article.summaryBlock.question}</h2><p className="text-slate-300 text-sm sm:text-base leading-relaxed">{article.summaryBlock.directAnswer}</p></section>}
+
           {/* CORPO DO ARTIGO COM RESPOSTAS RÁPIDAS CITÁVEIS */}
           <div className="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
             {article.content.map((paragraph, idx) => (
@@ -90,6 +96,12 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
               </p>
             ))}
           </div>
+
+          {article.sections?.map(section => <section key={section.heading} className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">{section.heading}</h2>
+            {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            <p className="text-xs text-slate-400">Fontes: {section.sources.map((source, index) => <React.Fragment key={source.url}>{index > 0 && ' · '}<a href={source.url} target="_blank" rel="noopener noreferrer" className="text-emerald-300 underline">{source.label}</a></React.Fragment>)}</p>
+          </section>)}
 
           {/* SÍNTESE DO ARTIGO */}
           <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3 my-8">
@@ -104,13 +116,15 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
             </ul>
           </div>
 
+          {article.sections && <section className="space-y-4"><h2 className="text-xl font-bold text-white">Dúvidas frequentes</h2>{article.faq.map(item => <div key={item.question} className="bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-2"><h3 className="font-bold text-emerald-300">{item.question}</h3><p className="text-sm text-slate-300 leading-relaxed">{item.answer}</p></div>)}</section>}
+
           {/* CTA DENTRO DO ARTIGO */}
           <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 text-center space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-white">
               Quer aplicar esses princípios na sua rotina?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
-              Agende uma consulta com o Nutricionista Junior Coelho e receba um plano alimentar feito exclusivamente para você.
+              {article.sections ? 'Se desejar apoio para organizar sua alimentação, converse com Junior sobre a adequação da consulta online ao seu caso. Sintomas persistentes também precisam de avaliação médica.' : 'Agende uma consulta com o Nutricionista Junior Coelho e receba um plano alimentar feito exclusivamente para você.'}
             </p>
             <div className="flex flex-col items-center pt-2">
               <a

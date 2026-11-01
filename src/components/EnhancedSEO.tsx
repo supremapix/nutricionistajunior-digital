@@ -14,6 +14,7 @@ export interface EnhancedSEOProps {
   articleData?: {
     publishedAt: string;
     author: string;
+    authorType?: 'Person' | 'Organization';
   };
 }
 
@@ -178,9 +179,9 @@ export function EnhancedSEO({
     "image": image,
     "datePublished": articleData.publishedAt,
     "author": {
-      "@type": "Person",
+      "@type": articleData.authorType || "Person",
       "name": articleData.author || "Junior Coelho",
-      "jobTitle": "Nutricionista CRN 8-13752"
+      ...(articleData.authorType === "Organization" ? {} : { "jobTitle": "Nutricionista CRN 8-13752" })
     },
     "publisher": {
       "@type": "Organization",

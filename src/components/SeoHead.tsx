@@ -12,6 +12,7 @@ interface SeoHeadProps {
   articleData?: {
     publishedAt: string;
     author: string;
+    authorType?: 'Person' | 'Organization';
   };
   faqItems?: { question: string; answer: string }[];
 }

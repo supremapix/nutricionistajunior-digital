@@ -37,7 +37,12 @@ const render = async path => React.act(async () => { root.render(React.createEle
 const click = async element => React.act(async () => { element.focus(); element.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, button: 0 })); await tick(); });
 const sitemap = new JSDOM(fs.readFileSync('dist/sitemap.xml', 'utf8'), { contentType: 'text/xml' });
 const routes = [...sitemap.window.document.querySelectorAll('loc')].map(el => new URL(el.textContent).pathname);
-assert.equal(routes.length, 55, 'All 55 canonical pages must be covered');
+const { LOCAL_GUIDES } = await import('../src/data/localGuides.ts');
+const { ARTICLES_DATA } = await import('../src/data/contentData.ts');
+const { NEIGHBORHOODS_DATA } = await import('../src/data/neighborhoodsData.ts');
+const { PRERENDER_ROUTES } = await import('../prerender.config.js');
+const expectedRoutes = new Set([...PRERENDER_ROUTES.map(page => page.path), ...ARTICLES_DATA.map(article => `/conteudos/${article.slug}`), ...Object.values(NEIGHBORHOODS_DATA).map(area => new URL(area.canonicalUrl).pathname), ...LOCAL_GUIDES.map(guide => guide.route), '/evolucao']);
+assert.deepEqual(new Set(routes), expectedRoutes, 'Every canonical page must be covered');
 const questions = new Set();
 for (const path of routes) {
   const content = getPageInsight(path);
@@ -108,4 +113,4 @@ assert.equal(document.querySelector('[data-insight-dialog]'), null, 'No window f
 await React.act(async () => root.unmount());
 sitemap.window.close();
 dom.window.close();
-console.log('PASS: 55 unique contextual dialogs; explicit trigger, dismiss/reopen, simulated native Escape/cancel, focus return, route changes and no health inputs. JSDOM integration only; native browser top-layer/focus trap not tested.');
+console.log(`PASS: ${routes.length} unique contextual dialogs; explicit trigger, dismiss/reopen, simulated native Escape/cancel, focus return, route changes and no health inputs. JSDOM integration only; native browser top-layer/focus trap not tested.`);

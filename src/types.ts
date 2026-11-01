@@ -19,6 +19,9 @@ export interface ArticleItem {
   readTime: string;
   publishedAt: string;
   author?: string;
+  authorType?: 'Person' | 'Organization';
+  editorialNote?: string;
+  sections?: { heading: string; paragraphs: string[]; sources: { label: string; url: string }[] }[];
   imageUrl?: string;
   imageAlt?: string;
   summaryBlock: {

@@ -1,3 +1,4 @@
+import { DIGESTIVE_ARTICLE } from './digestiveArticle';
 import { ArticleItem, ServiceItem, HabitAchievement, AuthorizedTestimonial } from '../types';
 
 export const SERVICES_DATA: ServiceItem[] = [
@@ -165,6 +166,7 @@ export const SERVICES_DATA: ServiceItem[] = [
 ];
 
 export const ARTICLES_DATA: ArticleItem[] = [
+  DIGESTIVE_ARTICLE,
   {
     id: "art-1",
     slug: "como-funciona-acompanhamento-nutricional",
