@@ -4,12 +4,15 @@ import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
+import { buildContactWhatsAppUrl } from '../utils/contact';
 
 export function ContactPage() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     trackAnalyticsEvent('contact_form_submit', { location: 'contact_page' });
-    window.open(SITE_CONFIG.whatsappUrl, '_blank');
+    const data = new FormData(e.currentTarget);
+    // The visitor reviews the prepared message in WhatsApp before sending it.
+    window.location.assign(buildContactWhatsAppUrl(data));
   };
 
   return (
@@ -85,8 +88,8 @@ export function ContactPage() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <strong className="block font-bold">Endereço de Atendimento</strong>
-                    <span className="text-slate-300">{SITE_CONFIG.address.street} - {SITE_CONFIG.address.city} / {SITE_CONFIG.address.state}</span>
+                    <strong className="block font-bold">Endereço Informado — Confirme Antes de Ir</strong>
+                    <span className="text-slate-300">{SITE_CONFIG.address.street} - {SITE_CONFIG.address.city} / {SITE_CONFIG.address.state}. Confirme o local pelo WhatsApp antes de se deslocar.</span>
                   </div>
                 </div>
 
@@ -106,14 +109,15 @@ export function ContactPage() {
             <form onSubmit={handleSubmit} className="bg-slate-900/80 border border-slate-800 p-8 rounded-3xl space-y-4">
               <h2 className="text-2xl font-bold text-white">Envie uma Mensagem Rápida</h2>
               <p className="text-xs text-slate-400">
-                Preencha os dados para iniciar o contato via WhatsApp com suas dúvidas pré-preenchidas.
+                Preencha os dados para abrir uma mensagem no WhatsApp. Você poderá revisar e enviar por lá. Não inclua exames, diagnósticos ou outros dados sensíveis neste formulário.
               </p>
 
               <div className="space-y-3 text-xs sm:text-sm">
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Seu Nome Completo</label>
+                  <label htmlFor="contact-name" className="block text-slate-300 font-semibold mb-1">Seu Nome</label>
                   <input 
-                    type="text" 
+                    type="text"
+                    id="contact-name" name="name" autoComplete="name" maxLength={100}
                     required 
                     placeholder="Digite seu nome"
                     className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none"
@@ -121,8 +125,9 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Seu Objetivo Principal</label>
-                  <select className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none">
+                  <label htmlFor="contact-goal" className="block text-slate-300 font-semibold mb-1">Seu Objetivo Principal (opcional)</label>
+                  <select id="contact-goal" name="goal" defaultValue="" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none">
+                    <option value="">Prefiro conversar diretamente</option>
                     <option value="emagrecimento">Emagrecimento & Reeducação Alimentar</option>
                     <option value="massa">Ganho de Massa Muscular / Hipertrofia</option>
                     <option value="performance">Performance Esportiva</option>
@@ -131,8 +136,8 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Mensagem ou Dúvida</label>
-                  <textarea 
+                  <label htmlFor="contact-message" className="block text-slate-300 font-semibold mb-1">Mensagem ou Dúvida</label>
+                  <textarea id="contact-message" name="message" maxLength={1000}
                     rows={3}
                     placeholder="Como o nutricionista pode te ajudar?"
                     className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none"

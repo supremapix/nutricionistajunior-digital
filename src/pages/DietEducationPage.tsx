@@ -26,7 +26,7 @@ export function DietEducationPage() {
               Reeducação Alimentar Sustentável
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              O caminho definitivo para parar de depender de cardápios impostos e criar uma relação leve, equilibrada e saudável com a comida.
+              Um processo gradual para desenvolver autonomia nas escolhas alimentares e criar uma relação leve, equilibrada e saudável com a comida.
             </p>
           </div>
 

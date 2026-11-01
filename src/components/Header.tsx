@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { 
-  Menu, 
-  X, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
-  ChevronDown, 
-  Eye, 
+import {
+  Menu,
+  X,
+  Phone,
+  MapPin,
+  Clock,
+  MessageCircle,
+  ChevronDown,
+  Eye,
   Sparkles,
   ShieldCheck,
   ExternalLink
@@ -71,7 +71,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
                 <span className="text-slate-700 font-bold">•</span>
 
                 {/* TELEFONE CLICÁVEL */}
-                <a 
+                <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   onClick={() => trackAnalyticsEvent('phone_click', { location: 'ticker' })}
                   className="inline-flex items-center gap-2 hover:text-[var(--brand-green-light)] transition cursor-pointer text-slate-200"
@@ -150,35 +150,34 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
       {/* MENU PRINCIPAL */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
         {/* LOGO OFICIAL JR.COELHO */}
-        <button 
-          onClick={() => handleNavClick('/')}
+        <a
+          href={'/'} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick('/'); } }}
           className="flex items-center cursor-pointer group focus:outline-none"
           aria-label="Nutricionista Junior Coelho - Início"
         >
-          <img 
-            src={SITE_CONFIG.images.logo} 
-            alt="Logo Nutricionista Junior Coelho" 
-            onError={(e) => { e.currentTarget.src = "/logo-site.png"; }}
+          <img
+            src={SITE_CONFIG.images.logo}
+            alt="Logo Nutricionista Junior Coelho"
             className="h-14 sm:h-18 md:h-20 lg:h-24 max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
-        </button>
+        </a>
 
         {/* NAVEGAÇÃO DESKTOP */}
         <nav className="hidden xl:flex items-center gap-1 xl:gap-1.5">
           {navLinks.map((link) => {
             const isActive = currentPath === link.path;
             return (
-              <button
+              <a
                 key={link.path}
-                onClick={() => handleNavClick(link.path)}
+                href={link.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick(link.path); } }}
                 className={`px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold transition-all duration-200 cursor-pointer min-h-[40px] whitespace-nowrap shrink-0 ${
-                  isActive 
-                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold' 
+                  isActive
+                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold'
                     : 'text-slate-300 hover:text-white hover:bg-slate-900'
                 }`}
               >
                 <span className="whitespace-nowrap">{link.name}</span>
-              </button>
+              </a>
             );
           })}
 
@@ -195,13 +194,13 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
             {servicesDropdownOpen && (
               <div className="absolute top-full right-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl p-2 z-50">
                 {objectiveLinks.map((obj) => (
-                  <button
+                  <a
                     key={obj.path}
-                    onClick={() => handleNavClick(obj.path)}
-                    className="w-full text-left px-3.5 py-2.5 rounded-xl text-xs sm:text-sm text-slate-200 hover:text-emerald-400 hover:bg-slate-800 transition font-medium cursor-pointer whitespace-nowrap"
+                    href={obj.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick(obj.path); } }}
+                    className="block w-full text-left px-3.5 py-2.5 rounded-xl text-xs sm:text-sm text-slate-200 hover:text-emerald-400 hover:bg-slate-800 transition font-medium cursor-pointer whitespace-nowrap"
                   >
                     {obj.name}
-                  </button>
+                  </a>
                 ))}
               </div>
             )}
@@ -239,19 +238,19 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
       {/* MENU MOBILE LUXO FULL-SCREEN VIA PORTAL */}
       {mobileMenuOpen && createPortal(
         <div className="fixed inset-0 z-[9999] bg-[#050914] overflow-y-auto flex flex-col justify-between p-6 animate-in fade-in duration-200">
-          
+
           {/* TOPO DO MENU MOBILE */}
           <div className="flex items-center justify-between pb-6 border-b border-slate-800/80">
-            <button 
-              onClick={() => handleNavClick('/')}
+            <a
+              href={'/'} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick('/'); } }}
               className="flex items-center focus:outline-none"
             >
-              <img 
-                src={SITE_CONFIG.images.logo} 
-                alt="Logo Junior Coelho" 
+              <img
+                src={SITE_CONFIG.images.logo}
+                alt="Logo Junior Coelho"
                 className="h-12 sm:h-16 w-auto object-contain"
               />
-            </button>
+            </a>
 
             <div className="flex items-center gap-3">
               <button
@@ -283,12 +282,12 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
                 {navLinks.map((link, idx) => {
                   const isActive = currentPath === link.path;
                   return (
-                    <button
+                    <a
                       key={link.path}
-                      onClick={() => handleNavClick(link.path)}
+                      href={link.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick(link.path); } }}
                       className={`w-full text-left py-3.5 px-4 rounded-2xl text-lg font-black transition-all duration-200 flex items-center justify-between cursor-pointer ${
-                        isActive 
-                          ? 'bg-[var(--brand-green)]/15 text-[var(--brand-green-light)] border border-[var(--brand-green)]/30' 
+                        isActive
+                          ? 'bg-[var(--brand-green)]/15 text-[var(--brand-green-light)] border border-[var(--brand-green)]/30'
                           : 'text-slate-100 hover:bg-slate-900/80 hover:text-white'
                       }`}
                     >
@@ -297,7 +296,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
                         <span>{link.name}</span>
                       </span>
                       <ChevronDown size={18} className="-rotate-90 text-slate-600" />
-                    </button>
+                    </a>
                   );
                 })}
               </nav>
@@ -311,13 +310,13 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
 
               <div className="grid grid-cols-2 gap-2">
                 {objectiveLinks.map((obj) => (
-                  <button
+                  <a
                     key={obj.path}
-                    onClick={() => handleNavClick(obj.path)}
+                    href={obj.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick(obj.path); } }}
                     className="text-left px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 bg-slate-900/60 border border-slate-800 hover:border-[var(--brand-green)]/40 hover:text-white transition cursor-pointer truncate"
                   >
                     {obj.name}
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>

@@ -33,7 +33,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     iconName: "Apple",
     targetAudience: [
       "Quem deseja parar de depender de cardápios engessados.",
-      "Pessoas que enfrentam ansiedade ou compulsão por determinados alimentos.",
+      "Pessoas que querem compreender melhor seus hábitos alimentares. Sofrimento emocional ou episódios de perda de controle com a comida podem exigir cuidado multiprofissional.",
       "Quem quer melhorar marcadores de saúde e digestão no dia a dia."
     ],
     howItWorks: [
@@ -44,7 +44,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     benefits: [
       "Paz de espírito nas refeições em família e eventos sociais.",
       "Maior disposição ao longo de todo o dia.",
-      "Resultados duradouros mantidos por hábitos consolidados."
+      "Construção gradual de hábitos que possam ser mantidos na rotina."
     ]
   },
   {
@@ -61,13 +61,13 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     howItWorks: [
       "Ajuste fino de carboidratos e proteínas em horários estratégicos.",
-      "Cálculo exato da ingestão energética diária conforme gasto no treino.",
+      "Estimativa das necessidades energéticas, ajustada ao contexto e à evolução do acompanhamento.",
       "Sinergia entre alimentação, periodização de treino e recuperação."
     ],
     benefits: [
-      "Maximização dos ganhos do treino de força.",
-      "Melhora no tempo de recuperação e prevenção de fadiga.",
-      "Composição corporal otimizada com baixo acúmulo de gordura."
+      "Apoio nutricional aos objetivos do treino de força.",
+      "Planejamento alimentar considerando recuperação e percepção de esforço.",
+      "Acompanhamento individual das mudanças de composição corporal."
     ]
   },
   {
@@ -121,7 +121,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     slug: "como-funciona",
     title: "Suplementação Nutricional Individualizada",
     shortDesc: "Orientação individualizada sobre suplementação considerando alimentação, exames, rotina, objetivos e necessidades específicas.",
-    fullDesc: "A suplementação não substitui a refeição, mas atua como uma ferramenta estratégica quando bem prescrita. Com vasta experiência em consultoria técnica de suplementação esportiva, Junior Coelho orienta sobre o uso consciente, seguro e comprovado cientificamente de suplementos.",
+    fullDesc: "A suplementação não substitui a refeição, mas atua como uma ferramenta estratégica quando bem prescrita. Com vasta experiência em consultoria técnica de suplementação esportiva, Junior Coelho orienta sobre o avaliação da necessidade de suplementos, considerando evidências, riscos e orientações de uso.",
     iconName: "Target",
     targetAudience: [
       "Pessoas que têm dúvidas sobre quais suplementos realmente funcionam.",
@@ -180,7 +180,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     content: [
       "Muitas pessoas adiam a visita ao nutricionista por acreditarem que receberão uma folha impressa genérica com proibições. No acompanhamento profissional com Junior Coelho, o processo é o oposto: a dieta é construída *para* e *com* você.",
       "Na consulta inicial, investigamos seu estilo de vida completo: horários de trabalho, rotina de sono, nível de atividade física, digestão, histórico alimentar e alimentos que você mais gosta ou não tolera.",
-      "Com base nesses parâmetros, calculamos suas necessidades de calorias e macronutrientes. O plano alimentar é entregue de forma clara e prática, contendo opções flexíveis para que você não passe fome e consiga seguir com facilidade.",
+      "Com base nesses parâmetros, calculamos suas necessidades de calorias e macronutrientes. O plano alimentar é entregue de forma clara e prática, contendo opções flexíveis para discutir a adequação à sua rotina, percepção de fome e preferências.",
       "Além da consulta, o grande diferencial do acompanhamento está na continuidade: você conta com canal direto no WhatsApp para tirar dúvidas do dia a dia e realizar ajustes conforme surgem imprevistos na sua rotina."
     ],
     faq: [
@@ -204,7 +204,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     publishedAt: "2026-02-18",
     summaryBlock: {
       question: "Quando procurar um nutricionista especialista em emagrecimento?",
-      directAnswer: "Você deve procurar um nutricionista quando perceber que tentativas por conta própria causam frustração, cansaço, perda de massa muscular ou efeito sanfona. A orientação profissional garante déficit calórico seguro e reeducação de hábitos."
+      directAnswer: "Você deve procurar um nutricionista quando perceber que tentativas por conta própria causam frustração, cansaço, perda de massa muscular ou efeito sanfona. A avaliação profissional ajuda a decidir se a redução de peso é indicada e a planejar mudanças compatíveis com sua saúde e rotina."
     },
     content: [
       "O desejo de emagrecer é comum, mas o caminho escolhido por muitos costuma envolver dietas extremamente restritivas encontradas na internet. Essas estratégias falham porque não levam em conta a vida real.",
@@ -238,7 +238,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     faq: [
       {
         question: "Reeducação alimentar demora muito para dar resultado?",
-        answer: "Os primeiros benefícios — como melhora no funcionamento intestinal, diminuição do inchaço e aumento da energia — são percebidos já nas primeiras semanas."
+        answer: "Não existe um prazo único. Mudanças na rotina e na saúde são acompanhadas individualmente; sintomas persistentes, como inchaço ou cansaço, precisam ser avaliados em vez de receber promessa de melhora rápida."
       }
     ]
   },
@@ -256,8 +256,8 @@ export const ARTICLES_DATA: ArticleItem[] = [
     },
     content: [
       "Para ganhar massa muscular, o estímulo do treino de musculação precisa ser correspondido por uma nutrição bem calculada.",
-      "Se faltar carboidrato, o corpo utilizará aminoácidos como fonte de energia durante o treino, prejudicando o ganho de massa. Se faltar proteína, a síntese proteica pós-treino não atingirá o pico ideal.",
-      "Junior Coelho planeja a distribuição dos nutrientes de acordo com os horários e intensidades dos seus treinos, garantindo ganho de tecido muscular com mínimo acúmulo de gordura."
+      "A quantidade total de energia e nutrientes, a regularidade do treinamento e o descanso participam do processo de adaptação muscular. Não existe uma distribuição de alimentos que sirva igualmente para todos.",
+      "Junior Coelho planeja a distribuição dos nutrientes de acordo com os horários e intensidades dos seus treinos, buscando apoiar o desenvolvimento muscular e acompanhar as mudanças de composição corporal, que variam entre pessoas."
     ],
     faq: [
       {
@@ -303,7 +303,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
       directAnswer: "Com planejamento prévio simples: preparar porções de proteínas e vegetais no fim de semana, ter lanches práticos de fácil transporte e saber fazer boas escolhas em restaurantes a quilo ou reuniões de trabalho."
     },
     content: [
-      "Falta de tempo é a desculpa mais frequente para comer mal, mas também a que mais facilmente se resolve com método.",
+      "Falta de tempo é uma dificuldade real, muitas vezes associada ao trabalho, aos cuidados com a família e ao acesso aos alimentos. O planejamento precisa considerar essas condições, sem culpa.",
       "A chave não é cozinhar todos os dias do zero, mas simplificar o preparo de refeições básicas e estocar opções estratégicas (frutas, sementes, iogurtes, sanduíches naturais).",
       "No acompanhamento com Junior Coelho, cada paciente recebe sugestões personalizadas para o seu dia a dia real, seja almoçando fora em restaurantes a quilo ou viajando a trabalho."
     ],
@@ -328,9 +328,9 @@ export const ARTICLES_DATA: ArticleItem[] = [
       directAnswer: "Na nutrição voltada para performance, a atenção se volta para a crononutrição (timing de carboidratos pré, intra e pós-treino), hidratação adequada e manutenção do rendimento sob estresse físico elevado."
     },
     content: [
-      "Enquanto a nutrição clínica básica foca na saúde e peso corporal, a nutrição para performance busca extrair a eficiência máxima do organismo em movimento.",
-      "Seja para correr 10km, treinar forte na academia ou encarar provas de resistência, o tempo de digestão dos alimentos e o tipo de combustível consumido antes do treino determinam o seu sucesso.",
-      "Junior Coelho alinha os horários das suas refeições com os picos do seu treino para que você nunca falhe por falta de energia."
+      "A nutrição voltada ao esporte considera as demandas do treinamento sem deixar de cuidar da saúde, da relação com a alimentação e da rotina da pessoa.",
+      "Na corrida, na musculação ou em provas de resistência, a tolerância aos alimentos, a hidratação e a oferta de energia são fatores a considerar junto ao treinamento e à recuperação.",
+      "Junior Coelho considera os horários das refeições e dos treinos para planejar a disponibilidade de energia, respeitando a tolerância individual e a necessidade de ajustes."
     ],
     faq: [
       {
@@ -363,7 +363,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     faq: [
       {
         question: "O atendimento online tem a mesma eficácia do presencial?",
-        answer: "Sim, para grande parte dos objetivos como emagrecimento, reeducação alimentar e performance, a consulta online oferece o mesmo rigor técnico na avaliação e na elaboração do plano."
+        answer: "A consulta online pode ser adequada a diferentes objetivos, mas não substitui toda avaliação presencial. A escolha depende das necessidades de saúde, do acesso à tecnologia e da avaliação do profissional."
       }
     ]
   },
@@ -383,7 +383,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
       directAnswer: "A primeira consulta consiste em uma anamnese detalhada sobre sua rotina, histórico de saúde, hábitos alimentares e objetivos, permitindo que o nutricionista elabore um plano alimentar inicial totalmente personalizado."
     },
     content: [
-      "Preparar-se para a primeira consulta online é simples e garante que o aproveitamento do tempo seja máximo.",
+      "Algumas anotações antes da consulta online podem ajudar a aproveitar a conversa e lembrar das suas principais dúvidas.",
       "Recomenda-se escolher um ambiente tranquilo e reservado para a videochamada, ter em mãos anotações sobre sua rotina alimentar habitual e, caso possua exames de sangue recentes (realizados nos últimos 6 meses), separá-los para discussão conjunta.",
       "Vale destacar que exames laboratoriais não são obrigatórios para todos os pacientes no primeiro momento, mas ajudam a refinar a estratégia nutricional quando disponíveis."
     ],
@@ -470,7 +470,7 @@ export const HABIT_ACHIEVEMENTS: HabitAchievement[] = [
     id: "hab-3",
     category: "Disposição & Vigor",
     metric: "Nível de Energia Diário",
-    description: "Adequação do aporte de micronutrientes e água para eliminação da fadiga crônica vespertina.",
+    description: "Observação da alimentação, hidratação e rotina para compreender a disposição. Cansaço persistente requer avaliação de saúde e não deve ser atribuído apenas à alimentação.",
     indicator: "Relatos de maior vitalidade do despertar até a hora de dormir."
   },
   {
@@ -478,7 +478,7 @@ export const HABIT_ACHIEVEMENTS: HabitAchievement[] = [
     category: "Rendimento Esportivo",
     metric: "Carga e Tolerância ao Treino",
     description: "Otimização da ingestão de carboidratos pré e pós-treino para melhora no rendimento das séries e provas.",
-    indicator: "Progresso constante de carga e redução do tempo de recuperação."
+    indicator: "Registro da percepção de esforço e recuperação em conjunto com a rotina de treinamento."
   }
 ];
 

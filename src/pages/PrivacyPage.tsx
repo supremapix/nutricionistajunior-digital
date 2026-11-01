@@ -19,31 +19,31 @@ export function PrivacyPage() {
           
           <div className="space-y-3">
             <span className="bg-emerald-500/10 text-emerald-400 font-bold px-3 py-1 rounded-full text-xs border border-emerald-500/30 uppercase tracking-wider">
-              Conformidade LGPD
+              Privacidade e Transparência
             </span>
             <h1 className="text-3xl font-black text-white">Política de Privacidade</h1>
-            <p className="text-slate-400">Última atualização: Setembro de 2026</p>
+            <p className="text-slate-400">Última atualização: 1 de novembro de 2026</p>
           </div>
 
           <div className="space-y-6 bg-slate-900/60 p-6 sm:p-8 rounded-3xl border border-slate-800">
             <section className="space-y-2">
               <h2 className="text-base font-bold text-white">1. Coleta e Uso de Dados</h2>
               <p>
-                O site do Nutricionista Junior Coelho ({SITE_CONFIG.domain}) respeita a privacidade dos usuários. Dados pessoais fornecidos voluntariamente via formulário ou WhatsApp (como nome e telefone) são utilizados exclusivamente para responder solicitações de agendamento e dúvidas de consultas.
+                O formulário de contato prepara, no seu navegador, uma mensagem com o nome, objetivo e dúvida informados. Ao continuar, você é direcionado ao WhatsApp para revisar e decidir se deseja enviá-la. Não envie exames, diagnósticos ou outros dados sensíveis pelo formulário. Para tratar informações clínicas, combine o canal adequado com o profissional.
               </p>
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-base font-bold text-white">2. Não Compartilhamento</h2>
+              <h2 className="text-base font-bold text-white">2. Serviços Externos</h2>
               <p>
-                Seus dados não são vendidos, alugados nem repassados a terceiros para fins de marketing não solicitado.
+                Este site utiliza recursos externos, como fontes, imagens e conteúdo do Instagram. Ao carregar esses recursos ou acessar WhatsApp, Instagram e Google, esses serviços podem receber informações técnicas da conexão e aplicar suas próprias políticas de privacidade. O site também pode armazenar arquivos públicos no navegador para acesso offline; o formulário não é salvo nesse cache.
               </p>
             </section>
 
             <section className="space-y-2">
               <h2 className="text-base font-bold text-white">3. Ética e Imagens Corporais</h2>
               <p>
-                Em conformidade com as diretrizes do Conselho Federal de Nutricionistas (CFN), nenhuma imagem pessoal ou dado sensível de pacientes é publicado comercialmente sem prévio consentimento expresso e autorização formal.
+                O conteúdo do site tem finalidade informativa e não substitui a avaliação individual. Resultados de acompanhamento variam entre pessoas. Dúvidas sobre informações pessoais ou imagens apresentadas neste site podem ser encaminhadas ao contato abaixo.
               </p>
             </section>
 

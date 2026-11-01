@@ -65,7 +65,7 @@ export function ConsultingPage() {
     <>
       <SeoHead 
         title="Acompanhamento Nutricional Individualizado"
-        description="Acompanhamento nutricional completo com Junior Coelho. Avaliação de rotina, plano alimentar personalizado e suporte constante pelo WhatsApp."
+        description="Acompanhamento nutricional completo com Junior Coelho. Avaliação de rotina, plano alimentar personalizado e condições de contato pelo WhatsApp combinadas no atendimento."
         path="/acompanhamento-nutricional"
       />
 
@@ -82,7 +82,7 @@ export function ConsultingPage() {
               Acompanhamento Nutricional Individualizado
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Um método de trabalho estruturado para adaptar a nutrição à sua realidade, garantindo clareza, autonomia e suporte constante.
+              Um método de trabalho estruturado para adaptar a nutrição à sua realidade, com foco em clareza, autonomia e acompanhamento individualizado.
             </p>
           </div>
 

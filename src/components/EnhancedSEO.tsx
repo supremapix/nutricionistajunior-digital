@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 export interface EnhancedSEOProps {
+  noindex?: boolean;
   title: string;
   description: string;
   canonicalUrl?: string;
@@ -18,6 +19,7 @@ export interface EnhancedSEOProps {
 
 export function EnhancedSEO({
   title,
+  noindex = false,
   description,
   canonicalUrl,
   path = '',
@@ -27,7 +29,7 @@ export function EnhancedSEO({
   articleData
 }: EnhancedSEOProps) {
   const pageTitle = title.includes('Junior Coelho') ? title : `${title} | Nutricionista Junior Coelho (CRN 8-13752)`;
-  const currentCanonical = canonicalUrl || `https://www.nutricionistajunior.digital${path || ''}`;
+  const currentCanonical = canonicalUrl || `https://www.nutricionistajunior.digital${path || '/'}`;
 
   // Structured Data Schema: Person (Entity Junior Coelho)
   const personSchema = {
@@ -77,7 +79,6 @@ export function EnhancedSEO({
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": SITE_CONFIG.address.street,
       "addressLocality": SITE_CONFIG.address.city,
       "addressRegion": SITE_CONFIG.address.state,
       "addressCountry": "BR"
@@ -87,46 +88,34 @@ export function EnhancedSEO({
   // Structured Data Schema: Physician / MedicalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "Physician",
-    "@id": "https://www.nutricionistajunior.digital/#physician",
+    "@type": "LocalBusiness",
+    "@id": "https://www.nutricionistajunior.digital/#practice",
     "name": "Nutricionista Junior Coelho",
     "image": SITE_CONFIG.images.og,
     "telephone": SITE_CONFIG.phone,
     "email": SITE_CONFIG.email,
     "url": "https://www.nutricionistajunior.digital",
-    "priceRange": "$$",
-    "medicalSpecialty": [
-      "Dietetics",
-      "SportsNutrition",
-      "WeightManagement"
-    ],
-    "physicianSpecialty": [
-      "Nutrição Esportiva",
-      "Emagrecimento e Reeducação Alimentar",
-      "Hipertrofia Muscular",
-      "Nutrição para Artes Marciais e Musculação"
-    ],
     "founder": {
       "@type": "Person",
       "@id": "https://www.nutricionistajunior.digital/#person"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": SITE_CONFIG.address.street,
       "addressLocality": SITE_CONFIG.address.city,
       "addressRegion": SITE_CONFIG.address.state,
       "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -25.4284,
-      "longitude": -49.2733
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "07:00",
+        "closes": "09:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "15:00",
         "closes": "18:00"
       }
     ],
@@ -209,7 +198,7 @@ export function EnhancedSEO({
       <title>{pageTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={currentCanonical} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#050914" />
       <meta name="author" content="Nutricionista Junior Coelho (CRN 8-13752)" />
@@ -222,8 +211,6 @@ export function EnhancedSEO({
       {/* Local SEO Geo Tags */}
       <meta name="geo.region" content="BR-PR" />
       <meta name="geo.placename" content="Curitiba" />
-      <meta name="geo.position" content="-25.4284;-49.2733" />
-      <meta name="ICBM" content="-25.4284, -49.2733" />
 
       {/* Open Graph / Facebook / WhatsApp */}
       <meta property="og:type" content={type} />

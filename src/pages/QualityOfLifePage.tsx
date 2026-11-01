@@ -51,7 +51,7 @@ export function QualityOfLifePage() {
               </div>
               <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-start gap-3">
                 <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                <span>Prevenção de doenças crônicas e fortalecimento do sistema imunológico.</span>
+                <span>Alimentação adequada como parte do cuidado com a saúde, sem substituir avaliações e tratamentos necessários.</span>
               </div>
             </div>
 

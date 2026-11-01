@@ -28,7 +28,7 @@ export const SITE_CONFIG: SiteConfig = {
       "Hauer",
       "Capão Raso",
       "Santa Quitéria",
-      "Vila Fanny",
+      "Fanny",
       "Novo Mundo",
       "Sítio Cercado"
     ]

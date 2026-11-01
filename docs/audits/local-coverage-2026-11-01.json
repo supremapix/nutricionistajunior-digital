@@ -1,0 +1,911 @@
+{
+  "checkedAt": "2026-11-01",
+  "sourceRepository": "supremapix/nutricionistajunior-digital",
+  "officialListSource": "https://www.curitiba.pr.gov.br/noticias/populacao-recebe-noticias-personalizadas-dos-bairros-via-whatsapp/50663",
+  "counts": {
+    "existingLocalityPages": 28,
+    "existingCuritibaOfficial": 10,
+    "missingCuritibaOfficial": 65,
+    "officialUniqueCuritiba": 75,
+    "existingOtherMunicipalityLocalities": 18,
+    "otherMunicipalities": 9
+  },
+  "existing": [
+    {
+      "name": "Xaxim",
+      "slug": "xaxim",
+      "legacyPath": "/nutricionista-em-xaxim-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Xaxim"
+    },
+    {
+      "name": "Portão",
+      "slug": "portao",
+      "legacyPath": "/nutricionista-em-portao-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Portão"
+    },
+    {
+      "name": "Água Verde",
+      "slug": "agua-verde",
+      "legacyPath": "/nutricionista-em-agua-verde-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Água Verde"
+    },
+    {
+      "name": "Boqueirão",
+      "slug": "boqueirao",
+      "legacyPath": "/nutricionista-em-boqueirao-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Boqueirão"
+    },
+    {
+      "name": "Hauer",
+      "slug": "hauer",
+      "legacyPath": "/nutricionista-em-hauer-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Hauer"
+    },
+    {
+      "name": "Capão Raso",
+      "slug": "capao-raso",
+      "legacyPath": "/nutricionista-em-capao-raso-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Capão Raso"
+    },
+    {
+      "name": "Santa Quitéria",
+      "slug": "santa-quiteria",
+      "legacyPath": "/nutricionista-em-santa-quiteria-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Santa Quitéria"
+    },
+    {
+      "name": "Vila Fanny",
+      "slug": "fanny",
+      "legacyPath": "/nutricionista-em-fanny-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Fanny"
+    },
+    {
+      "name": "Novo Mundo",
+      "slug": "novo-mundo",
+      "legacyPath": "/nutricionista-em-novo-mundo-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Novo Mundo"
+    },
+    {
+      "name": "Sítio Cercado",
+      "slug": "sitio-cercado",
+      "legacyPath": "/nutricionista-em-sitio-cercado-curitiba",
+      "municipality": "Curitiba",
+      "classification": "official_curitiba_neighborhood",
+      "officialName": "Sítio Cercado"
+    },
+    {
+      "name": "Centro (Araucária)",
+      "slug": "araucaria-centro",
+      "legacyPath": "/nutricionista-em-araucaria-centro-curitiba",
+      "municipality": "Araucária",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Araucária)"
+    },
+    {
+      "name": "Costeira (Araucária)",
+      "slug": "costeira-araucaria",
+      "legacyPath": "/nutricionista-em-costeira-araucaria-curitiba",
+      "municipality": "Araucária",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Costeira (Araucária)"
+    },
+    {
+      "name": "Centro (São José dos Pinhais)",
+      "slug": "sjp-centro",
+      "legacyPath": "/nutricionista-em-sjp-centro-curitiba",
+      "municipality": "São José dos Pinhais",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (São José dos Pinhais)"
+    },
+    {
+      "name": "Afonso Pena (São José dos Pinhais)",
+      "slug": "afonso-pena",
+      "legacyPath": "/nutricionista-em-afonso-pena-curitiba",
+      "municipality": "São José dos Pinhais",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Afonso Pena (São José dos Pinhais)"
+    },
+    {
+      "name": "Centro (Pinhais)",
+      "slug": "pinhais-centro",
+      "legacyPath": "/nutricionista-em-pinhais-centro-curitiba",
+      "municipality": "Pinhais",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Pinhais)"
+    },
+    {
+      "name": "Pineville (Pinhais)",
+      "slug": "pineville",
+      "legacyPath": "/nutricionista-em-pineville-curitiba",
+      "municipality": "Pinhais",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Pineville (Pinhais)"
+    },
+    {
+      "name": "Centro (Colombo)",
+      "slug": "colombo-centro",
+      "legacyPath": "/nutricionista-em-colombo-centro-curitiba",
+      "municipality": "Colombo",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Colombo)"
+    },
+    {
+      "name": "Maracanã (Colombo)",
+      "slug": "maracana-colombo",
+      "legacyPath": "/nutricionista-em-maracana-colombo-curitiba",
+      "municipality": "Colombo",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Maracanã (Colombo)"
+    },
+    {
+      "name": "Centro (Fazenda Rio Grande)",
+      "slug": "fazenda-rio-grande-centro",
+      "legacyPath": "/nutricionista-em-fazenda-rio-grande-centro-curitiba",
+      "municipality": "Fazenda Rio Grande",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Fazenda Rio Grande)"
+    },
+    {
+      "name": "Eucaliptos (Fazenda Rio Grande)",
+      "slug": "eucaliptos-fazenda",
+      "legacyPath": "/nutricionista-em-eucaliptos-fazenda-curitiba",
+      "municipality": "Fazenda Rio Grande",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Eucaliptos (Fazenda Rio Grande)"
+    },
+    {
+      "name": "Centro (Campo Largo)",
+      "slug": "campo-largo-centro",
+      "legacyPath": "/nutricionista-em-campo-largo-centro-curitiba",
+      "municipality": "Campo Largo",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Campo Largo)"
+    },
+    {
+      "name": "Vila Bancária (Campo Largo)",
+      "slug": "bancaria-campo-largo",
+      "legacyPath": "/nutricionista-em-bancaria-campo-largo-curitiba",
+      "municipality": "Campo Largo",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Vila Bancária (Campo Largo)"
+    },
+    {
+      "name": "Centro (Almirante Tamandaré)",
+      "slug": "tamandare-centro",
+      "legacyPath": "/nutricionista-em-tamandare-centro-curitiba",
+      "municipality": "Almirante Tamandaré",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Almirante Tamandaré)"
+    },
+    {
+      "name": "Tamboado (Almirante Tamandaré)",
+      "slug": "tamboado-tamandare",
+      "legacyPath": "/nutricionista-em-tamboado-tamandare-curitiba",
+      "municipality": "Almirante Tamandaré",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Tamboado (Almirante Tamandaré)"
+    },
+    {
+      "name": "Centro (Campo Magro)",
+      "slug": "campo-magro-centro",
+      "legacyPath": "/nutricionista-em-campo-magro-centro-curitiba",
+      "municipality": "Campo Magro",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Campo Magro)"
+    },
+    {
+      "name": "Laranjeiras (Campo Magro)",
+      "slug": "laranjeiras-campo-magro",
+      "legacyPath": "/nutricionista-em-laranjeiras-campo-magro-curitiba",
+      "municipality": "Campo Magro",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Laranjeiras (Campo Magro)"
+    },
+    {
+      "name": "Centro (Quatro Barras)",
+      "slug": "quatro-barras-centro",
+      "legacyPath": "/nutricionista-em-quatro-barras-centro-curitiba",
+      "municipality": "Quatro Barras",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Centro (Quatro Barras)"
+    },
+    {
+      "name": "Borda do Campo (Quatro Barras)",
+      "slug": "borda-do-campo-quatro-barras",
+      "legacyPath": "/nutricionista-em-borda-do-campo-quatro-barras-curitiba",
+      "municipality": "Quatro Barras",
+      "classification": "metropolitan_locality_not_curitiba",
+      "officialName": "Borda do Campo (Quatro Barras)"
+    }
+  ],
+  "curitibaOfficial": [
+    {
+      "name": "Abranches",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Ahú",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Alto Boqueirão",
+      "regionals": [
+        "Boqueirão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Alto da Glória",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Alto da XV",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Atuba",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Augusta",
+      "regionals": [
+        "CIC"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Bacacheri",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Bairro Alto",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Barreirinha",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Batel",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Bigorrilho",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Boa Vista",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Bom Retiro",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Boqueirão",
+      "regionals": [
+        "Boqueirão"
+      ],
+      "existingSlug": "boqueirao",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Butiatuvinha",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cabral",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cachoeira",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cajuru",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Campina do Siqueira",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Campo Comprido",
+      "regionals": [
+        "Portão",
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Campo de Santana",
+      "regionals": [
+        "Tatuquara"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Capão Raso",
+      "regionals": [
+        "Pinheirinho"
+      ],
+      "existingSlug": "capao-raso",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Capão da Imbuia",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cascatinha",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Caximba",
+      "regionals": [
+        "Tatuquara"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Centro",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Centro Cívico",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cidade Industrial",
+      "regionals": [
+        "CIC"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Cristo Rei",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Fanny",
+      "regionals": [
+        "Pinheirinho"
+      ],
+      "existingSlug": "fanny",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Fazendinha",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Ganchinho",
+      "regionals": [
+        "Bairro Novo"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Guabirotuba",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Guaíra",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Hauer",
+      "regionals": [
+        "Boqueirão"
+      ],
+      "existingSlug": "hauer",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Hugo Lange",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Jardim Botânico",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Jardim Social",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Jardim das Américas",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Juvevê",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Lamenha Pequena",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Lindóia",
+      "regionals": [
+        "Pinheirinho"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Mercês",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Mossunguê",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Novo Mundo",
+      "regionals": [
+        "Pinheirinho"
+      ],
+      "existingSlug": "novo-mundo",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Orleans",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Parolin",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Pilarzinho",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Pinheirinho",
+      "regionals": [
+        "Pinheirinho"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Portão",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": "portao",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Prado Velho",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Rebouças",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Riviera",
+      "regionals": [
+        "CIC"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Santa Cândida",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Santa Felicidade",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Santa Quitéria",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": "santa-quiteria",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Santo Inácio",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Seminário",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "São Braz",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "São Francisco",
+      "regionals": [
+        "Matriz"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "São João",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "São Lourenço",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "São Miguel",
+      "regionals": [
+        "CIC"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Sítio Cercado",
+      "regionals": [
+        "Bairro Novo"
+      ],
+      "existingSlug": "sitio-cercado",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Taboão",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Tarumã",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Tatuquara",
+      "regionals": [
+        "Tatuquara"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Tingui",
+      "regionals": [
+        "Boa Vista"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Uberaba",
+      "regionals": [
+        "Cajuru"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Umbará",
+      "regionals": [
+        "Bairro Novo"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Vila Izabel",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Vista Alegre",
+      "regionals": [
+        "Santa Felicidade"
+      ],
+      "existingSlug": null,
+      "coverage": "missing_from_existing_location_dataset"
+    },
+    {
+      "name": "Xaxim",
+      "regionals": [
+        "Boqueirão"
+      ],
+      "existingSlug": "xaxim",
+      "coverage": "existing_page"
+    },
+    {
+      "name": "Água Verde",
+      "regionals": [
+        "Portão"
+      ],
+      "existingSlug": "agua-verde",
+      "coverage": "existing_page"
+    }
+  ],
+  "verifiedPopularNames": [
+    {
+      "name": "Champagnat",
+      "officialParent": "Bigorrilho",
+      "type": "popular_name",
+      "source": "https://mid-educacao.curitiba.pr.gov.br/2021/9/pdf/00310647.pdf",
+      "note": "Municipal education source explicitly explains popular name; not an official neighborhood."
+    },
+    {
+      "name": "Vila Nossa Senhora da Luz",
+      "officialParent": "Cidade Industrial",
+      "type": "housing_estate_vila",
+      "source": "https://www.curitiba.pr.gov.br/noticias/exposicao-de-fotos-resgata-criacao-da-vila-nossa-senhora-da-luz-o-1-conjunto-habitacional-de-curitiba/80664"
+    },
+    {
+      "name": "Vila Oficinas",
+      "officialParent": "Cajuru",
+      "type": "vila_locality",
+      "source": "https://www.curitiba.pr.gov.br/noticias/o-ano-em-curitiba-saiba-quais-foram-as-principais-realizacoes-da-regional-cajuru/71836"
+    },
+    {
+      "name": "Vila Osternack",
+      "officialParent": "Sítio Cercado",
+      "type": "vila_locality",
+      "source": "https://www.curitiba.pr.gov.br/noticias/cmei-vila-osternack-e-reformado-para-receber-140-curitibinhas/67499"
+    },
+    {
+      "name": "Bairro Novo",
+      "officialParent": "Sítio Cercado",
+      "type": "housing_estate_name_also_regional_name",
+      "source": "https://www.curitiba.pr.gov.br/noticias/em-52-anos-cohab-curitiba-entregou-20-do-total-de-moradias-da-cidade/42077",
+      "note": "Only local housing estate sense maps to Sitio Cercado. Administrative Regional Bairro Novo comprises Sitio Cercado, Umbará and Ganchinho."
+    },
+    {
+      "name": "Vila Sandra",
+      "officialParent": "Cidade Industrial",
+      "type": "vila_locality",
+      "source": "https://mid-educacao.curitiba.pr.gov.br/2025/2/pdf/00511929.pdf",
+      "note": "Municipal institution address corroborates association, not full boundary geometry."
+    }
+  ],
+  "limits": [
+    "Official list publication dated2019; names confirmed on municipal source, no shapefile/2026 legal boundary audit performed.",
+    "Campo Comprido is counted once; source places north in Santa Felicidade and south in Portão.",
+    "Metropolitan locality names are extracted from current code, not yet independently validated. Tamboado especially requires verification; do not invent parent/correct spelling automatically.",
+    "No search-volume evidence: popular means locally used, not proven most-searched.",
+    "Ecoville needs multi-neighborhood verification; do not blindly map entire region exclusively to Mossunguê.",
+    "No claim of a local office outside confirmed Xaxim address.",
+    "Popular inventory is deliberately non-exhaustive; unsupported previous106-list labels not reused."
+  ],
+  "implementationGuidance": [
+    "Use one browsable local service hub with official neighborhoods and popular names in separate groups; 75 names need not create75 thin pages.",
+    "Existing10 Curitiba detail pages link from appropriate names; absent65 can be searchable coverage names with CTA to online consultation or confirmed Curitiba office, not fake destination URLs.",
+    "Popular names link to parent official entry where known; no exact territorial boundaries implied.",
+    "Keep9 metropolitan municipalities separate with consultation-mode explanation; legacy -curitiba suffix on other-city pages should be redirected when canonical corrected.",
+    "Use official Fanny for intended fanny neighborhood page; Vila Fanny is ambiguous and also associated with Lindóia in municipal source. No exact synonym/boundary claim."
+  ],
+  "warnings": [
+    {
+      "label": "Vila Fanny",
+      "finding": "Existing fanny page label is ambiguous: municipal event lists a Vila Fanny locality in Lindóia. Official Fanny exists independently. Count10 assumes fanny slug intended official Fanny; do not claim exact equivalence of popular vila boundaries.",
+      "source": "https://www.curitiba.pr.gov.br/noticias/veja-onde-encontrar-a-unidade-do-urbs-movel-nesta-quarta-feira-em-curitiba/82989"
+    },
+    {
+      "label": "Tamboado (Almirante Tamandaré)",
+      "finding": "No corroboration found for exact name. Municipal Saúde lists Vila Tamboara, but this is not proof Tamboado intended Tamboara; keep unresolved/avoid geography claims and new content expansion until confirmed.",
+      "source": "https://tamandare.pr.gov.br/secretarias/saude"
+    }
+  ]
+}

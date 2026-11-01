@@ -26,7 +26,7 @@ export function HowItWorksPage() {
               Como Funciona a Consulta Nutricional?
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Tudo o que você precisa saber sobre as etapas do atendimento, desde a primeira conversa até o suporte diário.
+              Tudo o que você precisa saber sobre as etapas do atendimento, desde a primeira conversa até os retornos e as condições de contato combinadas.
             </p>
           </div>
 

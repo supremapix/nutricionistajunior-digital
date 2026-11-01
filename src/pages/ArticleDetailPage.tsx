@@ -1,3 +1,4 @@
+import { ARTICLE_INSIGHTS } from '../data/pageInsights';
 import React from 'react';
 import { ARTICLES_DATA } from '../data/contentData';
 import { SeoHead } from '../components/SeoHead';
@@ -97,9 +98,9 @@ export function ArticleDetailPage({ slug, onNavigate }: ArticleDetailPageProps) 
               <span>Resumo Prático em 3 Pontos:</span>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-200">
-              <li>1. O acompanhamento profissional evita perdas de tempo com estratégias genéricas.</li>
-              <li>2. A individualização garante que o plano alimentar seja sustentável na sua rotina.</li>
-              <li>3. A constância de hábitos supera qualquer restrição severa e temporária.</li>
+              {(ARTICLE_INSIGHTS[article.slug]?.summary || [article.summaryBlock.directAnswer]).map((point, index) => (
+                <li key={point}>{index + 1}. {point}</li>
+              ))}
             </ul>
           </div>
 

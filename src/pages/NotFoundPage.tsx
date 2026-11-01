@@ -11,7 +11,7 @@ interface NotFoundPageProps {
 export function NotFoundPage({ onNavigate }: NotFoundPageProps) {
   return (
     <>
-      <SeoHead 
+      <SeoHead noindex
         title="Página não encontrada (404)"
         description="A página solicitada não foi encontrada no site do Nutricionista Junior Coelho."
         path="/404"

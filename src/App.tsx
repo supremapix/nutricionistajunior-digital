@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PageInsight } from './components/PageInsight';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
@@ -20,14 +21,27 @@ import { PrivacyPage } from './pages/PrivacyPage';
 import { EbooksPage } from './pages/EbooksPage';
 import { LinksPage } from './pages/LinksPage';
 import { NeighborhoodPage } from './pages/NeighborhoodPage';
+import { ARTICLES_DATA } from './data/contentData';
+import { NEIGHBORHOODS_DATA } from './data/neighborhoodsData';
 import { NotFoundPage } from './pages/NotFoundPage';
 
-export default function App() {
-  const [currentPath, setCurrentPath] = useState<string>(() => window.location.pathname);
+export function normalizePath(path: string) {
+  const normalized = path.toLowerCase().replace(/\/+$/, '') || '/';
+  const aliases: Record<string, string> = { '/resultados': '/evolucao', '/artigos': '/conteudos', '/blog': '/conteudos', '/e-book': '/ebooks', '/ebook': '/ebooks', '/nutricionista-em-vila-fanny-curitiba': '/nutricionista-em-fanny-curitiba' };
+  if (normalized.startsWith('/atendimento/')) {
+    const slug = normalized.slice('/atendimento/'.length);
+    if (NEIGHBORHOODS_DATA[slug]) return new URL(NEIGHBORHOODS_DATA[slug].canonicalUrl).pathname;
+  }
+  const legacyNeighborhood = Object.values(NEIGHBORHOODS_DATA).find(info => normalized === `/nutricionista-em-${info.slug}-curitiba`);
+  return legacyNeighborhood ? new URL(legacyNeighborhood.canonicalUrl).pathname : aliases[normalized] || normalized;
+}
+
+export default function App({ initialPath = '/' }: { initialPath?: string }) {
+  const [currentPath, setCurrentPath] = useState<string>(() => normalizePath(typeof window === 'undefined' ? initialPath : window.location.pathname));
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(normalizePath(window.location.pathname));
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -35,6 +49,7 @@ export default function App() {
   }, []);
 
   const handleNavigate = (path: string) => {
+    path = normalizePath(path);
     window.history.pushState({}, '', path);
     setCurrentPath(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -90,6 +105,7 @@ export default function App() {
     }
     if (path.startsWith('/conteudos/')) {
       const slug = path.replace('/conteudos/', '');
+      if (!ARTICLES_DATA.some(article => article.slug === slug)) return <NotFoundPage onNavigate={handleNavigate} />;
       return <ArticleDetailPage slug={slug} onNavigate={handleNavigate} />;
     }
     if (path === '/contato') {
@@ -99,15 +115,9 @@ export default function App() {
       return <PrivacyPage />;
     }
 
-    // Neighborhood SEO pages (e.g. /nutricionista-em-xaxim-curitiba or /atendimento/xaxim)
-    if (path.startsWith('/nutricionista-em-')) {
-      const bairroSlug = path.replace('/nutricionista-em-', '').replace('-curitiba', '');
-      return <NeighborhoodPage slug={bairroSlug} />;
-    }
-    if (path.startsWith('/atendimento/')) {
-      const bairroSlug = path.replace('/atendimento/', '');
-      return <NeighborhoodPage slug={bairroSlug} />;
-    }
+    // Match verified canonical URLs; some municipality URLs differ from their data keys.
+    const neighborhood = Object.values(NEIGHBORHOODS_DATA).find(info => new URL(info.canonicalUrl).pathname === path);
+    if (neighborhood) return <NeighborhoodPage slug={neighborhood.slug} />;
 
     return <NotFoundPage onNavigate={handleNavigate} />;
   };
@@ -117,6 +127,7 @@ export default function App() {
       <div className="min-h-screen bg-[#050914] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
         <main className="flex-1">
           <LinksPage onNavigate={handleNavigate} />
+          <PageInsight path={currentPath} />
         </main>
       </div>
     );
@@ -130,6 +141,7 @@ export default function App() {
       {/* RENDERIZADOR DE PÁGINAS */}
       <main className="flex-1">
         {renderCurrentView()}
+        <PageInsight path={currentPath} />
       </main>
 
       {/* FOOTER GLOBAL COM SUPREMA CREDIT E AVISO ÉTICO */}

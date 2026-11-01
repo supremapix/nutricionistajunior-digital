@@ -71,7 +71,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
                 className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-6 py-3.5 rounded-full font-black text-xs sm:text-sm shadow-lg hover:scale-105 transition cursor-pointer"
               >
                 <MessageCircle size={18} />
-                <span>Agendar Consulta no {info.name}</span>
+                <span>Consultar atendimento para {info.name}</span>
               </a>
 
               <div className="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-3.5 rounded-full text-xs font-bold text-slate-200">
@@ -104,7 +104,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
               {/* OBJETIVOS POPULARES NO BAIRRO */}
               <div className="space-y-3 pt-4 border-t border-slate-800">
                 <h3 className="text-sm font-bold text-emerald-400 uppercase tracking-wider">
-                  Objetivos Principais Trabalhados no Bairro {info.name}:
+                  Objetivos que podem ser discutidos no acompanhamento:
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {info.popularObjectives.map((obj, i) => (
@@ -134,7 +134,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
               <div className="bg-slate-950 p-4 sm:p-5 rounded-2xl border border-slate-800 flex items-start gap-3">
                 <AlertCircle size={20} className="text-amber-400 shrink-0 mt-0.5" />
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  <strong>Atendimento Presencial e Online:</strong> Realizamos consultas presenciais na estrutura de Curitiba com fácil mobilidade para quem vem do bairro <strong>{info.name}</strong>, além de acompanhamento online com suporte diário via WhatsApp.
+                  <strong>Confirme antes de se deslocar:</strong> Esta página apresenta atendimento para moradores de <strong>{info.name}</strong>, não uma unidade instalada no bairro. Consulte pelo WhatsApp a modalidade, o endereço e o horário disponíveis. As condições de contato durante o acompanhamento são combinadas no atendimento.
                 </p>
               </div>
             </div>

@@ -17,22 +17,22 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   xaxim: {
     slug: 'xaxim',
     name: 'Xaxim',
-    fullName: 'Nutricionista no Bairro Xaxim em Curitiba',
+    fullName: 'Nutricionista para moradores de Xaxim em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-xaxim-curitiba',
     altUrl: '/atendimento/xaxim',
-    description: 'Acompanhamento nutricional focado em emagrecimento, reeducação alimentar e ganho de massa no bairro Xaxim e região em Curitiba/PR. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Xaxim – Curitiba',
+    description: 'Acompanhamento nutricional focado em emagrecimento, reeducação alimentar e ganho de massa para moradores de Xaxim e região em Curitiba/PR. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Xaxim – Curitiba',
     heroSubheadline: 'Atendimento nutricional de alta performance, emagrecimento saudável e reeducação alimentar para moradores e trabalhadores da região do Xaxim.',
-    locationDetails: 'Localizado na zona sul de Curitiba, o bairro Xaxim possui fácil acesso pela Av. Derosso e Linha Verde. Oferecemos atendimento presencial com horários flexíveis e consultas online.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Av. Francisco H. dos Santos', 'Rua David Tows', 'Av. Brasília', 'Shopping Boulevard Curitiba'],
     popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia Muscular', 'Reeducação Alimentar', 'Saúde Digestiva'],
     faq: [
       {
         question: 'O Nutricionista Junior Coelho atende moradores do Xaxim?',
-        answer: 'Sim! Atendemos moradores e trabalhadores do Xaxim com consultas presenciais em Curitiba e acompanhamento online contínuo via WhatsApp.'
+        answer: 'Sim! Atendemos moradores e trabalhadores do Xaxim com consultas presenciais em Curitiba e atendimento online conforme avaliação e disponibilidade.'
       },
       {
-        question: 'Como agendar uma consulta no Xaxim?',
+        question: 'Como consultar as opções de atendimento para moradores do Xaxim?',
         answer: 'Você pode agendar diretamente clicando no botão do WhatsApp ou pelo telefone (41) 99789-9045.'
       }
     ]
@@ -40,34 +40,34 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   portao: {
     slug: 'portao',
     name: 'Portão',
-    fullName: 'Nutricionista no Bairro Portão em Curitiba',
+    fullName: 'Nutricionista para moradores de Portão em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-portao-curitiba',
     altUrl: '/atendimento/portao',
-    description: 'Atendimento nutricional presencial e online no bairro Portão em Curitiba. Emagrecimento, reeducação alimentar e hipertrofia com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Portão – Curitiba',
+    description: 'Atendimento nutricional para moradores de Portão em Curitiba. Emagrecimento, reeducação alimentar e hipertrofia com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Portão – Curitiba',
     heroSubheadline: 'Consultas nutricionais estratégicas para otimizar sua composição corporal, saúde e qualidade de vida no bairro Portão.',
-    locationDetails: 'Região centralizada do Portão, próxima ao Terminal do Portão e Av. República Argentina, facilitando o acesso de pacientes de toda a zona oeste e sul.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Shopping Palladium', 'Shopping Ventura', 'Terminal do Portão', 'Av. República Argentina'],
-    popularObjectives: ['Emagrecimento Definitivo', 'Performance Esportiva', 'Ganho de Massa Muscular', 'Acompanhamento de Exames'],
+    popularObjectives: ['Emagrecimento Individualizado', 'Performance Esportiva', 'Ganho de Massa Muscular', 'Acompanhamento de Exames'],
     faq: [
       {
-        question: 'Qual a localização do atendimento no Portão?',
-        answer: 'Oferecemos atendimento presencial em Curitiba com rápido acesso para quem mora ou trabalha no Portão, além de consultas online.'
+        question: 'Como confirmar o local de atendimento para moradores do Portão?',
+        answer: 'Consulte o WhatsApp para confirmar o endereço e a modalidade antes de se deslocar. Esta página atende interessados da região e não indica consultório no Portão.'
       }
     ]
   },
   'agua-verde': {
     slug: 'agua-verde',
     name: 'Água Verde',
-    fullName: 'Nutricionista no Bairro Água Verde em Curitiba',
+    fullName: 'Nutricionista para moradores de Água Verde em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-agua-verde-curitiba',
     altUrl: '/atendimento/agua-verde',
-    description: 'Nutricionista no Água Verde em Curitiba. Planos alimentares personalizados para emagrecimento, ganho de massa e performance com Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Água Verde – Curitiba',
+    description: 'Nutricionista para moradores de Água Verde em Curitiba. Planos alimentares personalizados para emagrecimento, ganho de massa e performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Água Verde – Curitiba',
     heroSubheadline: 'Planejamento alimentar científico, prático e adaptado à sua rotina profissional e pessoal no bairro Água Verde.',
-    locationDetails: 'Bairro nobre tradicional de Curitiba, com acesso facilitado pelas avenidas Sete de Setembro, Silva Jardim e Iguaçu.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Praça do Japão', 'Av. Silva Jardim', 'Av. Iguaçu', 'Clube Curitibano'],
-    popularObjectives: ['Gestão de Estresse e Sono', 'Performance de Treino', 'Emagrecimento com Saúde', 'Hipertrofia'],
+    popularObjectives: ['Alimentação e Rotina', 'Performance de Treino', 'Emagrecimento com Saúde', 'Hipertrofia'],
     faq: [
       {
         question: 'O plano alimentar inclui receitas para quem trabalha no Água Verde?',
@@ -78,13 +78,13 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   boqueirao: {
     slug: 'boqueirao',
     name: 'Boqueirão',
-    fullName: 'Nutricionista no Bairro Boqueirão em Curitiba',
+    fullName: 'Nutricionista para moradores de Boqueirão em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-boqueirao-curitiba',
     altUrl: '/atendimento/boqueirao',
-    description: 'Atendimento com nutricionista no Boqueirão em Curitiba. Consultas para emagrecimento, hipertrofia e reeducação alimentar com Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Boqueirão – Curitiba',
+    description: 'Atendimento com nutricionista para moradores de Boqueirão em Curitiba. Consultas para emagrecimento, hipertrofia e reeducação alimentar com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Boqueirão – Curitiba',
     heroSubheadline: 'Acompanhamento nutricional direto e eficiente para pacientes do Boqueirão e entorno da Linha Verde.',
-    locationDetails: 'Fácil acesso para residentes do Boqueirão, próximo ao Terminal Carmo e Marechal Floriano Peixoto.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Terminal do Carmo', 'Av. Marechal Floriano Peixoto', 'Rua Bley Zornig'],
     popularObjectives: ['Perda de Gordura', 'Ganho de Força', 'Melhora da Disposição', 'Adequação Nutricional'],
     faq: [
@@ -97,51 +97,51 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   hauer: {
     slug: 'hauer',
     name: 'Hauer',
-    fullName: 'Nutricionista no Bairro Hauer em Curitiba',
+    fullName: 'Nutricionista para moradores de Hauer em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-hauer-curitiba',
     altUrl: '/atendimento/hauer',
-    description: 'Nutricionista no Hauer, Curitiba. Emagrecimento, reeducação e plano alimentar sob medida com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Hauer – Curitiba',
-    heroSubheadline: 'Resultados reais e duradouros com acompanhamento nutricional personalizado para quem vive ou trabalha no Hauer.',
-    locationDetails: 'Próximo ao Terminal do Hauer e Linha Verde, permitindo deslocamento rápido para consultas presenciais.',
+    description: 'Nutricionista para moradores de Hauer, Curitiba. Emagrecimento, reeducação e plano alimentar sob medida com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Hauer – Curitiba',
+    heroSubheadline: 'Planejamento e acompanhamento nutricional personalizado para quem vive ou trabalha no Hauer.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Terminal do Hauer', 'Linha Verde', 'Rua Waldemar Kost'],
     popularObjectives: ['Reeducação Alimentar', 'Definição Muscular', 'Nutrição Clínica', 'Emagrecimento'],
     faq: [
       {
-        question: 'O Nutricionista atende presencialmente na região do Hauer?',
-        answer: 'Sim! Atendemos a região do Hauer e bairros vizinhos com fácil acesso presencial e atendimento via WhatsApp.'
+        question: 'Como moradores do Hauer podem consultar as modalidades de atendimento?',
+        answer: 'Entre em contato para avaliar a modalidade e confirmar o endereço antes de se deslocar. Não há indicação de unidade no Hauer nesta página.'
       }
     ]
   },
   'capao-raso': {
     slug: 'capao-raso',
     name: 'Capão Raso',
-    fullName: 'Nutricionista no Bairro Capão Raso em Curitiba',
+    fullName: 'Nutricionista para moradores de Capão Raso em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-capao-raso-curitiba',
     altUrl: '/atendimento/capao-raso',
-    description: 'Atendimento nutricional especializado no Capão Raso em Curitiba. Consultas para emagrecer com saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Capão Raso – Curitiba',
+    description: 'Atendimento nutricional para moradores de Capão Raso em Curitiba. Consultas para emagrecer com saúde e hipertrofia com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Capão Raso – Curitiba',
     heroSubheadline: 'Consultoria nutricional individualizada para quem busca evolução física e saúde no Capão Raso.',
-    locationDetails: 'Região com fácil mobilidade urbana pelo eixo da Av. Winston Churchill e Terminal Capão Raso.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Terminal do Capão Raso', 'Av. Winston Churchill', 'Rua Pedro Gusso'],
     popularObjectives: ['Emagrecimento', 'Nutrição Esportiva', 'Controle da Fome', 'Disposição e Energia'],
     faq: [
       {
         question: 'Posso fazer a consulta online do Capão Raso?',
-        answer: 'Com certeza. Oferecemos tanto a modalidade presencial quanto a consulta online com o mesmo nível de detalhamento.'
+        answer: 'Consulte a possibilidade de atendimento online. A modalidade adequada depende das necessidades de avaliação, da disponibilidade e das condições de acesso.'
       }
     ]
   },
   'santa-quiteria': {
     slug: 'santa-quiteria',
     name: 'Santa Quitéria',
-    fullName: 'Nutricionista no Bairro Santa Quitéria em Curitiba',
+    fullName: 'Nutricionista para moradores de Santa Quitéria em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-santa-quiteria-curitiba',
     altUrl: '/atendimento/santa-quiteria',
-    description: 'Acompanhamento nutricional no bairro Santa Quitéria em Curitiba. Reeducação alimentar e alta performance com Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Santa Quitéria – Curitiba',
+    description: 'Acompanhamento nutricional para moradores de Santa Quitéria em Curitiba. Reeducação alimentar e alta performance com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Santa Quitéria – Curitiba',
     heroSubheadline: 'Transformação alimentar sustentável para moradores e profissionais da Santa Quitéria.',
-    locationDetails: 'Acesso rápido pelas avenidas Arthur Bernardes e Iguaçu.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Av. Arthur Bernardes', 'Rua João Alencar Guimarães', 'UniAndrade'],
     popularObjectives: ['Massa Magra', 'Qualidade do Sono', 'Reeducação Alimentar', 'Atletas de Fim de Semana'],
     faq: [
@@ -153,19 +153,19 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   },
   fanny: {
     slug: 'fanny',
-    name: 'Vila Fanny',
-    fullName: 'Nutricionista na Vila Fanny em Curitiba',
+    name: 'Fanny',
+    fullName: 'Nutricionista para moradores de Fanny em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-fanny-curitiba',
     altUrl: '/atendimento/fanny',
-    description: 'Nutricionista na Vila Fanny em Curitiba. Emagrecimento, reeducação e nutrição esportiva com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista na Vila Fanny – Curitiba',
-    heroSubheadline: 'Proximidade e atendimento ético para pacientes da Vila Fanny e arredores.',
-    locationDetails: 'Bairro situado entre o Hauer, Lindóia e Parolin, cortado pela Linha Verde.',
+    description: 'Nutricionista para moradores de Fanny em Curitiba. Emagrecimento, reeducação e nutrição esportiva com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Fanny – Curitiba',
+    heroSubheadline: 'Proximidade e atendimento ético para pacientes da Fanny e arredores.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Linha Verde Sul', 'Rua Maestro Francisco Antonello', 'Av. Wenceslau Braz'],
     popularObjectives: ['Perda de Peso', 'Aumento de Força', 'Saúde Digestiva', 'Rotina Saudável'],
     faq: [
       {
-        question: 'O plano alimentar é fácil de seguir na rotina da Vila Fanny?',
+        question: 'O plano alimentar é fácil de seguir na rotina da Fanny?',
         answer: 'Sim, todos os alimentos prescritos são simples e encontrados nos mercados da sua região.'
       }
     ]
@@ -173,13 +173,13 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   'novo-mundo': {
     slug: 'novo-mundo',
     name: 'Novo Mundo',
-    fullName: 'Nutricionista no Bairro Novo Mundo em Curitiba',
+    fullName: 'Nutricionista para moradores de Novo Mundo em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-novo-mundo-curitiba',
     altUrl: '/atendimento/novo-mundo',
-    description: 'Consulta com nutricionista no Novo Mundo em Curitiba. Foco em emagrecimento, massa muscular e hábitos saudáveis com Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Novo Mundo – Curitiba',
-    heroSubheadline: 'Plano alimentar personalizado e suporte constante para quem mora no Novo Mundo.',
-    locationDetails: 'Eixo da Av. Brasília e Linha Verde, garantindo comodidade de acesso aos pacientes.',
+    description: 'Consulta com nutricionista para moradores de Novo Mundo em Curitiba. Foco em emagrecimento, massa muscular e hábitos saudáveis com Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Novo Mundo – Curitiba',
+    heroSubheadline: 'Plano alimentar personalizado e acompanhamento individualizado para quem mora no Novo Mundo.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Av. Brasília', 'Rua Eduardo Carlos Pereira', 'Terminal do Capão Raso'],
     popularObjectives: ['Definição Muscular', 'Emagrecimento', 'Saúde do Coração', 'Energia para Treino'],
     faq: [
@@ -192,15 +192,15 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
   'sitio-cercado': {
     slug: 'sitio-cercado',
     name: 'Sítio Cercado',
-    fullName: 'Nutricionista no Bairro Sítio Cercado em Curitiba',
+    fullName: 'Nutricionista para moradores de Sítio Cercado em Curitiba',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-sitio-cercado-curitiba',
     altUrl: '/atendimento/sitio-cercado',
-    description: 'Atendimento nutricional acessível e prático no Sítio Cercado em Curitiba. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista no Bairro Sítio Cercado – Curitiba',
-    heroSubheadline: 'Nutrição descomplicada e resultados comprovados para moradores do Sítio Cercado.',
-    locationDetails: 'Atendimento voltado à comunidade do Sítio Cercado com foco em praticidade e custo-benefício na escolha dos alimentos.',
+    description: 'Atendimento nutricional acessível e prático para moradores de Sítio Cercado em Curitiba. Agende com o Nutricionista Junior Coelho (CRN 8-13752).',
+    heroHeadline: 'Nutricionista para moradores de Sítio Cercado – Curitiba',
+    heroSubheadline: 'Nutrição descomplicada e orientação individualizada para moradores do Sítio Cercado.',
+    locationDetails: 'Atendimento para moradores desta região. Confirme pelo WhatsApp a modalidade disponível, o endereço e o horário antes de se deslocar; esta página não informa uma unidade instalada no bairro.',
     nearbyLandmarks: ['Rua Izaac Ferreira da Cruz', 'Terminal do Sítio Cercado', 'Bairro Novo'],
-    popularObjectives: ['Reeducação Alimentar', 'Emagrecimento Sem Fome', 'Controle do Colesterol', 'Hipertrofia'],
+    popularObjectives: ['Reeducação Alimentar', 'Hábitos Alimentares', 'Controle do Colesterol', 'Hipertrofia'],
     faq: [
       {
         question: 'O Nutricionista prescreve suplementos caros?',
@@ -217,7 +217,7 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     altUrl: '/atendimento/araucaria-centro',
     description: 'Atendimento nutricional online para moradores do Centro de Araucária/PR. Emagrecimento, reeducação alimentar e hipertrofia com o Nutricionista Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de Araucária',
-    heroSubheadline: 'Consultoria nutricional online especializada com suporte diário via WhatsApp para moradores e trabalhadores do Centro de Araucária.',
+    heroSubheadline: 'Consultoria nutricional online especializada com contato pelo WhatsApp conforme condições combinadas para moradores e trabalhadores do Centro de Araucária.',
     locationDetails: 'Atendimento online estruturado para residentes do Centro de Araucária, com plano alimentar adaptado à rotina local e comércios da região.',
     nearbyLandmarks: ['Prefeitura Municipal de Araucária', 'Praça Dr. Vicente Machado', 'Rodovia do Xisto'],
     popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia e Performance', 'Reeducação Alimentar', 'Avaliação de Exames'],
@@ -260,13 +260,13 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     description: 'Nutricionista online para o Centro de São José dos Pinhais/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de São José dos Pinhais',
     heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de São José dos Pinhais.',
-    locationDetails: 'Atendimento online com suporte contínuo para o Centro de São José dos Pinhais, facilitando a rotina de quem busca resultados sólidos.',
+    locationDetails: 'Atendimento online com acompanhamento periódico para o Centro de São José dos Pinhais, facilitando a rotina de quem busca resultados sólidos.',
     nearbyLandmarks: ['Catedral São José', 'Rua XV de Novembro', 'Shopping São José'],
     popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'O atendimento para São José dos Pinhais é presencial ou online?',
-        answer: 'O atendimento para São José dos Pinhais é realizado na modalidade online, com alto padrão técnico e acompanhamento diário via WhatsApp.'
+        answer: 'O atendimento para São José dos Pinhais é realizado na modalidade online, com alto padrão técnico e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -300,11 +300,11 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Pinhais.',
     locationDetails: 'Atendimento online dedicado aos residentes do Centro de Pinhais, com foco em metas reais e sustentáveis.',
     nearbyLandmarks: ['Avenida Camilo di Lellis', 'Prefeitura de Pinhais', 'Bosque Municipal'],
-    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    popularObjectives: ['Emagrecimento Individualizado', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'As consultas de Pinhais ocorrem online?',
-        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+        answer: 'Sim, atendimento 100% online com videochamada e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -336,14 +336,14 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     altUrl: '/atendimento/colombo-centro',
     description: 'Atendimento nutricional online para moradores do Centro de Colombo/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de Colombo',
-    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento contínuo via WhatsApp para moradores e trabalhadores do Centro de Colombo.',
+    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento com condições de contato combinadas para moradores e trabalhadores do Centro de Colombo.',
     locationDetails: 'Atendimento online estruturado para residentes do Centro de Colombo, com plano alimentar adaptado à rotina local.',
     nearbyLandmarks: ['Prefeitura Municipal de Colombo', 'Parque Municipal da Uva', 'Rua XV de Novembro'],
     popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia', 'Reeducação Alimentar', 'Qualidade de Vida'],
     faq: [
       {
         question: 'Como funciona a consulta online para o Centro de Colombo?',
-        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e suporte diário via WhatsApp.'
+        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -375,13 +375,13 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     description: 'Nutricionista online para o Centro de Fazenda Rio Grande/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de Fazenda Rio Grande',
     heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de Fazenda Rio Grande.',
-    locationDetails: 'Atendimento online com suporte contínuo para o Centro de Fazenda Rio Grande.',
+    locationDetails: 'Atendimento online com acompanhamento periódico para o Centro de Fazenda Rio Grande.',
     nearbyLandmarks: ['Prefeitura de Fazenda Rio Grande', 'Av. Brasil', 'Terminal Eucaliptos'],
     popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'O atendimento para Fazenda Rio Grande é online?',
-        answer: 'Sim, modalidade online com alto padrão técnico e acompanhamento diário via WhatsApp.'
+        answer: 'Sim, modalidade online com alto padrão técnico e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -415,11 +415,11 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Campo Largo.',
     locationDetails: 'Atendimento online dedicado aos residentes do Centro de Campo Largo, com foco em metas reais e sustentáveis.',
     nearbyLandmarks: ['Praça Getúlio Vargas', 'Igreja Matriz Nossa Senhora da Piedade', 'Rua XV de Novembro'],
-    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    popularObjectives: ['Emagrecimento Individualizado', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'As consultas para Campo Largo ocorrem online?',
-        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+        answer: 'Sim, atendimento 100% online com videochamada e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -451,33 +451,33 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     altUrl: '/atendimento/tamandare-centro',
     description: 'Atendimento nutricional online para moradores do Centro de Almirante Tamandaré/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de Almirante Tamandaré',
-    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento contínuo via WhatsApp para moradores e trabalhadores do Centro de Almirante Tamandaré.',
+    heroSubheadline: 'Consultoria nutricional online especializada com acompanhamento com condições de contato combinadas para moradores e trabalhadores do Centro de Almirante Tamandaré.',
     locationDetails: 'Atendimento online estruturado para residentes do Centro de Almirante Tamandaré, com plano alimentar adaptado à rotina local.',
     nearbyLandmarks: ['Prefeitura Municipal de Almirante Tamandaré', 'Parque Municipal Anibal Khury', 'Rodovia dos Minérios'],
     popularObjectives: ['Emagrecimento Sustentável', 'Hipertrofia', 'Reeducação Alimentar', 'Qualidade de Vida'],
     faq: [
       {
         question: 'Como funciona a consulta online para Almirante Tamandaré?',
-        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e suporte diário via WhatsApp.'
+        answer: 'Realizada via videochamada com anamnese detalhada, cálculo de necessidades e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
   'tamboado-tamandare': {
     slug: 'tamboado-tamandare',
-    name: 'Tamboado (Almirante Tamandaré)',
-    fullName: 'Nutricionista Online para o Bairro Tamboado em Almirante Tamandaré/PR',
+    name: 'Almirante Tamandaré — localidade a confirmar',
+    fullName: 'Orientação sobre Atendimento Online em Almirante Tamandaré/PR',
     canonicalUrl: 'https://www.nutricionistajunior.digital/nutricionista-em-tamboado',
     altUrl: '/atendimento/tamboado-tamandare',
-    description: 'Atendimento nutricional online para o bairro Tamboado em Almirante Tamandaré/PR. Emagrecimento e ganho de massa com o Nutricionista Junior Coelho (CRN 8-13752).',
-    heroHeadline: 'Nutricionista para o Bairro Tamboado – Almirante Tamandaré',
-    heroSubheadline: 'Planos alimentares personalizados para objetivos de emagrecimento e saúde no bairro Tamboado em Almirante Tamandaré.',
-    locationDetails: 'Atendimento online dedicado aos moradores do bairro Tamboado em Almirante Tamandaré, com diretrizes práticas e acessíveis.',
-    nearbyLandmarks: ['Rodovia dos Minérios', 'Comércio Local', 'Área Residencial de Tamandaré'],
+    description: 'Consulte as condições do atendimento nutricional online para Almirante Tamandaré/PR com Junior Coelho. Informe sua localidade no agendamento.',
+    heroHeadline: 'Atendimento Online para Almirante Tamandaré',
+    heroSubheadline: 'Converse sobre seus objetivos e a adequação da consulta online à sua rotina.',
+    locationDetails: 'Esta página mantém um endereço antigo do site. O nome de localidade antes indicado como Tamboado precisa de confirmação. Informe seu bairro e município ao consultar o atendimento; não há indicação de consultório físico nesta região.',
+    nearbyLandmarks: ['Município de Almirante Tamandaré — confirme a localidade'],
     popularObjectives: ['Perda de Gordura', 'Ganho de Massa Muscular', 'Saúde Digestiva', 'Alimentação Saudável'],
     faq: [
       {
-        question: 'Como agendar consulta online para o Tamboado?',
-        answer: 'Você pode agendar pelo WhatsApp (41) 99789-9045 com atendimento rápido e prático.'
+        question: 'Como consultar o atendimento online para Almirante Tamandaré?',
+        answer: 'Entre em contato pelo WhatsApp (41) 99789-9045 e confirme modalidade, disponibilidade e sua localidade.'
       }
     ]
   },
@@ -490,13 +490,13 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     description: 'Nutricionista online para o Centro de Campo Magro/PR. Emagrecimento, reeducação alimentar e performance com Junior Coelho (CRN 8-13752).',
     heroHeadline: 'Nutricionista para o Centro de Campo Magro',
     heroSubheadline: 'Acompanhamento nutricional especializado e individualizado para moradores do Centro de Campo Magro.',
-    locationDetails: 'Atendimento online com suporte contínuo para o Centro de Campo Magro.',
+    locationDetails: 'Atendimento online com acompanhamento periódico para o Centro de Campo Magro.',
     nearbyLandmarks: ['Prefeitura de Campo Magro', 'Rodovia PR-090', 'Igreja Matriz'],
     popularObjectives: ['Emagrecimento', 'Hipertrofia', 'Nutrição Esportiva', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'O atendimento para Campo Magro é online?',
-        answer: 'Sim, modalidade online com alto padrão técnico e acompanhamento diário via WhatsApp.'
+        answer: 'Sim, modalidade online com alto padrão técnico e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },
@@ -530,11 +530,11 @@ export const NEIGHBORHOODS_DATA: Record<string, NeighborhoodInfo> = {
     heroSubheadline: 'Planejamento alimentar personalizado e orientação nutricional profissional para moradores do Centro de Quatro Barras.',
     locationDetails: 'Atendimento online dedicado aos residentes do Centro de Quatro Barras, com foco em metas reais e sustentáveis.',
     nearbyLandmarks: ['Prefeitura de Quatro Barras', 'Igreja Matriz São Sebastião', 'Av. Dom Pedro II'],
-    popularObjectives: ['Emagrecimento Definitivo', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
+    popularObjectives: ['Emagrecimento Individualizado', 'Hipertrofia', 'Qualidade de Vida', 'Reeducação Alimentar'],
     faq: [
       {
         question: 'As consultas para Quatro Barras ocorrem online?',
-        answer: 'Sim, atendimento 100% online com videochamada e suporte contínuo via WhatsApp.'
+        answer: 'Sim, atendimento 100% online com videochamada e contato pelo WhatsApp conforme condições combinadas.'
       }
     ]
   },

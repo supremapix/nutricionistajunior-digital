@@ -46,11 +46,11 @@ export const EBOOKS_DATA: EbookItem[] = [
   {
     id: 'dieta-inteligente',
     title: 'Dieta Inteligente: Seu Guia Alimentar Prático',
-    subtitle: 'Aprenda a Montar seus Pratos e Garanta Autonomia Alimentar',
+    subtitle: 'Aprenda sobre a Composição das Refeições e a Autonomia Alimentar',
     price: 'Hotmart Marketplace',
     image: 'https://img.supremasite.com.br/nutri/dieta-inteligente.webp',
     link: 'https://hotmart.com/pt-br/marketplace/produtos/nutricao-seu-guia-alimentar/X63627482N',
-    description: 'Guia definitivo de Reeducação Alimentar para você entender o funcionamento dos macronutrientes, aprender a fazer substituições inteligentes de alimentos e manter os resultados para sempre.',
+    description: 'Material educativo de Reeducação Alimentar para você entender o funcionamento dos macronutrientes, aprender a fazer substituições inteligentes de alimentos e desenvolver autonomia para adaptar a alimentação ao longo da vida.',
     highlights: [
       'Como montar pratos saudáveis e saciantes no dia a dia',
       'Guia prático de substituição inteligente de alimentos',

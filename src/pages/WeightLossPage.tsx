@@ -36,7 +36,7 @@ export function WeightLossPage() {
               Acompanhamento Nutricional para Emagrecimento
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Estratégia personalizada focada em redução sustentável de gordura corporal, preservação de massa muscular e eliminação do efeito sanfona.
+              Estratégia personalizada focada em redução sustentável de gordura corporal, cuidado com a massa muscular e construção gradual de hábitos.
             </p>
           </div>
 

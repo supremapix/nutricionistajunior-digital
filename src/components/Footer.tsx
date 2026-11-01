@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
-  ShieldCheck, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageCircle,
+  ShieldCheck,
   ChevronRight,
   FileText
 } from 'lucide-react';
@@ -27,16 +27,16 @@ export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#050914] text-slate-200 border-t border-slate-800 pt-12 pb-10 relative overflow-hidden">
       {/* VIDEO DE FUNDO DO FOOTER DE ALTA VISIBILIDADE */}
-      <HeroVideoBg 
-        brightness="brightness-[0.88]" 
-        overlayGradient="from-[#050914]/95 via-[#050914]/65 to-[#050914]/25" 
+      <HeroVideoBg
+        brightness="brightness-[0.88]"
+        overlayGradient="from-[#050914]/95 via-[#050914]/65 to-[#050914]/25"
       />
 
       {/* GLOW DISCRETO NO FUNDO DO FOOTER */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-28 bg-[var(--brand-green)]/10 blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
-        
+
         {/* BANNER DEDICADO DE ATENDIMENTO FÁCIL & RÁPIDO (ACESSÍVEL PARA PESSOAS IDOSAS) */}
         <div className="bg-slate-950/90 backdrop-blur-md border-2 border-[var(--brand-green)]/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
@@ -78,7 +78,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* INFORMAÇÕES ESSENCIAIS DE FÁCIL LEITURA */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-200 pt-2">
-            
+
             {/* HORÁRIOS */}
             <div className="bg-slate-900/80 p-4 rounded-2xl border border-slate-800/80 flex items-center gap-3.5">
               <Clock size={24} className="text-[var(--brand-green-light)] shrink-0" />
@@ -114,13 +114,13 @@ export function Footer({ onNavigate }: FooterProps) {
 
         {/* ESTRUTURA PRINCIPAL DO FOOTER (4 COLUNAS DE ALTO CONTRASTE E TEXTO AMPLO) */}
         <div className="bg-slate-950/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-slate-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* COLUNA 1: LOGO E SOBrE */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img 
-                src={SITE_CONFIG.images.logo} 
-                alt="Logo Nutricionista Junior Coelho" 
+              <img
+                src={SITE_CONFIG.images.logo}
+                alt="Logo Nutricionista Junior Coelho"
                 onError={(e) => { e.currentTarget.src = "/logo-site.png"; }}
                 className="h-16 sm:h-20 max-h-24 w-auto object-contain"
               />
@@ -156,13 +156,13 @@ export function Footer({ onNavigate }: FooterProps) {
                 { name: "Contato Direto", path: "/contato" }
               ].map((link) => (
                 <li key={link.path}>
-                  <button
-                    onClick={() => handleNav(link.path)}
+                  <a
+                    href={link.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNav(link.path); } }}
                     className="w-full text-left flex items-center gap-2 text-slate-200 hover:text-[var(--brand-green-light)] hover:bg-slate-900/90 px-2.5 py-1.5 rounded-xl transition cursor-pointer min-h-[40px]"
                   >
                     <ChevronRight size={16} className="text-[var(--brand-green-light)] shrink-0" />
                     <span className="font-semibold">{link.name}</span>
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -182,13 +182,13 @@ export function Footer({ onNavigate }: FooterProps) {
                 { name: "Qualidade de Vida & Energia", path: "/qualidade-de-vida" }
               ].map((link) => (
                 <li key={link.path}>
-                  <button
-                    onClick={() => handleNav(link.path)}
+                  <a
+                    href={link.path} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNav(link.path); } }}
                     className="w-full text-left flex items-center gap-2 text-slate-200 hover:text-[var(--brand-green-light)] hover:bg-slate-900/90 px-2.5 py-1.5 rounded-xl transition cursor-pointer min-h-[40px]"
                   >
                     <ChevronRight size={16} className="text-[var(--brand-green-light)] shrink-0" />
                     <span className="font-semibold">{link.name}</span>
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -242,19 +242,19 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="bg-slate-950/80 backdrop-blur-md rounded-2xl p-4 border border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300 font-medium">
           <p>© {new Date().getFullYear()} Nutricionista Junior Coelho • CRN: {SITE_CONFIG.crn}. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4">
-            <button 
-              onClick={() => handleNav('/politica-de-privacidade')} 
+            <a
+              href={'/politica-de-privacidade'} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNav('/politica-de-privacidade'); } }}
               className="hover:text-[var(--brand-green-light)] transition cursor-pointer min-h-[30px]"
             >
               Política de Privacidade (LGPD)
-            </button>
+            </a>
             <span>•</span>
-            <button 
-              onClick={() => handleNav('/como-funciona')} 
+            <a
+              href={'/como-funciona'} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNav('/como-funciona'); } }}
               className="hover:text-[var(--brand-green-light)] transition cursor-pointer min-h-[30px]"
             >
               Termos de Acompanhamento
-            </button>
+            </a>
           </div>
         </div>
 

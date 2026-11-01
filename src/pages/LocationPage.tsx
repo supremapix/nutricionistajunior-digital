@@ -1,4 +1,5 @@
 import React from 'react';
+import { LocalCoverage } from '../components/LocalCoverage';
 import { MapPin, ExternalLink, MessageCircle, Clock, Phone, AlertCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SeoHead } from '../components/SeoHead';
@@ -26,7 +27,7 @@ export function LocationPage() {
               Locais de Atendimento
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Atendimento presencial na região de Curitiba/PR e modalidade online com suporte contínuo.
+              Atendimento presencial na região de Curitiba/PR e modalidade online, conforme avaliação e agendamento.
             </p>
           </div>
 
@@ -37,7 +38,7 @@ export function LocationPage() {
               <div className="space-y-2">
                 <h3 className="text-lg font-bold text-white">Confirmação de Endereço Presencial</h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Nota de transparência: O cadastro original informado ({SITE_CONFIG.address.street}) está sob validação formal de confirmação de sede. O atendimento principal aos pacientes ocorre com foco na região metropolitana de <strong>Curitiba/PR</strong> (DDD 41).
+                  O endereço informado no cadastro é {SITE_CONFIG.address.street}, em Curitiba/PR, e ainda precisa de confirmação para o atendimento presencial. Antes de se deslocar, confirme diretamente com Junior o local, a modalidade e o horário da consulta. As regiões listadas indicam origem de pacientes e possibilidade de atendimento online, não consultórios em cada bairro ou cidade.
                 </p>
               </div>
             </div>
@@ -91,7 +92,7 @@ export function LocationPage() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 px-6 rounded-full text-xs transition cursor-pointer"
               >
                 <ExternalLink size={16} />
-                <span>Abrir GPS no Google Maps</span>
+                <span>Ver Curitiba no Google Maps</span>
               </a>
 
               <a
@@ -107,6 +108,7 @@ export function LocationPage() {
             </div>
           </div>
 
+          <LocalCoverage />
         </div>
       </section>
     </>
