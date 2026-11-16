@@ -11,6 +11,7 @@ import { LOCAL_COVERAGE } from '../src/data/localCoverage';
 import { LOCAL_GUIDES } from '../src/data/localGuides';
 import { PRERENDER_ROUTES } from '../prerender.config.js';
 import { NEIGHBORHOODS_DATA } from '../src/data/neighborhoodsData';
+import { isIndexablePath } from '../src/data/indexing';
 
 const origin = 'https://www.nutricionistajunior.digital';
 const sitemap = new JSDOM(fs.readFileSync('dist/sitemap.xml', 'utf8'), { contentType: 'text/xml' });
@@ -18,8 +19,9 @@ const urls = [...sitemap.window.document.querySelectorAll('loc')].map(el => el.t
 assert.equal(new Set(urls).size, urls.length, 'No duplicate sitemap entries');
 for (const article of ARTICLES_DATA) assert(urls.includes(`${origin}/conteudos/${article.slug}`));
 for (const info of Object.values(NEIGHBORHOODS_DATA)) assert(urls.includes(info.canonicalUrl));
-const expectedRoutes = new Set([...PRERENDER_ROUTES.map(page => `${origin}${page.path}`), ...ARTICLES_DATA.map(article => `${origin}/conteudos/${article.slug}`), ...Object.values(NEIGHBORHOODS_DATA).map(area => area.canonicalUrl), ...LOCAL_GUIDES.map(guide => `${origin}${guide.route}`), `${origin}/evolucao`]);
-assert.deepEqual(new Set(urls), expectedRoutes, 'Every supported route belongs in sitemap exactly once');
+const allRoutes = new Set([...PRERENDER_ROUTES.map(page => `${origin}${page.path}`), ...ARTICLES_DATA.map(article => `${origin}/conteudos/${article.slug}`), ...Object.values(NEIGHBORHOODS_DATA).map(area => area.canonicalUrl), ...LOCAL_GUIDES.map(guide => `${origin}${guide.route}`), `${origin}/evolucao`]);
+const expectedIndexable = new Set([...allRoutes].filter(url => isIndexablePath(new URL(url).pathname)));
+assert.deepEqual(new Set(urls), expectedIndexable, 'Sitemap lists each indexable route once');
 const questions = new Set<string>();
 const miniArticles = new Set<string>();
 assert.equal(LOCAL_COVERAGE.official.length, 75, '75 official neighborhoods correctly classified');
@@ -79,7 +81,13 @@ for (const [selector, count] of [['[data-coverage-official]', LOCAL_COVERAGE.off
 hubDom.window.close();
 // RMC pages preserve the previously published URL set and link both ways to a city.
 const oldSitemap = JSON.parse(fs.readFileSync('scripts/fixtures/published-routes-231.json', 'utf8')) as string[];
-for (const old of oldSitemap) assert(urls.includes(old), `Preserved published route ${old}`);
+for (const old of oldSitemap) {
+  const pathname = new URL(old).pathname;
+  const file = pathname === '/' ? 'dist/index.html' : path.join('dist', pathname.slice(1), 'index.html');
+  assert(fs.existsSync(file), `Published page still rendered ${old}`);
+  if (isIndexablePath(pathname)) assert(urls.includes(old), `Indexable published route remains in sitemap ${old}`);
+  else assert(!urls.includes(old), `Noindex near-duplicate stays out of sitemap ${old}`);
+}
 for (const guide of LOCAL_GUIDES.filter(item => item.kind === 'urban_locality')) {
   assert(guide.source?.startsWith('https://'), `${guide.route}: primary geography source`);
   const parent = LOCAL_GUIDES.find(item => item.route === guide.parentRoute && item.kind === 'municipality');
@@ -93,6 +101,13 @@ for (const guide of LOCAL_GUIDES.filter(item => item.kind === 'urban_locality'))
   const schemas = [...childDom.window.document.querySelectorAll('script[type="application/ld+json"]')].map(el => JSON.parse(el.textContent!));
   const crumb = schemas.find(item => item['@type'] === 'BreadcrumbList');
   assert.equal(crumb.itemListElement.length, 4);
+  assert(childDom.window.document.querySelector('meta[name="robots"]')?.getAttribute('content')?.includes('noindex'), `${guide.route}: noindex`);
+  assert(!urls.includes(`${origin}${guide.route}`), `${guide.route}: absent from sitemap`);
+  const practice = schemas.find(item => item['@type'] === 'LocalBusiness');
+  const person = schemas.find(item => item['@type'] === 'Person');
+  assert(practice && practice.identifier?.value === '8-13752', `${guide.route}: LocalBusiness CRN`);
+  assert.equal(practice.openingHoursSpecification.length, 2);
+  assert(person && String(person.jobTitle).includes('8-13752'), `${guide.route}: Person CRN`);
   assert.equal(crumb.itemListElement[2].item, `${origin}${parent.route}`);
   childDom.window.close(); parentDom.window.close();
   await new Promise<void>(resolve => setImmediate(resolve));

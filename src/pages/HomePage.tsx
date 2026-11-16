@@ -22,6 +22,7 @@ import { EthicalNoticeBanner } from '../components/EthicalNoticeBanner';
 import { SeoHead } from '../components/SeoHead';
 import { InstagramFeed } from '../components/InstagramFeed';
 import { HeroVideoBg } from '../components/HeroVideoBg';
+import { ReplyHoursNote } from '../components/ReplyHoursNote';
 import { trackAnalyticsEvent } from '../types';
 
 interface HomePageProps {
@@ -46,7 +47,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
         {/* VIDEO DE FUNDO HERO DE ALTA VISIBILIDADE */}
         <HeroVideoBg 
           brightness="brightness-[0.95]" 
-          overlayGradient="from-[#050914] via-[#050914]/40 to-[#050914]/10" 
+          overlayGradient="from-[#050914] via-[#050914]/40 to-[#050914]/10"
+          priority="high"
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -63,38 +65,28 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </p>
 
             {/* BOTÕES DE AÇÃO REFINADOS EM LINHA ÚNICA COM SUBTEXTO DISCRETO E ELEGANTE */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-5 pt-2">
-              
-              <div className="flex flex-col items-center sm:items-start">
+            <div className="flex flex-col items-start gap-3 pt-2 max-w-3xl">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 w-full">
                 <a
                   href={SITE_CONFIG.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-whatsapp-location="hero_primary_cta"
                   onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'hero_primary_cta' })}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-8 py-4 rounded-full font-black text-base whitespace-nowrap shadow-[0_10px_35px_rgba(121,184,42,0.4)] hover:shadow-[0_15px_45px_rgba(121,184,42,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer min-h-[54px]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-8 py-4 rounded-full font-black text-base shadow-[0_10px_35px_rgba(121,184,42,0.4)] hover:shadow-[0_15px_45px_rgba(121,184,42,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer min-h-[54px]"
                 >
                   <MessageCircle size={20} className="shrink-0" />
-                  <span className="whitespace-nowrap">Agendar pelo WhatsApp</span>
+                  <span>Agendar consulta pelo WhatsApp</span>
                 </a>
-                <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 px-1 flex items-center gap-1.5 opacity-90 drop-shadow">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Resposta rápida em horário comercial
-                </span>
-              </div>
-
-              <div className="flex flex-col items-center sm:items-start">
                 <button
                   onClick={() => handleNav('/acompanhamento-nutricional')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-slate-950/80 hover:bg-slate-900/90 text-white border border-slate-600/80 hover:border-[var(--brand-green)]/60 px-7 py-4 rounded-full font-bold text-base whitespace-nowrap transition-all duration-300 hover:scale-[1.02] cursor-pointer min-h-[54px] backdrop-blur-md shadow-lg"
+                  className="inline-flex items-center justify-center sm:justify-start gap-1.5 text-sm font-semibold text-white/90 underline underline-offset-4 decoration-white/40 hover:text-white hover:decoration-white min-h-[44px] cursor-pointer"
                 >
-                  <span className="whitespace-nowrap">Conhecer o Acompanhamento</span>
-                  <ArrowRight size={18} className="text-[var(--brand-green-light)] shrink-0" />
+                  <span>Conhecer o Acompanhamento</span>
+                  <ArrowRight size={16} className="shrink-0" />
                 </button>
-                <span className="text-[11px] text-slate-300/80 font-medium tracking-wide mt-2 px-1 opacity-85 drop-shadow">
-                  Entenda nossa metodologia completa
-                </span>
               </div>
-
+              <ReplyHoursNote className="max-w-xl text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" />
             </div>
 
           </div>
@@ -555,11 +547,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--brand-green)] via-[var(--brand-green-light)] to-[var(--brand-green)] text-slate-950 px-8 py-4 rounded-full font-black text-base whitespace-nowrap shadow-[0_10px_35px_rgba(121,184,42,0.4)] hover:shadow-[0_15px_45px_rgba(121,184,42,0.6)] transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer min-h-[52px]"
             >
               <MessageCircle size={20} className="shrink-0" />
-              <span className="whitespace-nowrap">Quero iniciar meu acompanhamento</span>
+              <span className="whitespace-nowrap">Agendar consulta pelo WhatsApp</span>
             </a>
-            <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 opacity-85">
-              Atendimento direto pelo WhatsApp • Vagas limitadas para este mês
-            </span>
+            <ReplyHoursNote className="mt-3 max-w-md" />
           </div>
         </div>
       </section>

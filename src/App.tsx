@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from './components/Analytics';
 import { PageInsight } from './components/PageInsight';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -130,6 +131,7 @@ export default function App({ initialPath = '/' }: { initialPath?: string }) {
   if (isLinksPage) {
     return (
       <div className="min-h-screen bg-[#050914] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+        <Analytics />
         <main className="flex-1">
           <LinksPage onNavigate={handleNavigate} />
           <PageInsight path={currentPath} />
@@ -140,6 +142,7 @@ export default function App({ initialPath = '/' }: { initialPath?: string }) {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+      <Analytics />
       {/* HEADER GLOBAL */}
       <Header currentPath={currentPath} onNavigate={handleNavigate} />
 

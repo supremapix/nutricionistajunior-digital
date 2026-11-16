@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dumbbell, MessageCircle, CheckCircle2, ShieldAlert, Zap } from 'lucide-react';
-import { SITE_CONFIG } from '../config/siteConfig';
+import { whatsappUrlFor } from '../utils/whatsapp';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
@@ -70,7 +70,7 @@ export function MuscleGainPage() {
             </p>
             <div className="flex flex-col items-center pt-2">
               <a
-                href={SITE_CONFIG.whatsappUrl}
+                href={whatsappUrlFor('ganho de massa muscular')}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'muscle_gain_page' })}

@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from '../config/siteConfig';
+import { WHATSAPP_NUMBER } from './whatsapp';
 
 const GOALS: Record<string, string> = {
   emagrecimento: 'Emagrecimento e reeducação alimentar',
@@ -13,5 +13,5 @@ export function buildContactWhatsAppUrl(data: Pick<FormData, 'get'>): string {
   const goal = GOALS[String(data.get('goal') || '')] || 'Acompanhamento nutricional';
   const message = String(data.get('message') || '').trim().slice(0, 1000);
   const text = [`Olá Junior! Meu nome é ${name}.`, `Gostaria de informações sobre: ${goal}.`, message].filter(Boolean).join('\n');
-  return `https://wa.me/${SITE_CONFIG.phoneRaw.replace(/\D/g, '')}?text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }

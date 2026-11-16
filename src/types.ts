@@ -108,12 +108,21 @@ export type AnalyticsEventName =
   | 'click_location'
   | 'click_qrcode';
 
+let lastWhatsAppClickAt = 0;
+
 export function trackAnalyticsEvent(eventName: AnalyticsEventName, details?: Record<string, any>) {
-  if (typeof window !== 'undefined') {
-    console.log(`[Analytics Event Tracked]: ${eventName}`, details || {});
-    // Trigger custom window event if Google Analytics or Tag Manager is attached
-    if ((window as any).dataLayer) {
-      (window as any).dataLayer.push({ event: eventName, ...details });
-    }
+  if (typeof window === 'undefined') return;
+  const now = Date.now();
+  // Link handlers and the document listener can both see the same click.
+  if (eventName === 'whatsapp_click') {
+    if (now - lastWhatsAppClickAt < 400) return;
+    lastWhatsAppClickAt = now;
   }
+  const analyticsWindow = window as Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
+  if (typeof analyticsWindow.gtag === 'function') {
+    analyticsWindow.gtag('event', eventName, details || {});
+    return;
+  }
+  analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+  analyticsWindow.dataLayer.push({ event: eventName, ...(details || {}) });
 }

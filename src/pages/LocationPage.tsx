@@ -2,6 +2,7 @@ import React from 'react';
 import { LocalCoverage } from '../components/LocalCoverage';
 import { MapPin, ExternalLink, MessageCircle, Clock, Phone, AlertCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { whatsappUrlFor } from '../utils/whatsapp';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
@@ -96,7 +97,7 @@ export function LocationPage() {
               </a>
 
               <a
-                href={SITE_CONFIG.whatsappUrl}
+                href={whatsappUrlFor('atendimento em Curitiba')}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'location_page' })}

@@ -41,10 +41,12 @@ const { LOCAL_GUIDES } = await import('../src/data/localGuides.ts');
 const { ARTICLES_DATA } = await import('../src/data/contentData.ts');
 const { NEIGHBORHOODS_DATA } = await import('../src/data/neighborhoodsData.ts');
 const { PRERENDER_ROUTES } = await import('../prerender.config.js');
+const { isIndexablePath } = await import('../src/data/indexing.ts');
 const expectedRoutes = new Set([...PRERENDER_ROUTES.map(page => page.path), ...ARTICLES_DATA.map(article => `/conteudos/${article.slug}`), ...Object.values(NEIGHBORHOODS_DATA).map(area => new URL(area.canonicalUrl).pathname), ...LOCAL_GUIDES.map(guide => guide.route), '/evolucao']);
-assert.deepEqual(new Set(routes), expectedRoutes, 'Every canonical page must be covered');
+assert.deepEqual(new Set(routes), new Set([...expectedRoutes].filter(isIndexablePath)), 'Sitemap lists only indexable pages');
+const routesToCheck = [...expectedRoutes];
 const questions = new Set();
-for (const path of routes) {
+for (const path of routesToCheck) {
   const content = getPageInsight(path);
   assert(content, `${path}: contextual copy exists`);
   assert(!questions.has(content.question), `${path}: unique contextual question`);
@@ -113,4 +115,4 @@ assert.equal(document.querySelector('[data-insight-dialog]'), null, 'No window f
 await React.act(async () => root.unmount());
 sitemap.window.close();
 dom.window.close();
-console.log(`PASS: ${routes.length} unique contextual dialogs; explicit trigger, dismiss/reopen, simulated native Escape/cancel, focus return, route changes and no health inputs. JSDOM integration only; native browser top-layer/focus trap not tested.`);
+console.log(`PASS: ${routesToCheck.length} unique contextual dialogs (${routes.length} indexable in the sitemap); explicit trigger, dismiss/reopen, simulated native Escape/cancel, focus return, route changes and no health inputs. JSDOM integration only; native browser top-layer/focus trap not tested.`);

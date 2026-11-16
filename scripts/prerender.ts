@@ -8,6 +8,7 @@ import App from '../src/App';
 import { ARTICLES_DATA } from '../src/data/contentData';
 import { NEIGHBORHOODS_DATA } from '../src/data/neighborhoodsData';
 import { LOCAL_GUIDES } from '../src/data/localGuides';
+import { isIndexablePath } from '../src/data/indexing';
 import { PRERENDER_ROUTES } from '../prerender.config.js';
 
 const dist = path.resolve('dist');
@@ -43,11 +44,12 @@ for (const route of [...routes, '/404']) {
   dom.window.close();
   console.log(`Rendered ${route}`);
 }
-// Keep sitemap synchronized with actual canonical pages, without invented update dates.
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(route => `  <url><loc>${origin}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
+// Near-duplicate urban locality pages stay rendered, with noindex and out of the sitemap.
+const indexableRoutes = routes.filter(isIndexablePath);
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexableRoutes.map(route => `  <url><loc>${origin}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
 fs.writeFileSync('public/sitemap.xml', sitemap);
-console.log(`${routes.length} indexable routes and one noindex 404 rendered with full body content.`);
+console.log(`${indexableRoutes.length} indexable routes, ${routes.length - indexableRoutes.length} noindex routes still rendered, and one noindex 404.`);
 
 // Compatibility URLs redirect to one canonical page instead of becoming duplicate content.
 const aliases: Record<string, string> = { '/resultados': '/evolucao', '/artigos': '/conteudos', '/blog': '/conteudos', '/e-book': '/ebooks', '/ebook': '/ebooks', '/nutricionista-em-vila-fanny-curitiba': '/nutricionista-em-fanny-curitiba' };

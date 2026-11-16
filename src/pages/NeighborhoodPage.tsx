@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, MessageCircle, Clock, CheckCircle2, AlertCircle, ArrowRight, ExternalLink, ShieldCheck } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { whatsappUrlFor } from '../utils/whatsapp';
 import { NEIGHBORHOODS_DATA, NeighborhoodInfo } from '../data/neighborhoodsData';
 import { EnhancedSEO } from '../components/EnhancedSEO';
 import { HeroVideoBg } from '../components/HeroVideoBg';
@@ -64,7 +65,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
 
             <div className="pt-2 flex flex-wrap gap-3">
               <a
-                href={SITE_CONFIG.whatsappUrl}
+                href={whatsappUrlFor(`atendimento no bairro ${info.name}`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: `neighborhood_page_${info.slug}` })}
@@ -174,7 +175,7 @@ export function NeighborhoodPage({ slug }: NeighborhoodPageProps) {
                 </div>
 
                 <a
-                  href={SITE_CONFIG.whatsappUrl}
+                  href={whatsappUrlFor(`atendimento no bairro ${info.name}`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackAnalyticsEvent('whatsapp_click', { location: `neighborhood_sidebar_${info.slug}` })}
