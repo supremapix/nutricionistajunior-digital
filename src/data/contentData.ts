@@ -1,3 +1,4 @@
+import { GLUTEN_ARTICLE } from './glutenArticle';
 import { DIGESTIVE_ARTICLE } from './digestiveArticle';
 import { ArticleItem, ServiceItem, HabitAchievement, AuthorizedTestimonial } from '../types';
 
@@ -166,6 +167,7 @@ export const SERVICES_DATA: ServiceItem[] = [
 ];
 
 export const ARTICLES_DATA: ArticleItem[] = [
+  GLUTEN_ARTICLE,
   DIGESTIVE_ARTICLE,
   {
     id: "art-1",
