@@ -1,4 +1,5 @@
 import { SiteConfig } from '../types';
+import { buildWhatsAppUrl, DEFAULT_WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '../utils/whatsapp';
 
 export const SITE_CONFIG: SiteConfig = {
   name: "Nutricionista Junior Coelho",
@@ -6,9 +7,9 @@ export const SITE_CONFIG: SiteConfig = {
   positioning: "Emagrecimento, Performance e Qualidade de Vida",
   domain: "www.nutricionistajunior.digital",
   phone: "(41) 99789-9045",
-  phoneRaw: "+5541997899045",
-  whatsappUrl: "https://wa.me/5541997899045?text=Ol%C3%A1%20Junior!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20nutricional.",
-  whatsappMessage: "Olá Junior! Encontrei seu site e gostaria de saber mais sobre o acompanhamento nutricional.",
+  phoneRaw: `+${WHATSAPP_NUMBER}`,
+  whatsappUrl: buildWhatsAppUrl(),
+  whatsappMessage: DEFAULT_WHATSAPP_MESSAGE,
   email: "nutricionistajuniorcoelho@gmail.com",
   emailUrl: "mailto:nutricionistajuniorcoelho@gmail.com",
   crn: "8-13752",
@@ -39,7 +40,7 @@ export const SITE_CONFIG: SiteConfig = {
     period2: "15:00 – 18:00"
   },
   images: {
-    logo: "https://img.supremasite.com.br/nutri/logo-site.png",
+    logo: "https://www.nutricionistajunior.digital/media/logo-site.webp",
     og: "https://img.supremasite.com.br/nutri/og-card.webp",
     heroBg: "https://img.supremasite.com.br/nutri/fundo-banner-hero.jpg",
     heroVideo: "https://img.supremasite.com.br/nutri/nutri-junior.mp4",

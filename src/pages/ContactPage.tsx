@@ -5,11 +5,13 @@ import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
 import { buildContactWhatsAppUrl } from '../utils/contact';
+import { ReplyHoursNote } from '../components/ReplyHoursNote';
 
 export function ContactPage() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     trackAnalyticsEvent('contact_form_submit', { location: 'contact_page' });
+    trackAnalyticsEvent('whatsapp_click', { location: 'contact_form' });
     const data = new FormData(e.currentTarget);
     // The visitor reviews the prepared message in WhatsApp before sending it.
     window.location.assign(buildContactWhatsAppUrl(data));
@@ -100,6 +102,7 @@ export function ContactPage() {
                   <div>
                     <strong className="block font-bold">Horários de Atendimento</strong>
                     <span className="text-slate-300">{SITE_CONFIG.hours.days} ({SITE_CONFIG.hours.period1} | {SITE_CONFIG.hours.period2})</span>
+                    <ReplyHoursNote className="mt-2 text-slate-300" />
                   </div>
                 </div>
               </div>

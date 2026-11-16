@@ -29,6 +29,11 @@ export function SupremaCredit() {
             <img 
               src="https://img.supremamidia.com/suprema-img.png" 
               alt="Suprema" 
+              width={72}
+              height={18}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               className="h-[18px] w-auto inline select-none shrink-0 filter drop-shadow-[0_0_2px_rgba(250,204,21,0.5)] transition-transform duration-300 hover:scale-110" 
               referrerPolicy="no-referrer"
             />

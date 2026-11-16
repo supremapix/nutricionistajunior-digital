@@ -325,6 +325,9 @@ export function LinksPage({ onNavigate }: LinksPageProps) {
                   alt="QR Code de contato do Nutricionista Junior Coelho"
                   style={{ width: '100%', maxWidth: '220px', height: 'auto', objectFit: 'contain' }}
                   className="rounded-2xl border-2 border-slate-700 p-2.5 bg-white shadow-md hover:scale-[1.02] transition-transform cursor-pointer"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                   onClick={() => trackAnalyticsEvent('click_qrcode', { location: 'links_page' })}
                 />
               </div>

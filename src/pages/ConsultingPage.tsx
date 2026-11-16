@@ -10,6 +10,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { whatsappUrlFor } from '../utils/whatsapp';
+import { ReplyHoursNote } from '../components/ReplyHoursNote';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
@@ -149,7 +151,7 @@ export function ConsultingPage() {
             </p>
             <div className="flex flex-col items-center pt-2">
               <a
-                href={SITE_CONFIG.whatsappUrl}
+                href={whatsappUrlFor('acompanhamento nutricional')}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'consulting_page_cta' })}
@@ -158,9 +160,7 @@ export function ConsultingPage() {
                 <MessageCircle size={20} className="shrink-0" />
                 <span className="whitespace-nowrap">Iniciar Atendimento no WhatsApp</span>
               </a>
-              <span className="text-[11px] text-slate-300 font-medium tracking-wide mt-2 block opacity-85">
-                Atendimento direto pelo WhatsApp • Resposta em horário comercial
-              </span>
+              <ReplyHoursNote className="mt-3 max-w-md" />
             </div>
           </div>
 

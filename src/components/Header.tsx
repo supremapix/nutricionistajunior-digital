@@ -14,6 +14,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { SiteLogo } from './SiteLogo';
 import { trackAnalyticsEvent } from '../types';
 
 interface HeaderProps {
@@ -155,11 +156,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
           className="flex items-center cursor-pointer group focus:outline-none"
           aria-label="Nutricionista Junior Coelho - Início"
         >
-          <img
-            src={SITE_CONFIG.images.logo}
-            alt="Logo Nutricionista Junior Coelho"
-            className="h-14 sm:h-18 md:h-20 lg:h-24 max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-          />
+          <SiteLogo priority className="h-14 sm:h-16 md:h-20 lg:h-24 max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
         </a>
 
         {/* NAVEGAÇÃO DESKTOP */}
@@ -207,8 +204,21 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
           </div>
         </nav>
 
+        {/* CTA visível no celular, ao lado do menu. No desktop largo fica a versão completa. */}
+        <a
+          href={SITE_CONFIG.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-whatsapp-location="header_mobile"
+          onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'header_mobile' })}
+          className="xl:hidden inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green-light)] text-slate-950 px-3 py-2 rounded-full font-black text-xs whitespace-nowrap shadow-[0_6px_20px_rgba(121,184,42,0.35)] min-h-[44px] shrink-0"
+        >
+          <MessageCircle size={16} className="shrink-0" />
+          <span>Agendar</span>
+        </a>
+
         {/* CTA PRINCIPAL WHATSAPP & BADGE CRN */}
-        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+        <div className="hidden xl:flex items-center gap-2.5 shrink-0">
           <div className="hidden 2xl:flex items-center gap-1.5 bg-slate-900 border border-slate-700/80 px-3 py-1.5 rounded-full text-xs font-bold text-slate-100 shadow-sm whitespace-nowrap shrink-0">
             <ShieldCheck size={15} className="text-[var(--brand-green-light)] shrink-0" />
             <span>CRN: <strong className="text-[var(--brand-green-light)]">8-13752</strong></span>
@@ -245,11 +255,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
               href={'/'} onClick={(event) => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); handleNavClick('/'); } }}
               className="flex items-center focus:outline-none"
             >
-              <img
-                src={SITE_CONFIG.images.logo}
-                alt="Logo Junior Coelho"
-                className="h-12 sm:h-16 w-auto object-contain"
-              />
+              <SiteLogo className="h-12 sm:h-16 w-auto object-contain" />
             </a>
 
             <div className="flex items-center gap-3">
@@ -400,6 +406,7 @@ export function Header({ currentPath, onNavigate, highContrast = false, setHighC
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-whatsapp-location="address_modal"
                 className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-xs transition min-h-[44px]"
               >
                 <MessageCircle size={16} />

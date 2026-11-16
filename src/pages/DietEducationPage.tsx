@@ -1,6 +1,6 @@
 import React from 'react';
 import { Apple, MessageCircle, CheckCircle2, HeartPulse } from 'lucide-react';
-import { SITE_CONFIG } from '../config/siteConfig';
+import { whatsappUrlFor } from '../utils/whatsapp';
 import { SeoHead } from '../components/SeoHead';
 import { HeroVideoBg } from '../components/HeroVideoBg';
 import { trackAnalyticsEvent } from '../types';
@@ -57,7 +57,7 @@ export function DietEducationPage() {
 
             <div className="pt-4 flex flex-col items-center">
               <a
-                href={SITE_CONFIG.whatsappUrl}
+                href={whatsappUrlFor('reeducação alimentar')}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackAnalyticsEvent('whatsapp_click', { location: 'diet_education_page' })}

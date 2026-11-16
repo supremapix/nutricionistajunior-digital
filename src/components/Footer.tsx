@@ -11,6 +11,8 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { SupremaCredit } from './SupremaCredit';
+import { SiteLogo } from './SiteLogo';
+import { ReplyHoursNote } from './ReplyHoursNote';
 import { trackAnalyticsEvent } from '../types';
 
 import { HeroVideoBg } from './HeroVideoBg';
@@ -30,6 +32,8 @@ export function Footer({ onNavigate }: FooterProps) {
       <HeroVideoBg
         brightness="brightness-[0.88]"
         overlayGradient="from-[#050914]/95 via-[#050914]/65 to-[#050914]/25"
+        allowVideo={false}
+        priority="low"
       />
 
       {/* GLOW DISCRETO NO FUNDO DO FOOTER */}
@@ -50,6 +54,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <p className="text-sm sm:text-base text-slate-200 font-medium">
                 Entre em contato direto pelo WhatsApp ou Telefone. Estamos prontos para te atender!
               </p>
+              <ReplyHoursNote className="max-w-xl" />
             </div>
 
             {/* BOTÕES DE AÇÃO DIRETA COM LETRAS GRANDES E TOQUE FÁCIL */}
@@ -118,12 +123,7 @@ export function Footer({ onNavigate }: FooterProps) {
           {/* COLUNA 1: LOGO E SOBrE */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img
-                src={SITE_CONFIG.images.logo}
-                alt="Logo Nutricionista Junior Coelho"
-                onError={(e) => { e.currentTarget.src = "/logo-site.png"; }}
-                className="h-16 sm:h-20 max-h-24 w-auto object-contain"
-              />
+              <SiteLogo className="h-16 sm:h-20 max-h-24 w-auto object-contain" />
             </div>
 
             <p className="text-sm text-slate-300 leading-relaxed font-normal">
