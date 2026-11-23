@@ -103,6 +103,23 @@ export function ConsultingPage() {
             </div>
           </div>
 
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 sm:p-6 space-y-3">
+            <h2 className="text-xl font-bold text-white">Nutricionista online ou presencial em Curitiba?</h2>
+            <p className="text-sm leading-relaxed text-slate-300">
+              Junior Coelho atende online e presencialmente em Curitiba, conforme avaliação e agendamento.
+              Se você prefere a consulta online, confirme como acessar a chamada e reserve um local tranquilo.
+              Se prefere o atendimento presencial, confirme o endereço e o horário antes de sair.
+            </p>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              <a className="text-emerald-300 underline underline-offset-4 hover:text-emerald-200" href="/conteudos/consulta-online-ou-presencial-como-escolher">
+                Compare as modalidades de consulta
+              </a>
+              <a className="text-emerald-300 underline underline-offset-4 hover:text-emerald-200" href="/atendimento">
+                Veja as informações de atendimento
+              </a>
+            </div>
+          </div>
+
           {/* PASSO A PASSO DO ACOMPANHAMENTO */}
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-white">
